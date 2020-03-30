@@ -1,0 +1,2 @@
+# WordCounter-BrowserExtension
+ 
