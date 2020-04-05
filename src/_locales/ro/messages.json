@@ -1,8 +1,20 @@
 {
-  "_translations": {
-    "enterDesiredText": "Introduceți textul dorit",
-    "words": "Cuvinte",
-    "characters": "Caractere",
-    "charactersWithoutSpaces": "Caractere fără spații"
+  "_enterDesiredText": {
+    "message": "Introduceți textul dorit"
+  },
+  "_words": {
+    "message": "Cuvinte"
+  },
+  "_characters": {
+    "message": "Caractere"
+  },
+  "_charactersNoWhiteSpace": {
+    "message": "Personaje Fără spațiu alb"
+  },
+  "extName": {
+    "message": "Contorizator de cuvinte"
+  },
+  "extDescription": {
+    "message": "Contor de cuvinte și caractere"
   }
 }

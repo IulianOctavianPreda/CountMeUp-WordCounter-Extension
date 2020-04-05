@@ -6,6 +6,8 @@ const fs = require("fs");
 // let languageCodes = ["af","sq","am","ar","hy","az","eu","be","bn","bs","bg","ca","ceb","zh-CN","zh-TW","co","hr","cs","da","nl","en","eo","et","fi","fr","fy","gl","ka","de","el","gu","ht","ha","haw","he","hi","hmn","hu","is","ig","id","ga","it","ja","jv","kn","kk","km","ko","ku","ky","lo","la","lv","lt","lb","mk","mg","ms","ml","mt","mi","mr","mn","my","ne","no","ny","ps","fa","pl","pt","pa","ro","ru","sm","gd","sr","st","sn","sd","si","sk","sl","so","es","su","sw","sv","tl","tg","ta","te","th","tr","uk","ur","uz","vi","cy","xh","yi","yo","zu"];
 let languageCodes = ["ro"]
 let pathToTranslationFile = "./src/translations/template.json";
+let extName = "Word counter";
+let extDescription = "Word and character counter";
 
 Array.prototype.last = function () {
     return this[this.length - 1];
@@ -112,7 +114,12 @@ function createTranslateFile(languageCode) {
     // fs.copyFileSync(pathToTranslationFile, `./src/_locale/${languageCode}/translations.json`);
     let translationFile = fs.readFileSync(pathToTranslationFile);
     let translation = JSON.parse(translationFile);
-    Promise.all(updateTranslations(translation, languageCode)).then(() => {
+
+    let promiseArray = [];
+    promiseArray.push(translateText(translation, "extName", extName, languageCode));
+    promiseArray.push(translateText(translation, "extDescription", extDescription, languageCode));
+    promiseArray.push(...updateTranslations(translation, languageCode));
+    Promise.all(promiseArray).then(() => {
         writeObjectToJson(`./src/_locales/${languageCode}/messages.json`, translation, "w");
     });
 }
@@ -123,16 +130,16 @@ function updateTranslations(obj1, languageCode) {
         if (Object.entries(obj1[element]).length !== 0) {
             promisesArray.push(...updateTranslations(obj1[element], languageCode));
         } else {
-            promisesArray.push(translateText(obj1, element, languageCode));
+            promisesArray.push(translateText(obj1, element, element, languageCode));
         }
     });
     return promisesArray;
 }
 
-async function translateText(obj, text, languageCode) {
-    let textToTranslate = camelCaseToText(text);
-    obj[text] = (await translate(textToTranslate, { to: languageCode })).text;
-    obj[text] = capitalizeFirstLetter(obj[text]);
+async function translateText(obj, element, text, languageCode) {
+    let textToTranslate = camelCaseToText(text.replace("_", ""));
+    obj[element] = (await translate(textToTranslate, { to: languageCode, client: "webapp" })).text;
+    obj[element] = convertToMessageString(capitalizeFirstLetter(obj[element]));
 }
 
 function camelCaseToText(str) {
@@ -142,6 +149,10 @@ function camelCaseToText(str) {
 
 function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function convertToMessageString(str) {
+    return { message: str };
 }
 
 function writeObjectToJson(path, obj, flag = "a") {

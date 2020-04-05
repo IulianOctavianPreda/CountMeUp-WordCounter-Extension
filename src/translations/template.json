@@ -1,8 +1,6 @@
 {
-  "_translations": {
-    "enterDesiredText": "",
-    "words": "",
-    "characters": "",
-    "charactersWithoutSpaces": ""
-  }
+  "_enterDesiredText": "",
+  "_words": "",
+  "_characters": "",
+  "_charactersNoWhiteSpace": ""
 }

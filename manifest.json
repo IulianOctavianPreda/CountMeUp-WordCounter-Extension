@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Word Counter",
+    "name": "__MSG_extName__",
     "version": "1.0",
-    "description": "Word and character counter",
-    "default_locale": "en",
+    "description": "__MSG_extDescription__",
+    "default_locale": "ro",
     "icons": {
         "128": "./assets/images/128x128-icon.png"
     },
@@ -11,7 +11,7 @@
         "scripts": ["./background/background.js"]
     },
     "browser_action": {
-        "default_title": "Word Counter",
+        "default_title": "__MSG_extName__",
         "default_icon": "./assets/images/128x128-icon.png",
         "default_popup": "/popup/popup.html"
     },

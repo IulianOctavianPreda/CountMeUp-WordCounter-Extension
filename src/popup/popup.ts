@@ -44,12 +44,12 @@ function updateInputValue(id: string, str: string): void {
 }
 
 function placeTranslations() {
-    updateInputPlaceholder("textArea", chrome.i18n.getMessage("_translations.enterDesiredText"));
-    updateElementText("inputWordsLabel", chrome.i18n.getMessage("_translations.words"));
-    updateElementText("inputCharactersLabel", chrome.i18n.getMessage("_translations.characters"));
+    updateInputPlaceholder("textArea", chrome.i18n.getMessage("_enterDesiredText"));
+    updateElementText("inputWordsLabel", chrome.i18n.getMessage("_words"));
+    updateElementText("inputCharactersLabel", chrome.i18n.getMessage("_characters"));
     updateElementText(
         "inputCharactersWithoutSpacesLabel",
-        chrome.i18n.getMessage("_translations.charactersWithoutSpaces")
+        chrome.i18n.getMessage("_charactersNoWhiteSpace")
     );
 }
 
