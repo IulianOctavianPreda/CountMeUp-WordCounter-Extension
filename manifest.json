@@ -15,5 +15,5 @@
         "default_icon": "./assets/images/128x128-icon.png",
         "default_popup": "/popup/popup.html"
     },
-    "permissions": ["contextMenus"]
+    "permissions": ["contextMenus", "storage"]
 }

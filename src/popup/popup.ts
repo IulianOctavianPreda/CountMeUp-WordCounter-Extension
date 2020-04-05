@@ -1,7 +1,6 @@
 import "./popup.scss";
 
 import { Counter } from "../shared/counter";
-import { Message } from "../shared/message";
 
 const counter = new Counter();
 
@@ -12,11 +11,26 @@ placeTranslations();
     updateInputs();
 });
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.msg === Message.Id) {
-        updateInputValue("textArea", request.data.content);
-    }
+window.addEventListener("load", (event) => {
+    getFromStorage();
 });
+
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//     if (request.msg === Message.Id) {
+//         alert(request.data.content);
+//         updateInputValue("textArea", request.data.content);
+//     }
+// });
+
+function getFromStorage() {
+    chrome.storage.sync.get(["selection"], (data) => {
+        if (!!data && !!data.selection) {
+            updateInputValue("textArea", data.selection);
+            updateInputs();
+        }
+        chrome.storage.sync.remove(["selection"]);
+    });
+}
 
 function getElement(id: string): HTMLElement | null {
     return document.getElementById(id);
@@ -45,11 +59,12 @@ function updateInputValue(id: string, str: string): void {
 
 function placeTranslations() {
     updateInputPlaceholder("textArea", chrome.i18n.getMessage("_enterDesiredText"));
+    updateElementText("cardTitle", chrome.i18n.getMessage("extDescription"));
     updateElementText("inputWordsLabel", chrome.i18n.getMessage("_words"));
     updateElementText("inputCharactersLabel", chrome.i18n.getMessage("_characters"));
     updateElementText(
         "inputCharactersWithoutSpacesLabel",
-        chrome.i18n.getMessage("_charactersNoWhiteSpace")
+        chrome.i18n.getMessage("_charactersWithoutSpaces")
     );
 }
 
@@ -58,6 +73,6 @@ function updateInputs() {
     updateInputValue("inputCharacters", String(counter.numberOfCharacters));
     updateInputValue(
         "inputCharactersWithoutSpaces",
-        String(counter.numberOfCharactersWithoutSpace)
+        String(counter.numberOfCharactersWithoutSpaces)
     );
 }

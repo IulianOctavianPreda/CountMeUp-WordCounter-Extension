@@ -8,13 +8,22 @@
   "_characters": {
     "message": "Caractere"
   },
-  "_charactersNoWhiteSpace": {
-    "message": "Personaje Fără spațiu alb"
+  "_charactersWithoutSpaces": {
+    "message": "Personaje fără spații"
   },
-  "extName": {
-    "message": "Contorizator de cuvinte"
+  "_word": {
+    "message": "Cuvânt"
+  },
+  "_character": {
+    "message": "Caracter"
+  },
+  "_characterWithoutSpaces": {
+    "message": "Personaj fără spații"
   },
   "extDescription": {
     "message": "Contor de cuvinte și caractere"
+  },
+  "extName": {
+    "message": "Contorizator de cuvinte"
   }
 }

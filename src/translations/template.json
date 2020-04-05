@@ -2,5 +2,8 @@
   "_enterDesiredText": "",
   "_words": "",
   "_characters": "",
-  "_charactersNoWhiteSpace": ""
+  "_charactersWithoutSpaces": "",
+  "_word": "",
+  "_character": "",
+  "_characterWithoutSpaces": ""
 }
