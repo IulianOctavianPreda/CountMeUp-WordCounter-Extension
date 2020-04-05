@@ -8,6 +8,7 @@ chrome.contextMenus.create({
 });
 
 function openPopUp(info, tab) {
+    // browser.browserAction.openPopup();
     sendMessage(info.selectionText);
 }
 
@@ -16,12 +17,12 @@ function updatedText(str) {
     return `W:${counter.numberOfWords} C:${counter.numberOfCharacters} C/:${counter.numberOfCharactersWithoutSpace}`;
 }
 
-function sendMessage(content: string) {
+function sendMessage(str: string) {
     chrome.runtime.sendMessage({
         msg: Message.Id,
         data: {
             subject: Message.Subject,
-            content,
+            content: str,
         },
     });
 }

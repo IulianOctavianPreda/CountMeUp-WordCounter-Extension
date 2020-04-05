@@ -7,7 +7,7 @@ const counter = new Counter();
 
 placeTranslations();
 
-(<HTMLInputElement>getElement("textArea"))?.addEventListener("change", (event) => {
+(<HTMLInputElement>getElement("textArea"))?.addEventListener("keyup", (event) => {
     counter.setText((event as any)?.target.value);
     updateInputs();
 });
