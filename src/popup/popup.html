@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+
+    <body>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-subtitle mb-2 text-muted">
+                    <%= htmlWebpackPlugin.options.title %>
+                </h5>
+                <div class="form-group mb-3">
+                    <textarea
+                        class="form-control"
+                        id="textArea"
+                        placeholder="Enter desired text"
+                    ></textarea>
+                </div>
+
+                <div class="input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputWordsLabel">Words</span>
+                    </div>
+                    <input
+                        id="inputWords"
+                        type="text"
+                        class="form-control"
+                        aria-describedby="inputWords"
+                        disabled
+                    />
+                </div>
+                <div class="input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputCharactersLabel">Characters</span>
+                    </div>
+                    <input
+                        id="inputCharacters"
+                        type="text"
+                        class="form-control"
+                        aria-describedby="inputCharacters"
+                        disabled
+                    />
+                </div>
+                <div class="input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputCharactersWithoutSpacesLabel"
+                            >CharactersWithoutSpaces</span
+                        >
+                    </div>
+                    <input
+                        id="inputCharactersWithoutSpaces"
+                        type="text"
+                        class="form-control"
+                        aria-describedby="inputCharactersWithoutSpaces"
+                        disabled
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+        <div class="container-fluid">
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="input-group-sm mb-3">
+                <input type="text" class="form-control" aria-describedby="basic-addon1" />
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Words</span>
+                </div>
+            </div>
+            <div class="input-group-sm mb-3">
+                <input type="text" class="form-control" aria-describedby="basic-addon1" />
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Characters</span>
+                </div>
+            </div>
+            <div class="input-group-sm mb-3">
+                <input type="text" class="form-control" aria-describedby="basic-addon1" />
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"
+                        >Characters without spaces</span
+                    >
+                </div>
+            </div>
+        </div>
+         -->
+    </body>
+</html>
