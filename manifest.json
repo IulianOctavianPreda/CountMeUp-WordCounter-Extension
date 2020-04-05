@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Word Counter",
+    "version": "1.0",
+    "description": "Word and character counter",
+    "default_locale": "en",
+    "icons": {
+        "128": "./assets/images/128x128-icon.png"
+    },
+    "background": {
+        "scripts": ["./background/background.js"]
+    },
+    "browser_action": {
+        "default_title": "Word Counter",
+        "default_icon": "./assets/images/128x128-icon.png",
+        "default_popup": "/popup/popup.html"
+    },
+    "permissions": ["contextMenus"]
+}
