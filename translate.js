@@ -113,7 +113,7 @@ function createTranslateFile(languageCode) {
     let translationFile = fs.readFileSync(pathToTranslationFile);
     let translation = JSON.parse(translationFile);
     Promise.all(updateTranslations(translation, languageCode)).then(() => {
-        writeObjectToJson(`./src/_locale/${languageCode}/messages.json`, translation, "w");
+        writeObjectToJson(`./src/_locales/${languageCode}/messages.json`, translation, "w");
     });
 }
 
@@ -132,11 +132,16 @@ function updateTranslations(obj1, languageCode) {
 async function translateText(obj, text, languageCode) {
     let textToTranslate = camelCaseToText(text);
     obj[text] = (await translate(textToTranslate, { to: languageCode })).text;
+    obj[text] = capitalizeFirstLetter(obj[text]);
 }
 
 function camelCaseToText(str) {
     var result = str.replace(/([A-Z])/g, " $1");
-    return result.charAt(0).toUpperCase() + result.slice(1);
+    return capitalizeFirstLetter(result);
+}
+
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function writeObjectToJson(path, obj, flag = "a") {
