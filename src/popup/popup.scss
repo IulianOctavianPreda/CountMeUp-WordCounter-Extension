@@ -1,1 +1,56 @@
 @import "~bootstrap";
+
+.dropdown-content {
+    // display: none;
+    transition: opacity 0.7s ease;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content .btn.list:hover {
+    background-color: green !important;
+}
+
+.dropdown-content .btn.list:active {
+    background-color: darkgreen !important;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    height: auto;
+
+    // display: block;
+}
+
+.svg-menu {
+    width: 5px;
+    height: 20px;
+}
+
+.svg-sun {
+    height: 18px;
+}
+
+.svg-moon {
+    height: 17px;
+}
+
+.svg-tick {
+    height: 20px;
+}
+
+.switch {
+    padding-left: 40px;
+}
+
+.no-border-radius {
+    border-radius: 0;
+}

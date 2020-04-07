@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
     <head>
         <meta charset="UTF-8" />
         <title><%= htmlWebpackPlugin.options.title %></title>
     </head>
 
-    <body>
-        <div class="card" style="width: 18rem;">
+    <body class="h-100">
+        <div class="card no-border-radius h-100" style="width: 320px;">
             <div class="card-body">
-                <h5 class="card-subtitle mb-2 text-muted" id="cardTitle">
+                <h5 class="card-subtitle mb-3 text-muted" id="cardTitle">
                     Word and character counter
                 </h5>
+
+                <div class="d-flex flex-row-reverse">
+                    <div class="dropdown">
+                        <button class="btn btn-sm pb-1 pr-0 pt-0 pl-2 border-0" type="button">
+                            <img class="svg-menu" id="menu" />
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="d-flex flex-column">
+                                <div class="btn">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="svg-sun" id="sun" />
+                                        <span class="custom-switch switch">
+                                            <input
+                                                type="checkbox"
+                                                class="custom-control-input"
+                                                id="darkSwitch"
+                                            />
+                                            <label class="custom-control-label" for="darkSwitch">
+                                            </label>
+                                        </span>
+                                        <img class="svg-moon" id="moon" />
+                                    </div>
+                                </div>
+
+                                <div class="btn list" id="listCheck1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="col-3"
+                                            ><img class="svg-tick" id="check1"
+                                        /></span>
+                                        <span class="col-9" id="popup">Popup</span>
+                                    </div>
+                                </div>
+
+                                <div class="btn list" id="listCheck2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="col-3"
+                                            ><img class="svg-tick" id="check2"
+                                        /></span>
+                                        <span class="col-9" id="sideMenu">Side Menu</span>
+                                    </div>
+                                </div>
+
+                                <div class="btn list" id="listCheck3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="col-3"
+                                            ><img class="svg-tick" id="check3"
+                                        /></span>
+                                        <span class="col-9" id="extension">Extension</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group mb-3">
                     <textarea
                         class="form-control"
@@ -46,7 +100,7 @@
                 <div class="input-group-sm mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputCharactersWithoutSpacesLabel"
-                            >CharactersWithoutSpaces</span
+                            >Characters Without Spaces</span
                         >
                     </div>
                     <input
@@ -59,34 +113,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- 
-        <div class="container-fluid">
-            <div class="input-group">
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
-
-            <div class="input-group-sm mb-3">
-                <input type="text" class="form-control" aria-describedby="basic-addon1" />
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Words</span>
-                </div>
-            </div>
-            <div class="input-group-sm mb-3">
-                <input type="text" class="form-control" aria-describedby="basic-addon1" />
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Characters</span>
-                </div>
-            </div>
-            <div class="input-group-sm mb-3">
-                <input type="text" class="form-control" aria-describedby="basic-addon1" />
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1"
-                        >Characters without spaces</span
-                    >
-                </div>
-            </div>
-        </div>
-         -->
     </body>
 </html>

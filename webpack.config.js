@@ -7,7 +7,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 
 module.exports = {
-    entry: { background: "./src/background/background.ts", popup: "./src/popup/popup.ts" },
+    entry: {
+        background: "./src/background/background.ts",
+        popup: "./src/popup/popup.ts",
+        content_script: "./src/content-script/content-script.ts",
+    },
     module: {
         rules: [
             {

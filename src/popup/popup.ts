@@ -1,78 +1,144 @@
 import "./popup.scss";
 
 import { Counter } from "../shared/counter";
+import { DomUtils } from "../shared/dom-utils";
 
 const counter = new Counter();
 
-placeTranslations();
+if (!!typeof browser) {
+    DomUtils.hideElementById("extensionFirefox");
+}
 
-(<HTMLInputElement>getElement("textArea"))?.addEventListener("keyup", (event) => {
+DomUtils.getFromStorage("selection", getSelectedText);
+DomUtils.getFromStorage("darkTheme", (data) => {
+    changeTheme(data.darkTheme);
+    updateDarkThemeSwitch(data.darkTheme);
+});
+
+DomUtils.getFromStorage("selectedViewMethod", (data) => {
+    checklistUpdate(data.selectedViewMethod);
+});
+
+DomUtils.hideElementById("check3");
+DomUtils.createDarkThemeCss();
+placeTranslations();
+addChecklistListeners();
+
+(<HTMLInputElement>DomUtils.getElement("textArea"))?.addEventListener("keyup", (event) => {
     counter.setText((event as any)?.target.value);
     updateInputs();
 });
 
-window.addEventListener("load", (event) => {
-    getFromStorage();
+(<HTMLInputElement>DomUtils.getElement("darkSwitch"))?.addEventListener("click", (event) => {
+    const inputValue = (event as any)?.target.checked;
+    DomUtils.saveToStorage({ darkTheme: inputValue });
+    changeTheme(inputValue);
 });
 
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//     if (request.msg === Message.Id) {
-//         alert(request.data.content);
-//         updateInputValue("textArea", request.data.content);
-//     }
+// window.addEventListener("load", (event) => {
+
 // });
 
-function getFromStorage() {
-    chrome.storage.sync.get(["selection"], (data) => {
-        if (!!data && !!data.selection) {
-            updateInputValue("textArea", data.selection);
-            updateInputs();
-        }
-        chrome.storage.sync.remove(["selection"]);
-    });
-}
-
-function getElement(id: string): HTMLElement | null {
-    return document.getElementById(id);
-}
-
-function updateElementText(id: string, str: string): void {
-    const element = document.getElementById(id);
-    if (!!element) {
-        element.innerText = str;
+function getSelectedText(data) {
+    if (!!data && !!data.selection) {
+        DomUtils.updateInputValue("textArea", data.selection);
+        updateInputs();
     }
-}
-
-function updateInputPlaceholder(id: string, str: string): void {
-    const element = <HTMLInputElement>document.getElementById(id);
-    if (!!element) {
-        element.placeholder = str;
-    }
-}
-
-function updateInputValue(id: string, str: string): void {
-    const element = <HTMLInputElement>document.getElementById(id);
-    if (!!element) {
-        element.value = str;
-    }
+    DomUtils.removeFromStorage("selection");
+    updateImageSources();
 }
 
 function placeTranslations() {
-    updateInputPlaceholder("textArea", chrome.i18n.getMessage("_enterDesiredText"));
-    updateElementText("cardTitle", chrome.i18n.getMessage("extDescription"));
-    updateElementText("inputWordsLabel", chrome.i18n.getMessage("_words"));
-    updateElementText("inputCharactersLabel", chrome.i18n.getMessage("_characters"));
-    updateElementText(
+    DomUtils.updateInputPlaceholder("textArea", chrome.i18n.getMessage("_enterDesiredText"));
+    DomUtils.updateElementText("cardTitle", chrome.i18n.getMessage("extDescription"));
+    DomUtils.updateElementText("inputWordsLabel", chrome.i18n.getMessage("_words"));
+    DomUtils.updateElementText("inputCharactersLabel", chrome.i18n.getMessage("_characters"));
+    DomUtils.updateElementText(
         "inputCharactersWithoutSpacesLabel",
         chrome.i18n.getMessage("_charactersWithoutSpaces")
     );
+    DomUtils.updateElementText("popup", chrome.i18n.getMessage("_inPopup"));
+    DomUtils.updateElementText("sideMenu", chrome.i18n.getMessage("_inSideMenu"));
+    DomUtils.updateElementText("extension", chrome.i18n.getMessage("_inExtension"));
 }
 
 function updateInputs() {
-    updateInputValue("inputWords", String(counter.numberOfWords));
-    updateInputValue("inputCharacters", String(counter.numberOfCharacters));
-    updateInputValue(
+    DomUtils.updateInputValue("inputWords", String(counter.numberOfWords));
+    DomUtils.updateInputValue("inputCharacters", String(counter.numberOfCharacters));
+    DomUtils.updateInputValue(
         "inputCharactersWithoutSpaces",
         String(counter.numberOfCharactersWithoutSpaces)
     );
+}
+
+function updateImageSources() {
+    DomUtils.updateImageSource("menu", "assets/images/menu.svg");
+    DomUtils.updateImageSource("sun", "assets/images/sun.svg");
+    DomUtils.updateImageSource("moon", "assets/images/moon.svg");
+    DomUtils.updateImageSource("check1", "assets/images/check.svg");
+    DomUtils.updateImageSource("check2", "assets/images/check.svg");
+    DomUtils.updateImageSource("check3", "assets/images/check.svg");
+}
+
+function changeTheme(isDark) {
+    if (isDark) {
+        toDarkTheme();
+    } else {
+        toLightTheme();
+    }
+}
+
+function addChecklistListeners() {
+    const idList = ["listCheck1", "listCheck2", "listCheck3"];
+    idList.forEach((element) => {
+        (<HTMLInputElement>DomUtils.getElement(element))?.addEventListener(
+            "click",
+            checklistUpdateEvent
+        );
+    });
+}
+
+function checklistUpdateEvent(this: any) {
+    checklistUpdate(this.id);
+}
+
+function checklistUpdate(id: string) {
+    const idList = ["check1", "check2", "check3"];
+    const toShowId = idList.find((x) => id.toLowerCase().includes(x));
+    const idToHide = idList.filter((x) => toShowId !== x);
+    console.log(idToHide);
+    idToHide.forEach((element) => {
+        DomUtils.hideElementById(element);
+    });
+    DomUtils.showElementById(toShowId ?? "");
+    DomUtils.saveToStorage({ selectedViewMethod: id });
+}
+
+function updateDarkThemeSwitch(isDark) {
+    const element = <HTMLInputElement>DomUtils.getElement("darkSwitch");
+    if (!!element) {
+        element.checked = isDark;
+    }
+}
+
+function toDarkTheme() {
+    DomUtils.addDarkThemeToTag("img");
+    DomUtils.addDarkThemeByClassNames([
+        "card",
+        "form-control",
+        "btn list",
+        "input-group-text",
+        "dropdown-content",
+    ]);
+}
+
+function toLightTheme() {
+    DomUtils.removeDarkThemeFromTag("img");
+    DomUtils.removeDarkThemeByClassNames([
+        "card",
+        "form-control",
+        "btn list",
+        "input-group-text",
+        "dropdown-content",
+    ]);
 }
