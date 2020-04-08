@@ -1,5 +1,14 @@
 @import "~bootstrap";
 
+html {
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+}
+
 .dropdown-content {
     // display: none;
     transition: opacity 0.7s ease;

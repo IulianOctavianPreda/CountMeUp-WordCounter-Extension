@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html class="h-100">
+<html class="h-100 w-100" id="wordsCounterPopup">
     <head>
         <meta charset="UTF-8" />
         <title><%= htmlWebpackPlugin.options.title %></title>
     </head>
 
-    <body class="h-100">
-        <div class="card no-border-radius h-100" style="width: 320px;">
-            <div class="card-body">
+    <body class="h-100 w-100">
+        <div class="card no-border-radius border-0" style="min-width: 320px;">
+            <div class="card-body h-100">
                 <h5 class="card-subtitle mb-3 text-muted" id="cardTitle">
                     Word and character counter
                 </h5>
@@ -49,7 +49,7 @@
                                         <span class="col-3"
                                             ><img class="svg-tick" id="check2"
                                         /></span>
-                                        <span class="col-9" id="sideMenu">Side Menu</span>
+                                        <span class="col-9" id="sideMenuLeft">Side Menu Left</span>
                                     </div>
                                 </div>
 
@@ -58,6 +58,17 @@
                                         <span class="col-3"
                                             ><img class="svg-tick" id="check3"
                                         /></span>
+                                        <span class="col-9" id="sideMenuRight"
+                                            >Side Menu Right</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="btn list" id="listCheck4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="col-3"
+                                            ><img class="svg-tick" id="check4"
+                                        /></span>
                                         <span class="col-9" id="extension">Extension</span>
                                     </div>
                                 </div>
@@ -65,15 +76,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group mb-3">
+                <div class="form-group mb-3 w-100">
                     <textarea
                         class="form-control"
+                        style="min-height: 60px;"
                         id="textArea"
                         placeholder="Enter desired text"
                     ></textarea>
                 </div>
 
-                <div class="input-group-sm mb-3">
+                <div class="input-group-sm mb-3 w-100">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputWordsLabel">Words</span>
                     </div>
@@ -85,7 +97,7 @@
                         disabled
                     />
                 </div>
-                <div class="input-group-sm mb-3">
+                <div class="input-group-sm mb-3 w-100">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputCharactersLabel">Characters</span>
                     </div>
@@ -97,7 +109,7 @@
                         disabled
                     />
                 </div>
-                <div class="input-group-sm mb-3">
+                <div class="input-group-sm mb-3 w-100">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputCharactersWithoutSpacesLabel"
                             >Characters Without Spaces</span

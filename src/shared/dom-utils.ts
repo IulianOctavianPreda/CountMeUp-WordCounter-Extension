@@ -1,16 +1,4 @@
 export class DomUtils {
-    public static getFromStorage(id: string, callback) {
-        chrome.storage.sync.get(id, callback);
-    }
-
-    public static removeFromStorage(id: string, callback?) {
-        chrome.storage.sync.remove(id, callback);
-    }
-
-    public static saveToStorage(obj) {
-        chrome.storage.sync.set(obj);
-    }
-
     public static getElement(id: string): HTMLElement | null {
         return document.getElementById(id);
     }
@@ -130,11 +118,4 @@ export class DomUtils {
             element.classList.remove(appendedClass);
         }
     }
-
-    // chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    //     if (request.msg === Message.Id) {
-    //         alert(request.data.content);
-    //         updateInputValue("textArea", request.data.content);
-    //     }
-    // });
 }

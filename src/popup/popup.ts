@@ -2,24 +2,26 @@ import "./popup.scss";
 
 import { Counter } from "../shared/counter";
 import { DomUtils } from "../shared/dom-utils";
+import { Storage } from "../shared/enums/storage";
+import { StorageService } from "../shared/storage-service";
 
 const counter = new Counter();
 
 if (!!typeof browser) {
-    DomUtils.hideElementById("extensionFirefox");
+    // firefox specific extra option - open directly in the extension popup
+    DomUtils.hideElementById("listCheck4");
 }
 
-DomUtils.getFromStorage("selection", getSelectedText);
-DomUtils.getFromStorage("darkTheme", (data) => {
+StorageService.getFromStorage(Storage.SelectedText, getSelectedText);
+StorageService.getFromStorage(Storage.DarkTheme, (data) => {
     changeTheme(data.darkTheme);
     updateDarkThemeSwitch(data.darkTheme);
 });
 
-DomUtils.getFromStorage("selectedViewMethod", (data) => {
+StorageService.getFromStorage(Storage.SelectedViewMethod, (data) => {
     checklistUpdate(data.selectedViewMethod);
 });
 
-DomUtils.hideElementById("check3");
 DomUtils.createDarkThemeCss();
 placeTranslations();
 addChecklistListeners();
@@ -31,7 +33,7 @@ addChecklistListeners();
 
 (<HTMLInputElement>DomUtils.getElement("darkSwitch"))?.addEventListener("click", (event) => {
     const inputValue = (event as any)?.target.checked;
-    DomUtils.saveToStorage({ darkTheme: inputValue });
+    StorageService.saveToStorage({ darkTheme: inputValue });
     changeTheme(inputValue);
 });
 
@@ -44,7 +46,7 @@ function getSelectedText(data) {
         DomUtils.updateInputValue("textArea", data.selection);
         updateInputs();
     }
-    DomUtils.removeFromStorage("selection");
+    StorageService.removeFromStorage("selection");
     updateImageSources();
 }
 
@@ -78,6 +80,7 @@ function updateImageSources() {
     DomUtils.updateImageSource("check1", "assets/images/check.svg");
     DomUtils.updateImageSource("check2", "assets/images/check.svg");
     DomUtils.updateImageSource("check3", "assets/images/check.svg");
+    DomUtils.updateImageSource("check4", "assets/images/check.svg");
 }
 
 function changeTheme(isDark) {
@@ -89,7 +92,7 @@ function changeTheme(isDark) {
 }
 
 function addChecklistListeners() {
-    const idList = ["listCheck1", "listCheck2", "listCheck3"];
+    const idList = ["listCheck1", "listCheck2", "listCheck3", "listCheck3"];
     idList.forEach((element) => {
         (<HTMLInputElement>DomUtils.getElement(element))?.addEventListener(
             "click",
@@ -103,7 +106,7 @@ function checklistUpdateEvent(this: any) {
 }
 
 function checklistUpdate(id: string) {
-    const idList = ["check1", "check2", "check3"];
+    const idList = ["check1", "check2", "check3", "check4"];
     const toShowId = idList.find((x) => id.toLowerCase().includes(x));
     const idToHide = idList.filter((x) => toShowId !== x);
     console.log(idToHide);
@@ -111,7 +114,7 @@ function checklistUpdate(id: string) {
         DomUtils.hideElementById(element);
     });
     DomUtils.showElementById(toShowId ?? "");
-    DomUtils.saveToStorage({ selectedViewMethod: id });
+    StorageService.saveToStorage({ selectedViewMethod: id });
 }
 
 function updateDarkThemeSwitch(isDark) {
@@ -123,6 +126,7 @@ function updateDarkThemeSwitch(isDark) {
 
 function toDarkTheme() {
     DomUtils.addDarkThemeToTag("img");
+    DomUtils.addDarkThemeToTag("body");
     DomUtils.addDarkThemeByClassNames([
         "card",
         "form-control",
@@ -134,6 +138,7 @@ function toDarkTheme() {
 
 function toLightTheme() {
     DomUtils.removeDarkThemeFromTag("img");
+    DomUtils.removeDarkThemeFromTag("body");
     DomUtils.removeDarkThemeByClassNames([
         "card",
         "form-control",
