@@ -2,11 +2,13 @@ export class Counter {
     private text = "";
 
     constructor(str = "") {
-        this.text = str;
+        this.text = str.trim();
     }
 
-    public setText(text: string) {
-        this.text = text;
+    public setText(text?: string) {
+        if (!!text) {
+            this.text = text.trim();
+        }
     }
 
     public get numberOfWords() {
@@ -19,6 +21,16 @@ export class Counter {
 
     public get numberOfCharactersWithoutSpaces() {
         return this.text.split(" ").join("").length;
+    }
+
+    public formattedTextShort(str: string) {
+        this.setText(str);
+        return `W:${this.numberOfWords} C:${this.numberOfCharacters} C/:${this.numberOfCharactersWithoutSpaces}`;
+    }
+
+    public formattedTextLong(str: string) {
+        this.setText(str);
+        return `${this.numberOfWordsLocaleString} - ${this.numberOfCharactersLocaleString}`;
     }
 
     public get numberOfWordsLocaleString() {
@@ -37,15 +49,15 @@ export class Counter {
         return `${numberOfCharacters} ${chrome.i18n.getMessage("_characters")}`;
     }
 
-    public get numberOfCharactersWithoutSpacesLocaleString() {
-        const numberOfCharactersWithoutSpaces = this.numberOfCharactersWithoutSpaces;
-        if (numberOfCharactersWithoutSpaces === 1) {
-            return `${numberOfCharactersWithoutSpaces} ${chrome.i18n.getMessage(
-                "_characterWithoutSpaces"
-            )}`;
-        }
-        return `${numberOfCharactersWithoutSpaces} ${chrome.i18n.getMessage(
-            "_charactersWithoutSpaces"
-        )}`;
-    }
+    // public get numberOfCharactersWithoutSpacesLocaleString() {
+    //     const numberOfCharactersWithoutSpaces = this.numberOfCharactersWithoutSpaces;
+    //     if (numberOfCharactersWithoutSpaces === 1) {
+    //         return `${numberOfCharactersWithoutSpaces} ${chrome.i18n.getMessage(
+    //             "_characterWithoutSpaces"
+    //         )}`;
+    //     }
+    //     return `${numberOfCharactersWithoutSpaces} ${chrome.i18n.getMessage(
+    //         "_charactersWithoutSpaces"
+    //     )}`;
+    // }
 }

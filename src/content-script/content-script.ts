@@ -1,8 +1,12 @@
-import { MenuPosition } from "../shared/enums/menu-position";
-import { MessagePassingService } from "../shared/message-passing-service";
+import { Message } from "../shared/enums/message";
+import { MessagePassingService } from "../shared/services/message-passing-service";
 import { SideMenu } from "./side-menu";
 
-const sideMenu = new SideMenu(MenuPosition.Right);
-sideMenu.render();
-sideMenu.addListeners();
-MessagePassingService.addMessageListenerForBackground(() => sideMenu.showMenu());
+const sideMenu = new SideMenu();
+MessagePassingService.addMessageListener(
+    { source: Message.BackgroundId, destination: Message.ContentId },
+    (data) => {
+        sideMenu.reInitialize(data);
+        sideMenu.showMenu();
+    }
+);

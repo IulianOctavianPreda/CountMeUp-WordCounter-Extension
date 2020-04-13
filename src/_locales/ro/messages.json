@@ -1,41 +1,44 @@
 {
-  "_blank": {
-    "message": "Gol"
-  },
-  "_enterDesiredText": {
-    "message": "Introduceți textul dorit"
-  },
-  "_words": {
-    "message": "Cuvinte"
-  },
-  "_characters": {
-    "message": "Caractere"
-  },
-  "_charactersWithoutSpaces": {
-    "message": "Personaje fără spații"
-  },
-  "_inPopup": {
-    "message": "În Popup"
-  },
-  "_inSideMenu": {
-    "message": "În meniul lateral"
-  },
-  "_inExtension": {
-    "message": "În extindere"
-  },
-  "_word": {
-    "message": "Cuvânt"
-  },
-  "_character": {
-    "message": "Caracter"
-  },
-  "_characterWithoutSpaces": {
-    "message": "Personaj fără spații"
-  },
-  "extName": {
-    "message": "Contorizator de cuvinte"
-  },
-  "extDescription": {
-    "message": "Contor de cuvinte și caractere"
-  }
+    "_blank": {
+        "message": "Gol"
+    },
+    "_enterDesiredText": {
+        "message": "Introduceți textul dorit"
+    },
+    "_words": {
+        "message": "Cuvinte"
+    },
+    "_characters": {
+        "message": "Caractere"
+    },
+    "_charactersWithoutSpaces": {
+        "message": "Personaje fără spații"
+    },
+    "_inPopup": {
+        "message": "În Popup"
+    },
+    "_inSideMenuLeft": {
+        "message": "În meniul lateral S"
+    },
+    "_inSideMenuRight": {
+        "message": "În meniul lateral D"
+    },
+    "_inExtension": {
+        "message": "În extindere"
+    },
+    "_word": {
+        "message": "Cuvânt"
+    },
+    "_character": {
+        "message": "Caracter"
+    },
+    "_characterWithoutSpaces": {
+        "message": "Personaj fără spații"
+    },
+    "extName": {
+        "message": "Contorizator de cuvinte"
+    },
+    "extDescription": {
+        "message": "Contor de cuvinte și caractere"
+    }
 }

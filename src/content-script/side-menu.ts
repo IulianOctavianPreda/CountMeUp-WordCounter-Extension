@@ -1,18 +1,27 @@
 import { MenuPosition } from "../shared/enums/menu-position";
 
 export class SideMenu {
-    BORDER_SIZE = 5;
-    mouse_position;
-    cssPosition: { div: string; iframe: string };
-    position: string;
+    mousePosition;
+    borderSize = 5;
+    side = MenuPosition.Right;
+    cssSide = {
+        [MenuPosition.Right]: { div: "right:0;", iframe: `margin-left:${this.borderSize}px;` },
+        [MenuPosition.Left]: { div: "left:0;", iframe: `margin-right:${this.borderSize}px;` },
+    };
 
-    template = `
+    constructor() {
+        this.render();
+        this.addListeners();
+    }
+
+    get template() {
+        return `
     <div
         id="wordsCounterSidePanel"
         style="height:100%;
                    position: fixed;
                    width: 0px;
-                   ${this.cssPosition?.div}
+                   ${this.cssSide[this.side].div}
                    top:0;
                    border: 0;
                    padding: 0;
@@ -22,24 +31,24 @@ export class SideMenu {
         <iframe
             id="wordsCounterSidePanelIframe"
             src="${chrome.extension.getURL("popup/popup.html")}"
-            style="height:100%; width:CALC(100% - ${this.BORDER_SIZE}px); ${
-        this.cssPosition?.iframe
-    }"
+            style="height:100%; width:CALC(100% - ${this.borderSize}px); ${
+            this.cssSide[this.side].iframe
+        }"
         "></iframe>
     </div>
     `;
+    }
 
-    constructor(side: MenuPosition = MenuPosition.Right) {
-        this.position = side;
-        if (side === MenuPosition.Left) {
-            this.cssPosition = { div: "left:0;", iframe: `margin-right:${this.BORDER_SIZE}px;` };
-        } else {
-            this.cssPosition = { div: "right:0;", iframe: `margin-left:${this.BORDER_SIZE}px;` };
+    reInitialize(side: MenuPosition = MenuPosition.Right) {
+        if (side !== this.side) {
+            this.side = side;
+            document.getElementById("wordsCounterSidePanel")?.remove();
+            this.render();
         }
     }
 
     render(
-        htmlElement = <HTMLElement>document.getElementsByTagName("body")[0],
+        htmlElement: HTMLElement = <HTMLElement>document.getElementsByTagName("body")[0],
         position: InsertPosition = "beforeend"
     ) {
         htmlElement.insertAdjacentHTML(position, this.template);
@@ -54,7 +63,7 @@ export class SideMenu {
     }
 
     showMenu() {
-        this.panel.style.width = 320 + this.BORDER_SIZE + "px";
+        this.panel.style.width = 320 + this.borderSize + "px";
     }
 
     hideMenu() {
@@ -68,18 +77,18 @@ export class SideMenu {
         this.panel.addEventListener(
             "mousedown",
             (e) => {
-                if (this.position === MenuPosition.Right) {
-                    if (e.offsetX < this.BORDER_SIZE) {
-                        this.mouse_position = e.x;
+                if (this.side === MenuPosition.Right) {
+                    if (e.offsetX < this.borderSize) {
+                        this.mousePosition = e.x;
                         document.addEventListener("mousemove", resizeEvent);
                     }
                 }
-                if (this.position === MenuPosition.Left) {
+                if (this.side === MenuPosition.Left) {
                     if (
-                        this.panel.offsetWidth - this.BORDER_SIZE < e.offsetX &&
+                        this.panel.offsetWidth - this.borderSize < e.offsetX &&
                         e.offsetX < this.panel.offsetWidth
                     ) {
-                        this.mouse_position = e.x;
+                        this.mousePosition = e.x;
                         document.addEventListener("mousemove", resizeEvent);
                     }
                 }
@@ -106,12 +115,12 @@ export class SideMenu {
 
     resize(e) {
         let dx = 0;
-        if (this.position === MenuPosition.Right) {
-            dx = this.mouse_position - e.x;
+        if (this.side === MenuPosition.Right) {
+            dx = this.mousePosition - e.x;
         } else {
-            dx = e.x - this.mouse_position;
+            dx = e.x - this.mousePosition;
         }
-        this.mouse_position = e.x;
+        this.mousePosition = e.x;
 
         const panelWidth = parseInt(this.panel.style.width, 10);
         if (panelWidth < 50) {

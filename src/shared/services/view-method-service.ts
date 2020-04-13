@@ -1,9 +1,12 @@
+import { Message } from "../enums/message";
 import { Storage } from "../enums/storage";
 import { ViewMethod } from "../enums/view-method";
+import { MenuPosition } from "./../enums/menu-position";
+import { MessagePassingService } from "./message-passing-service";
 import { StorageService } from "./storage-service";
 
 export class ViewMethodService {
-    public static getViewMethod(callback?: (data: any) => void): void {
+    public static getViewMethod(callback: (data: any) => void): void {
         StorageService.getFromStorage(Storage.SelectedViewMethod, (data) => {
             callback(data);
         });
@@ -13,9 +16,23 @@ export class ViewMethodService {
         StorageService.saveToStorage(Storage.SelectedViewMethod, viewMethod);
     }
 
-    public static openView(tabId?: number, detail?: any) {
+    public static initializeViewMethod() {
         ViewMethodService.getViewMethod((data) => {
+            if (!data) {
+                data = ViewMethod.Popup;
+                ViewMethodService.setViewMethod(data);
+            }
+        });
+    }
+
+    public static openView(tabId: number) {
+        ViewMethodService.getViewMethod((data) => {
+            data = ViewMethod.SideMenuLeft;
             switch (data) {
+                case ViewMethod.Extension: {
+                    browser.browserAction.openPopup();
+                    break;
+                }
                 case ViewMethod.Popup: {
                     window.open(
                         chrome.extension.getURL("popup/popup.html"),
@@ -25,7 +42,20 @@ export class ViewMethodService {
                     break;
                 }
                 case ViewMethod.SideMenuLeft: {
-                    // MessagePassingService.sendMessageToContentScript(tabId, MenuPosition.Left);
+                    MessagePassingService.sendMessageToContentScript(
+                        tabId,
+                        { source: Message.BackgroundId },
+                        MenuPosition.Left
+                    );
+                    break;
+                }
+                case ViewMethod.SideMenuRight: {
+                    MessagePassingService.sendMessageToContentScript(
+                        tabId,
+                        { source: Message.BackgroundId },
+                        MenuPosition.Right
+                    );
+                    break;
                 }
             }
         });
