@@ -4,7 +4,7 @@
     "rules": {
         "array-type": false,
         "arrow-parens": true,
-        "interface-name": true,
+        "interface-name": false,
         "max-classes-per-file": [true, 1],
         "no-consecutive-blank-lines": true,
         "no-angle-bracket-type-assertion": false,

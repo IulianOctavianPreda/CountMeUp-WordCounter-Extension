@@ -1,9 +1,15 @@
 import "./popup.scss";
 
 import { Counter } from "../shared/counter";
-import { DomUtils } from "../shared/dom-utils";
 import { Storage } from "../shared/enums/storage";
-import { StorageService } from "../shared/storage-service";
+import { DomUtils } from "../shared/services/dom-utils";
+import { ImageService } from "../shared/services/image-service";
+import { StorageService } from "../shared/services/storage-service";
+import { ThemeService } from "../shared/services/theme-service";
+import { TranslationService } from "../shared/services/translation-service";
+import { ImageElementsModel } from "./models/image-elements-model";
+import { ThemeElementsModel } from "./models/theme-elements-model";
+import { TranslatableElementsModel } from "./models/translatable-elements-model";
 
 const counter = new Counter();
 
@@ -14,16 +20,17 @@ if (!!typeof browser) {
 
 StorageService.getFromStorage(Storage.SelectedText, getSelectedText);
 StorageService.getFromStorage(Storage.DarkTheme, (data) => {
-    changeTheme(data.darkTheme);
-    updateDarkThemeSwitch(data.darkTheme);
+    changeTheme(data);
+    updateDarkThemeSwitch(data);
 });
 
 StorageService.getFromStorage(Storage.SelectedViewMethod, (data) => {
-    checklistUpdate(data.selectedViewMethod);
+    checklistUpdate(data);
 });
 
-DomUtils.createDarkThemeCss();
-placeTranslations();
+ThemeService.createDarkThemeCss();
+TranslationService.updateTranslations(TranslatableElementsModel);
+ImageService.updateSources(ImageElementsModel);
 addChecklistListeners();
 
 (<HTMLInputElement>DomUtils.getElement("textArea"))?.addEventListener("keyup", (event) => {
@@ -33,35 +40,16 @@ addChecklistListeners();
 
 (<HTMLInputElement>DomUtils.getElement("darkSwitch"))?.addEventListener("click", (event) => {
     const inputValue = (event as any)?.target.checked;
-    StorageService.saveToStorage({ darkTheme: inputValue });
+    StorageService.saveToStorage(Storage.DarkTheme, inputValue);
     changeTheme(inputValue);
 });
 
-// window.addEventListener("load", (event) => {
-
-// });
-
 function getSelectedText(data) {
-    if (!!data && !!data.selection) {
-        DomUtils.updateInputValue("textArea", data.selection);
+    if (!!data) {
+        DomUtils.updateInputValue("textArea", data);
         updateInputs();
     }
-    StorageService.removeFromStorage("selection");
-    updateImageSources();
-}
-
-function placeTranslations() {
-    DomUtils.updateInputPlaceholder("textArea", chrome.i18n.getMessage("_enterDesiredText"));
-    DomUtils.updateElementText("cardTitle", chrome.i18n.getMessage("extDescription"));
-    DomUtils.updateElementText("inputWordsLabel", chrome.i18n.getMessage("_words"));
-    DomUtils.updateElementText("inputCharactersLabel", chrome.i18n.getMessage("_characters"));
-    DomUtils.updateElementText(
-        "inputCharactersWithoutSpacesLabel",
-        chrome.i18n.getMessage("_charactersWithoutSpaces")
-    );
-    DomUtils.updateElementText("popup", chrome.i18n.getMessage("_inPopup"));
-    DomUtils.updateElementText("sideMenu", chrome.i18n.getMessage("_inSideMenu"));
-    DomUtils.updateElementText("extension", chrome.i18n.getMessage("_inExtension"));
+    StorageService.removeFromStorage(Storage.SelectedText);
 }
 
 function updateInputs() {
@@ -71,24 +59,6 @@ function updateInputs() {
         "inputCharactersWithoutSpaces",
         String(counter.numberOfCharactersWithoutSpaces)
     );
-}
-
-function updateImageSources() {
-    DomUtils.updateImageSource("menu", "assets/images/menu.svg");
-    DomUtils.updateImageSource("sun", "assets/images/sun.svg");
-    DomUtils.updateImageSource("moon", "assets/images/moon.svg");
-    DomUtils.updateImageSource("check1", "assets/images/check.svg");
-    DomUtils.updateImageSource("check2", "assets/images/check.svg");
-    DomUtils.updateImageSource("check3", "assets/images/check.svg");
-    DomUtils.updateImageSource("check4", "assets/images/check.svg");
-}
-
-function changeTheme(isDark) {
-    if (isDark) {
-        toDarkTheme();
-    } else {
-        toLightTheme();
-    }
 }
 
 function addChecklistListeners() {
@@ -114,7 +84,7 @@ function checklistUpdate(id: string) {
         DomUtils.hideElementById(element);
     });
     DomUtils.showElementById(toShowId ?? "");
-    StorageService.saveToStorage({ selectedViewMethod: id });
+    StorageService.saveToStorage(Storage.SelectedViewMethod, id);
 }
 
 function updateDarkThemeSwitch(isDark) {
@@ -124,26 +94,18 @@ function updateDarkThemeSwitch(isDark) {
     }
 }
 
+function changeTheme(isDark) {
+    if (isDark) {
+        toDarkTheme();
+    } else {
+        toLightTheme();
+    }
+}
+
 function toDarkTheme() {
-    DomUtils.addDarkThemeToTag("img");
-    DomUtils.addDarkThemeToTag("body");
-    DomUtils.addDarkThemeByClassNames([
-        "card",
-        "form-control",
-        "btn list",
-        "input-group-text",
-        "dropdown-content",
-    ]);
+    ThemeService.addDarkTheme(ThemeElementsModel);
 }
 
 function toLightTheme() {
-    DomUtils.removeDarkThemeFromTag("img");
-    DomUtils.removeDarkThemeFromTag("body");
-    DomUtils.removeDarkThemeByClassNames([
-        "card",
-        "form-control",
-        "btn list",
-        "input-group-text",
-        "dropdown-content",
-    ]);
+    ThemeService.removeDarkTheme(ThemeElementsModel);
 }
