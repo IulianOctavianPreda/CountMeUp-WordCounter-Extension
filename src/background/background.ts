@@ -16,6 +16,6 @@ chrome.contextMenus.create({
 });
 
 function openPopUp(info, tab) {
-    ViewMethodService.openView(tab.id);
+    ViewMethodService.openView(tab);
     StorageService.saveToStorage(Storage.SelectedText, info.selectionText);
 }

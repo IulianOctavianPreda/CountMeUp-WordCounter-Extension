@@ -25,9 +25,16 @@ export class ViewMethodService {
         });
     }
 
-    public static openView(tabId: number) {
+    public static openView(tab) {
         ViewMethodService.getViewMethod((data) => {
             data = ViewMethod.SideMenuLeft;
+            if (!ViewMethodService.isAcceptedTab(tab.url)) {
+                if (!!typeof browser) {
+                    data = ViewMethod.Extension;
+                } else {
+                    data = ViewMethod.Popup;
+                }
+            }
             switch (data) {
                 case ViewMethod.Extension: {
                     browser.browserAction.openPopup();
@@ -43,7 +50,7 @@ export class ViewMethodService {
                 }
                 case ViewMethod.SideMenuLeft: {
                     MessagePassingService.sendMessageToContentScript(
-                        tabId,
+                        tab.id,
                         { source: Message.BackgroundId },
                         MenuPosition.Left
                     );
@@ -51,7 +58,7 @@ export class ViewMethodService {
                 }
                 case ViewMethod.SideMenuRight: {
                     MessagePassingService.sendMessageToContentScript(
-                        tabId,
+                        tab.id,
                         { source: Message.BackgroundId },
                         MenuPosition.Right
                     );
@@ -60,12 +67,8 @@ export class ViewMethodService {
             }
         });
     }
-}
 
-// should place message passing between window//sidemenu to extension
-// initialize default for dark theme and selected view mode
-// place listeners for both of them with special id  + create aditional
-// function to send / receive data from popup - side / window to popup extension
-/// ( actualli it mign not be needed , just put everithing in the storage , because when you open
-// the pop-up it loads everithing again , so fuck the ones that leave it on wait they can't so the
-/// storage is enough)
+    public static isAcceptedTab(url) {
+        return url.includes("http") || url.includes("ftp");
+    }
+}
