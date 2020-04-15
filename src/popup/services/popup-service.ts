@@ -16,6 +16,7 @@ import { TranslationService } from "./translation-service";
 
 export class PopupService {
     private counter = new Counter();
+    private currentTabId: any;
 
     constructor() {
         ThemeService.createDarkThemeCss();
@@ -66,7 +67,6 @@ export class PopupService {
     }
 
     private updateUsingSelectedText(data) {
-        console.log(data, this.counter);
         if (!!data) {
             this.counter.setText(data);
             DomUtils.updateElement(Identifiers.TextArea, Property.Value, data);
@@ -76,31 +76,34 @@ export class PopupService {
     }
 
     private addOptionMenuListeners() {
+        const _this = this;
         const optionMenuIdList = Object.keys(ViewMethod)
             .map((k) => ViewMethod[k])
             .map((v) => v as ViewMethod);
         optionMenuIdList.forEach((element) => {
             (<HTMLInputElement>document.getElementById(element))?.addEventListener(
                 "click",
-                this.checklistUpdateEvent
+                function () {
+                    _this.checklistUpdateEvent(this);
+                }
             );
         });
     }
 
-    private checklistUpdateEvent(this: any) {
-        this.checklistUpdate(this.id);
+    private checklistUpdateEvent(element: any) {
+        this.checklistUpdate(element.id);
     }
 
     private checklistUpdate(id: string) {
         const optionMenuCheckIconIdList = Object.keys(ViewMethod)
             .map((k) => ViewMethod[k])
             .map((v) => v + "Check");
-        const toShowId = optionMenuCheckIconIdList.find((x) => id.includes(x));
-        const idToHide = optionMenuCheckIconIdList.filter((x) => toShowId !== x);
+        const idToShow = optionMenuCheckIconIdList.find((x) => x.includes(id));
+        const idToHide = optionMenuCheckIconIdList.filter((x) => idToShow !== x);
         idToHide.forEach((element) => {
             DomUtils.hideElementById(element);
         });
-        DomUtils.showElementById(toShowId ?? "");
+        DomUtils.showElementById(idToShow ?? "");
         StorageService.saveToStorage(Storage.SelectedViewMethod, id);
     }
 

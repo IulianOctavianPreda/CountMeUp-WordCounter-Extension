@@ -19,8 +19,7 @@ export class ViewMethodService {
     public static initializeViewMethod() {
         ViewMethodService.getViewMethod((data) => {
             if (!data) {
-                data = ViewMethod.Popup;
-                ViewMethodService.setViewMethod(data);
+                ViewMethodService.setViewMethod(ViewMethod.Popup);
             }
         });
     }

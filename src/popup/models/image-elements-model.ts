@@ -1,5 +1,6 @@
 import { Property } from "../enums/property";
 import { ImageElement } from "../types/image-element";
+import { ViewMethod } from "./../../shared/enums/view-method";
 
 export const ImageElementsModel: ImageElement[] = [
     {
@@ -18,22 +19,17 @@ export const ImageElementsModel: ImageElement[] = [
         property: Property.Src,
     },
     {
-        id: "check1",
+        id: ViewMethod.Popup + "Check",
         path: "assets/images/check.svg",
         property: Property.Src,
     },
     {
-        id: "check2",
+        id: ViewMethod.SideMenuLeft + "Check",
         path: "assets/images/check.svg",
         property: Property.Src,
     },
     {
-        id: "check2",
-        path: "assets/images/check.svg",
-        property: Property.Src,
-    },
-    {
-        id: "check3",
+        id: ViewMethod.SideMenuRight + "Check",
         path: "assets/images/check.svg",
         property: Property.Src,
     },
