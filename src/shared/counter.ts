@@ -5,10 +5,16 @@ export class Counter {
         this.text = str.trim();
     }
 
-    public setText(text?: string) {
-        if (!!text) {
-            this.text = text.trim();
-        }
+    public setText(text: string) {
+        this.text = text.trim();
+    }
+
+    public formattedTextShort() {
+        return `W:${this.numberOfWords} C:${this.numberOfCharacters} C/:${this.numberOfCharactersWithoutSpaces}`;
+    }
+
+    public formattedTextLong() {
+        return `${this.numberOfWordsLocaleString} - ${this.numberOfCharactersLocaleString}`;
     }
 
     public get numberOfWords() {
@@ -21,16 +27,6 @@ export class Counter {
 
     public get numberOfCharactersWithoutSpaces() {
         return this.text.split(" ").join("").length;
-    }
-
-    public formattedTextShort(str: string) {
-        this.setText(str);
-        return `W:${this.numberOfWords} C:${this.numberOfCharacters} C/:${this.numberOfCharactersWithoutSpaces}`;
-    }
-
-    public formattedTextLong(str: string) {
-        this.setText(str);
-        return `${this.numberOfWordsLocaleString} - ${this.numberOfCharactersLocaleString}`;
     }
 
     public get numberOfWordsLocaleString() {

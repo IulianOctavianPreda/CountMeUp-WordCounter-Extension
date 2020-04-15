@@ -10,6 +10,6 @@ export class StorageService {
     }
 
     public static saveToStorage(id: string, data: string | number | object, callback?) {
-        chrome.storage.sync.set({ id: data }, callback);
+        chrome.storage.sync.set({ [id]: data }, callback);
     }
 }

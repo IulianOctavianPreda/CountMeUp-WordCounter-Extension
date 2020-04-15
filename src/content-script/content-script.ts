@@ -10,3 +10,13 @@ MessagePassingService.addMessageListener(
         sideMenu.showMenu();
     }
 );
+
+document.addEventListener("mouseup", (event) => {
+    const selectedText = window?.getSelection()?.toString();
+    if (!!selectedText) {
+        MessagePassingService.sendMessage(
+            { source: Message.ContentId, destination: Message.BackgroundId, name: "selectedText" },
+            selectedText
+        );
+    }
+});

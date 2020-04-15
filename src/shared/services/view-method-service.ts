@@ -27,12 +27,13 @@ export class ViewMethodService {
 
     public static openView(tab) {
         ViewMethodService.getViewMethod((data) => {
-            data = ViewMethod.SideMenuLeft;
+            data = ViewMethod.Popup;
             if (!ViewMethodService.isAcceptedTab(tab.url)) {
+                // if browser is undefined
                 if (!!typeof browser) {
-                    data = ViewMethod.Extension;
-                } else {
                     data = ViewMethod.Popup;
+                } else {
+                    data = ViewMethod.Extension;
                 }
             }
             switch (data) {
@@ -41,11 +42,30 @@ export class ViewMethodService {
                     break;
                 }
                 case ViewMethod.Popup: {
-                    window.open(
-                        chrome.extension.getURL("popup/popup.html"),
-                        "_blank",
-                        "scrollbars=yes,resizable=yes,width=400,height=500"
-                    );
+                    StorageService.getFromStorage(Storage.PopupWindowId, (windowId) => {
+                        if (!!windowId) {
+                            chrome.windows.update(windowId, {
+                                focused: true,
+                            });
+                        } else {
+                            chrome.windows.create(
+                                {
+                                    url: chrome.extension.getURL("popup/popup.html"),
+                                    width: 400,
+                                    height: 500,
+                                    type: "popup",
+                                },
+                                (window) => {
+                                    if (!!window?.id) {
+                                        StorageService.saveToStorage(
+                                            Storage.PopupWindowId,
+                                            window.id
+                                        );
+                                    }
+                                }
+                            );
+                        }
+                    });
                     break;
                 }
                 case ViewMethod.SideMenuLeft: {
