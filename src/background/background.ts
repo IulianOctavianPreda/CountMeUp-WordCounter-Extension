@@ -3,7 +3,7 @@ import { Message } from "../shared/enums/message";
 import { Storage } from "../shared/enums/storage";
 import { MessagePassingService } from "./../shared/services/message-passing-service";
 import { StorageService } from "./../shared/services/storage-service";
-import { ViewMethodService } from "./../shared/services/view-method-service";
+import { ViewMethodService } from "./services/view-method-service";
 
 chrome.runtime.onInstalled.addListener(() => {
     ViewMethodService.initializeViewMethod();
@@ -23,6 +23,11 @@ chrome.contextMenus.create({
 function openPopUp(info, tab) {
     ViewMethodService.openView(tab);
     StorageService.saveToStorage(Storage.SelectedText, info.selectionText);
+
+    MessagePassingService.sendMessage(
+        { source: Message.BackgroundId, destination: Message.PopupId, name: "selectedText" },
+        info.selectionText
+    );
 }
 
 MessagePassingService.addMessageListener(

@@ -3,4 +3,5 @@ export enum Property {
     Placeholder = "placeholder",
     InnerText = "innerText",
     Src = "src",
+    Value = "value",
 }

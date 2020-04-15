@@ -1,5 +1,5 @@
 import { ThemeType } from "../enums/theme-type";
-import { ThemeElement } from "./../types/theme-element";
+import { ThemeElement } from "../types/theme-element";
 
 export class ThemeService {
     public static createDarkThemeCss() {

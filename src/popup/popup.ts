@@ -1,19 +1,25 @@
 import "./popup.scss";
 
 import { Counter } from "../shared/counter";
+import { Message } from "../shared/enums/message";
 import { Storage } from "../shared/enums/storage";
-import { DomUtils } from "../shared/services/dom-utils";
-import { ImageService } from "../shared/services/image-service";
+import { MessagePassingService } from "../shared/services/message-passing-service";
 import { StorageService } from "../shared/services/storage-service";
-import { ThemeService } from "../shared/services/theme-service";
-import { TranslationService } from "../shared/services/translation-service";
 import { ImageElementsModel } from "./models/image-elements-model";
 import { ThemeElementsModel } from "./models/theme-elements-model";
 import { TranslatableElementsModel } from "./models/translatable-elements-model";
+import { DomUtils } from "./services/dom-utils";
+import { ImageService } from "./services/image-service";
+import { ThemeService } from "./services/theme-service";
+import { TranslationService } from "./services/translation-service";
 
 const counter = new Counter();
 
 StorageService.getFromStorage(Storage.SelectedText, getSelectedText);
+MessagePassingService.addMessageListener(
+    { source: Message.BackgroundId, destination: Message.PopupId, name: "selectedText" },
+    getSelectedText
+);
 StorageService.getFromStorage(Storage.DarkTheme, (data) => {
     changeTheme(data);
     updateDarkThemeSwitch(data);
@@ -41,6 +47,7 @@ addChecklistListeners();
 
 function getSelectedText(data) {
     if (!!data) {
+        counter.setText(data);
         DomUtils.updateInputValue("textArea", data);
         updateInputs();
     }

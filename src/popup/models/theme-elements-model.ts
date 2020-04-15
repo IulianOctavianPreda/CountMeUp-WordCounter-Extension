@@ -1,5 +1,5 @@
-import { ThemeType } from "../../shared/enums/theme-type";
-import { ThemeElement } from "./../../shared/types/theme-element";
+import { ThemeType } from "../enums/theme-type";
+import { ThemeElement } from "../types/theme-element";
 
 export const ThemeElementsModel: ThemeElement[] = [
     {

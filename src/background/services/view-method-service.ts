@@ -1,9 +1,9 @@
-import { Message } from "../enums/message";
-import { Storage } from "../enums/storage";
+import { MenuPosition } from "../../shared/enums/menu-position";
+import { Message } from "../../shared/enums/message";
+import { Storage } from "../../shared/enums/storage";
+import { MessagePassingService } from "../../shared/services/message-passing-service";
+import { StorageService } from "../../shared/services/storage-service";
 import { ViewMethod } from "../enums/view-method";
-import { MenuPosition } from "./../enums/menu-position";
-import { MessagePassingService } from "./message-passing-service";
-import { StorageService } from "./storage-service";
 
 export class ViewMethodService {
     public static getViewMethod(callback: (data: any) => void): void {
@@ -34,26 +34,19 @@ export class ViewMethodService {
                 case ViewMethod.Popup: {
                     StorageService.getFromStorage(Storage.PopupWindowId, (windowId) => {
                         if (!!windowId) {
-                            chrome.windows.update(windowId, {
-                                focused: true,
-                            });
-                        } else {
-                            chrome.windows.create(
+                            chrome.windows.update(
+                                windowId,
                                 {
-                                    url: chrome.extension.getURL("popup/popup.html"),
-                                    width: 400,
-                                    height: 500,
-                                    type: "popup",
+                                    focused: true,
                                 },
-                                (window) => {
-                                    if (!!window?.id) {
-                                        StorageService.saveToStorage(
-                                            Storage.PopupWindowId,
-                                            window.id
-                                        );
+                                (callbackData) => {
+                                    if (!callbackData) {
+                                        ViewMethodService.createWindow();
                                     }
                                 }
                             );
+                        } else {
+                            ViewMethodService.createWindow();
                         }
                     });
                     break;
@@ -80,5 +73,21 @@ export class ViewMethodService {
 
     public static isAcceptedTab(url) {
         return url.includes("http") || url.includes("ftp");
+    }
+
+    public static createWindow() {
+        chrome.windows.create(
+            {
+                url: chrome.extension.getURL("popup/popup.html"),
+                width: 400,
+                height: 500,
+                type: "popup",
+            },
+            (window) => {
+                if (!!window?.id) {
+                    StorageService.saveToStorage(Storage.PopupWindowId, window.id);
+                }
+            }
+        );
     }
 }

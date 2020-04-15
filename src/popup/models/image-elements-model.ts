@@ -1,5 +1,5 @@
-import { Property } from "../../shared/enums/property";
-import { ImageElement } from "../../shared/types/image-element";
+import { Property } from "../enums/property";
+import { ImageElement } from "../types/image-element";
 
 export const ImageElementsModel: ImageElement[] = [
     {

@@ -1,5 +1,5 @@
-import { Property } from "../../shared/enums/property";
-import { TranslatableElement } from "../../shared/types/translatable-element";
+import { Property } from "../enums/property";
+import { TranslatableElement } from "../types/translatable-element";
 
 export const TranslatableElementsModel: TranslatableElement[] = [
     {
