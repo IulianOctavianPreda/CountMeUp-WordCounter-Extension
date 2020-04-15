@@ -1,9 +1,9 @@
 import { MenuPosition } from "../../shared/enums/menu-position";
 import { Message } from "../../shared/enums/message";
 import { Storage } from "../../shared/enums/storage";
+import { ViewMethod } from "../../shared/enums/view-method";
 import { MessagePassingService } from "../../shared/services/message-passing-service";
 import { StorageService } from "../../shared/services/storage-service";
-import { ViewMethod } from "../enums/view-method";
 
 export class ViewMethodService {
     public static getViewMethod(callback: (data: any) => void): void {
