@@ -13,11 +13,6 @@ import { TranslatableElementsModel } from "./models/translatable-elements-model"
 
 const counter = new Counter();
 
-if (typeof browser === "object") {
-    // firefox specific extra option - open directly in the extension popup
-    DomUtils.hideElementById("listCheck4");
-}
-
 StorageService.getFromStorage(Storage.SelectedText, getSelectedText);
 StorageService.getFromStorage(Storage.DarkTheme, (data) => {
     changeTheme(data);
@@ -62,7 +57,7 @@ function updateInputs() {
 }
 
 function addChecklistListeners() {
-    const idList = ["listCheck1", "listCheck2", "listCheck3", "listCheck3"];
+    const idList = ["listCheck1", "listCheck2", "listCheck3"];
     idList.forEach((element) => {
         (<HTMLInputElement>DomUtils.getElement(element))?.addEventListener(
             "click",
@@ -76,7 +71,7 @@ function checklistUpdateEvent(this: any) {
 }
 
 function checklistUpdate(id: string) {
-    const idList = ["check1", "check2", "check3", "check4"];
+    const idList = ["check1", "check2", "check3"];
     const toShowId = idList.find((x) => id.toLowerCase().includes(x));
     const idToHide = idList.filter((x) => toShowId !== x);
     console.log(idToHide);

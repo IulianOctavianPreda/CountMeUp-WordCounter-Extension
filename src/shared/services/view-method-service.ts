@@ -27,20 +27,10 @@ export class ViewMethodService {
 
     public static openView(tab) {
         ViewMethodService.getViewMethod((data) => {
-            data = ViewMethod.Popup;
             if (!ViewMethodService.isAcceptedTab(tab.url)) {
-                // if browser is undefined
-                if (typeof browser === "object") {
-                    data = ViewMethod.Extension;
-                } else {
-                    data = ViewMethod.Popup;
-                }
+                data = ViewMethod.Popup;
             }
             switch (data) {
-                case ViewMethod.Extension: {
-                    browser.browserAction.openPopup();
-                    break;
-                }
                 case ViewMethod.Popup: {
                     StorageService.getFromStorage(Storage.PopupWindowId, (windowId) => {
                         if (!!windowId) {
