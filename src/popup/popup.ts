@@ -13,7 +13,7 @@ import { TranslatableElementsModel } from "./models/translatable-elements-model"
 
 const counter = new Counter();
 
-if (!!typeof browser) {
+if (typeof browser === "object") {
     // firefox specific extra option - open directly in the extension popup
     DomUtils.hideElementById("listCheck4");
 }

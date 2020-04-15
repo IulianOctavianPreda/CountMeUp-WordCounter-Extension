@@ -9,6 +9,10 @@ chrome.runtime.onInstalled.addListener(() => {
     ViewMethodService.initializeViewMethod();
 });
 
+chrome.runtime.onStartup.addListener(() => {
+    StorageService.removeFromStorage(Storage.PopupWindowId);
+});
+
 chrome.contextMenus.create({
     title: `Word counter`,
     contexts: ["selection"],

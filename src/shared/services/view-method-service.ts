@@ -30,10 +30,10 @@ export class ViewMethodService {
             data = ViewMethod.Popup;
             if (!ViewMethodService.isAcceptedTab(tab.url)) {
                 // if browser is undefined
-                if (!!typeof browser) {
-                    data = ViewMethod.Popup;
-                } else {
+                if (typeof browser === "object") {
                     data = ViewMethod.Extension;
+                } else {
+                    data = ViewMethod.Popup;
                 }
             }
             switch (data) {
