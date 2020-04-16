@@ -1,10 +1,16 @@
-const translate = require("@vitalets/google-translate-api");
+const GOOGLE_APPLICATION_CREDENTIALS = "[PATH to key downloaded]";
+const projectId = "YOUR_PROJECT_ID";
+
+const { Translate } = require("@google-cloud/translate").v2;
+const translate = new Translate({ projectId });
+
 const path = require("path");
 const fs = require("fs");
 
 // prettier-ignore
-// let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da","de","el","en","en_GB","en_US","es","es_419","et","fa","fi","fil","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt_BR","pt_PT","ro","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh_CN","zh_TW"];
-let manualLanguageCodes = ["ro"]
+let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da","de","el","es","et","fa","fi","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh-CN","zh-TW"];
+
+let manualLanguageCodes = ["ro", "en", "pt_BR", "pt_PT"];
 let pathToTranslationFile = "./src/translations/template.json";
 let extName = "Word counter";
 let extDescription = "Word and character counter";
@@ -28,9 +34,9 @@ function main() {
         mergeTranslateTemplateWithTranslationFile(languageCode);
     });
 
-    // automaticLanguageCodes.forEach((languageCode) => {
-    //     createTranslateFile(languageCode);
-    // });
+    automaticLanguageCodes.forEach((languageCode) => {
+        createTranslateFile(languageCode);
+    });
 }
 
 function getAllFiles(source, filter = [], include = []) {
@@ -131,7 +137,7 @@ function mergeTranslateTemplateWithTranslationFile(languageCode) {
 
 function createTranslateFile(languageCode) {
     makeDirIfNotExist(`./src/_locales/`);
-    makeDirIfNotExist(`./src/_locales/${languageCode}`);
+    makeDirIfNotExist(`./src/_locales/${languageCode.replace("-", "_")}`);
     // fs.copyFileSync(pathToTranslationFile, `./src/_locale/${languageCode}/translations.json`);
     let templateTranslationFile = fs.readFileSync(pathToTranslationFile);
     let templateTranslation = JSON.parse(templateTranslationFile);
@@ -143,7 +149,11 @@ function createTranslateFile(languageCode) {
     );
     promiseArray.push(...updateTranslations(templateTranslation, languageCode));
     Promise.all(promiseArray).then(() => {
-        writeObjectToJson(`./src/_locales/${languageCode}/messages.json`, templateTranslation, "w");
+        writeObjectToJson(
+            `./src/_locales/${languageCode.replace("-", "_")}/messages.json`,
+            templateTranslation,
+            "w"
+        );
     });
 }
 
@@ -161,8 +171,8 @@ function updateTranslations(obj1, languageCode) {
 
 async function translateText(obj, element, text, languageCode) {
     let textToTranslate = camelCaseToText(text.replace("_", ""));
-    obj[element] = (await translate(textToTranslate, { to: languageCode, client: "webapp" })).text;
-    obj[element] = convertToMessageString(capitalizeFirstLetter(obj[element]));
+    let [translation] = await translate.translate(textToTranslate, languageCode);
+    obj[element] = convertToMessageString(capitalizeFirstLetter(translation.trim()));
 }
 
 function camelCaseToText(str) {

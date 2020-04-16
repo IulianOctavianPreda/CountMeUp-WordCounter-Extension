@@ -44,16 +44,4 @@ export class Counter {
         }
         return `${numberOfCharacters} ${chrome.i18n.getMessage("_characters")}`;
     }
-
-    // public get numberOfCharactersWithoutSpacesLocaleString() {
-    //     const numberOfCharactersWithoutSpaces = this.numberOfCharactersWithoutSpaces;
-    //     if (numberOfCharactersWithoutSpaces === 1) {
-    //         return `${numberOfCharactersWithoutSpaces} ${chrome.i18n.getMessage(
-    //             "_characterWithoutSpaces"
-    //         )}`;
-    //     }
-    //     return `${numberOfCharactersWithoutSpaces} ${chrome.i18n.getMessage(
-    //         "_charactersWithoutSpaces"
-    //     )}`;
-    // }
 }

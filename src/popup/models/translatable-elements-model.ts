@@ -34,17 +34,12 @@ export const TranslatableElementsModel: TranslatableElement[] = [
     },
     {
         id: "sideMenuLeft",
-        translateId: "_insideMenuLeft",
+        translateId: "_inSideMenuLeft",
         property: Property.InnerText,
     },
     {
         id: "sideMenuRight",
-        translateId: "_insideMenuRight",
-        property: Property.InnerText,
-    },
-    {
-        id: "extension",
-        translateId: "_inExtension",
+        translateId: "_inSideMenuRight",
         property: Property.InnerText,
     },
 ];
