@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Skriv inn ønsket tekst"
+  },
+  "_words": {
+    "message": "Ord"
+  },
+  "_characters": {
+    "message": "Tegn"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Karakterer uten mellomrom"
+  },
+  "_inPopup": {
+    "message": "I Popup"
+  },
+  "_inSideMenuLeft": {
+    "message": "I sidemenyen til venstre"
+  },
+  "_inSideMenuRight": {
+    "message": "I sidemenyen til høyre"
+  },
+  "_word": {
+    "message": "Ord"
+  },
+  "_character": {
+    "message": "Karakter"
+  },
+  "extDescription": {
+    "message": "Ord- og karakterteller"
+  },
+  "extName": {
+    "message": "Count me up - Ord- og karakterteller"
+  }
+}

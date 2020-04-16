@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "輸入所需文字"
+  },
+  "_words": {
+    "message": "話"
+  },
+  "_characters": {
+    "message": "性格"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "沒有空格的字符"
+  },
+  "_inPopup": {
+    "message": "在彈出窗口中"
+  },
+  "_inSideMenuLeft": {
+    "message": "在左側菜單中"
+  },
+  "_inSideMenuRight": {
+    "message": "在右側菜單中"
+  },
+  "_word": {
+    "message": "字"
+  },
+  "_character": {
+    "message": "字符"
+  },
+  "extName": {
+    "message": "Count me up - 文字和文字計數器"
+  },
+  "extDescription": {
+    "message": "文字和文字計數器"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Kirjoita haluamasi teksti"
+  },
+  "_words": {
+    "message": "Sanat"
+  },
+  "_characters": {
+    "message": "Merkit"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Hahmot ilman välilyöntejä"
+  },
+  "_inPopup": {
+    "message": "Ponnahdusikkunassa"
+  },
+  "_inSideMenuLeft": {
+    "message": "Sivun valikossa vasemmalla"
+  },
+  "_inSideMenuRight": {
+    "message": "Sivuvalikossa oikealla"
+  },
+  "_word": {
+    "message": "Sana"
+  },
+  "_character": {
+    "message": "Merkki"
+  },
+  "extDescription": {
+    "message": "Sana- ja merkkilaskuri"
+  },
+  "extName": {
+    "message": "Count me up - Sana- ja merkkilaskuri"
+  }
+}

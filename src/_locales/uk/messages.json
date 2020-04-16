@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Введіть бажаний текст"
+  },
+  "_words": {
+    "message": "Слова"
+  },
+  "_characters": {
+    "message": "Персонажі"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Персонажі без пробілів"
+  },
+  "_inPopup": {
+    "message": "В Попуп"
+  },
+  "_inSideMenuLeft": {
+    "message": "У бічному меню зліва"
+  },
+  "_inSideMenuRight": {
+    "message": "У бічному меню праворуч"
+  },
+  "_word": {
+    "message": "Слово"
+  },
+  "_character": {
+    "message": "Характер"
+  },
+  "extDescription": {
+    "message": "Лічильник слів і символів"
+  },
+  "extName": {
+    "message": "Count me up - Лічильник слів і символів"
+  }
+}

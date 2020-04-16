@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Indtast ønsket tekst"
+  },
+  "_words": {
+    "message": "Ord"
+  },
+  "_characters": {
+    "message": "Tegn"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Tegn uden mellemrum"
+  },
+  "_inPopup": {
+    "message": "I pop-up"
+  },
+  "_inSideMenuLeft": {
+    "message": "I sidemenu til venstre"
+  },
+  "_inSideMenuRight": {
+    "message": "I sidemenu til højre"
+  },
+  "_word": {
+    "message": "Ord"
+  },
+  "_character": {
+    "message": "Karakter"
+  },
+  "extName": {
+    "message": "Count me up - Ord- og karaktertæller"
+  },
+  "extDescription": {
+    "message": "Ord- og karaktertæller"
+  }
+}

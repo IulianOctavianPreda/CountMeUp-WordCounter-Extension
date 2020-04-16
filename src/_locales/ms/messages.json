@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Masukkan Teks yang Diinginkan"
+  },
+  "_words": {
+    "message": "Perkataan"
+  },
+  "_characters": {
+    "message": "Watak"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Watak Tanpa Ruang"
+  },
+  "_inPopup": {
+    "message": "Dalam Pop timbul"
+  },
+  "_inSideMenuLeft": {
+    "message": "Di Menu Sisi Kiri"
+  },
+  "_inSideMenuRight": {
+    "message": "Di Menu Sebelah Kanan"
+  },
+  "_word": {
+    "message": "Perkataan"
+  },
+  "_character": {
+    "message": "Perwatakan"
+  },
+  "extDescription": {
+    "message": "Pembilang perkataan dan watak"
+  },
+  "extName": {
+    "message": "Count me up - Pembilang perkataan dan watak"
+  }
+}

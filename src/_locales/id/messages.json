@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Masukkan Teks Yang Diinginkan"
+  },
+  "_words": {
+    "message": "Kata-kata"
+  },
+  "_characters": {
+    "message": "Karakter"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Karakter Tanpa Spasi"
+  },
+  "_inPopup": {
+    "message": "Di Popup"
+  },
+  "_inSideMenuLeft": {
+    "message": "Di Menu Sisi Kiri"
+  },
+  "_inSideMenuRight": {
+    "message": "Di Menu Sisi Kanan"
+  },
+  "_word": {
+    "message": "Kata"
+  },
+  "_character": {
+    "message": "Karakter"
+  },
+  "extName": {
+    "message": "Count me up - Penghitung kata dan karakter"
+  },
+  "extDescription": {
+    "message": "Penghitung kata dan karakter"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "İstenen Metni Girin"
+  },
+  "_words": {
+    "message": "Kelimeler"
+  },
+  "_characters": {
+    "message": "Karakterler"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Boşluksuz Karakterler"
+  },
+  "_inPopup": {
+    "message": "Popup'ta"
+  },
+  "_inSideMenuLeft": {
+    "message": "Yan Menü Solda"
+  },
+  "_inSideMenuRight": {
+    "message": "Yan Menü Sağda"
+  },
+  "_word": {
+    "message": "Sözcük"
+  },
+  "_character": {
+    "message": "Karakter"
+  },
+  "extName": {
+    "message": "Count me up - Kelime ve karakter sayacı"
+  },
+  "extDescription": {
+    "message": "Kelime ve karakter sayacı"
+  }
+}

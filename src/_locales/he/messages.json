@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "הזן טקסט רצוי"
+  },
+  "_words": {
+    "message": "מילים"
+  },
+  "_characters": {
+    "message": "דמויות"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "דמויות ללא רווחים"
+  },
+  "_inPopup": {
+    "message": "בפופ-אפ"
+  },
+  "_inSideMenuLeft": {
+    "message": "בתפריט הצד משמאל"
+  },
+  "_inSideMenuRight": {
+    "message": "בתפריט הצד מימין"
+  },
+  "_word": {
+    "message": "מילה"
+  },
+  "_character": {
+    "message": "דמות"
+  },
+  "extDescription": {
+    "message": "מונה ותווים"
+  },
+  "extName": {
+    "message": "Count me up - מונה ותווים"
+  }
+}

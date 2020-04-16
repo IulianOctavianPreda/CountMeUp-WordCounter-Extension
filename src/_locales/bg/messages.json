@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Въведете желания текст"
+  },
+  "_words": {
+    "message": "Думи"
+  },
+  "_characters": {
+    "message": "Герои"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Персонажи без интервали"
+  },
+  "_inPopup": {
+    "message": "В Popup"
+  },
+  "_inSideMenuLeft": {
+    "message": "В странично меню наляво"
+  },
+  "_inSideMenuRight": {
+    "message": "В страничното меню вдясно"
+  },
+  "_word": {
+    "message": "Дума"
+  },
+  "_character": {
+    "message": "Характер"
+  },
+  "extName": {
+    "message": "Count me up - Брояч на думи и символи"
+  },
+  "extDescription": {
+    "message": "Брояч на думи и символи"
+  }
+}

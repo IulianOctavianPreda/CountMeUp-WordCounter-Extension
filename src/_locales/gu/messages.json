@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "ઇચ્છિત ટેક્સ્ટ દાખલ કરો"
+  },
+  "_words": {
+    "message": "શબ્દો"
+  },
+  "_characters": {
+    "message": "પાત્રો"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "જગ્યાઓ વિનાનાં પાત્રો"
+  },
+  "_inPopup": {
+    "message": "પ Popપઅપમાં"
+  },
+  "_inSideMenuLeft": {
+    "message": "સાઇડ મેનુમાં ડાબે"
+  },
+  "_inSideMenuRight": {
+    "message": "સાઇડ મેનુમાં"
+  },
+  "_word": {
+    "message": "શબ્દ"
+  },
+  "_character": {
+    "message": "પાત્ર"
+  },
+  "extName": {
+    "message": "Count me up - શબ્દ અને પાત્રનો કાઉન્ટર"
+  },
+  "extDescription": {
+    "message": "શબ્દ અને પાત્રનો કાઉન્ટર"
+  }
+}

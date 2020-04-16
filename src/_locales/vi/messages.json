@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Nhập văn bản mong muốn"
+  },
+  "_words": {
+    "message": "Từ ngữ"
+  },
+  "_characters": {
+    "message": "Nhân vật"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Nhân vật không có không gian"
+  },
+  "_inPopup": {
+    "message": "Trong Popup"
+  },
+  "_inSideMenuLeft": {
+    "message": "Trong Menu bên trái"
+  },
+  "_inSideMenuRight": {
+    "message": "Trong menu bên phải"
+  },
+  "_word": {
+    "message": "Lời"
+  },
+  "_character": {
+    "message": "Tính cách"
+  },
+  "extName": {
+    "message": "Count me up - Từ và bộ đếm ký tự"
+  },
+  "extDescription": {
+    "message": "Từ và bộ đếm ký tự"
+  }
+}

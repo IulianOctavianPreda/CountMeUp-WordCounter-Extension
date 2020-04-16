@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Sisestage soovitud tekst"
+  },
+  "_words": {
+    "message": "Sõnad"
+  },
+  "_characters": {
+    "message": "Tegelased"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Tegelased ilma tühikuteta"
+  },
+  "_inPopup": {
+    "message": "Hüpikaknas"
+  },
+  "_inSideMenuLeft": {
+    "message": "Külgmenüüs vasakul"
+  },
+  "_inSideMenuRight": {
+    "message": "Külgmenüüs paremal"
+  },
+  "_word": {
+    "message": "Sõna"
+  },
+  "_character": {
+    "message": "Iseloom"
+  },
+  "extName": {
+    "message": "Count me up - Sõna- ja märgiloendur"
+  },
+  "extDescription": {
+    "message": "Sõna- ja märgiloendur"
+  }
+}

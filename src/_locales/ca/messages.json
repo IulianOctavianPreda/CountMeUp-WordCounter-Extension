@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Introduïu el text desitjat"
+  },
+  "_words": {
+    "message": "Paraules"
+  },
+  "_characters": {
+    "message": "Personatges"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Personatges sense espais"
+  },
+  "_inPopup": {
+    "message": "A la finestra emergent"
+  },
+  "_inSideMenuLeft": {
+    "message": "Al menú lateral esquerre"
+  },
+  "_inSideMenuRight": {
+    "message": "Al menú lateral dret"
+  },
+  "_word": {
+    "message": "Paraula"
+  },
+  "_character": {
+    "message": "Personatge"
+  },
+  "extDescription": {
+    "message": "Comptador de paraules i personatges"
+  },
+  "extName": {
+    "message": "Count me up - Comptador de paraules i personatges"
+  }
+}

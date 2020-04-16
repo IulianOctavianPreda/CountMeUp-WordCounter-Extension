@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "इच्छित मजकूर प्रविष्ट करा"
+  },
+  "_words": {
+    "message": "शब्द"
+  },
+  "_characters": {
+    "message": "वर्ण"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "मोकळी जागा नसलेली पात्रं"
+  },
+  "_inPopup": {
+    "message": "पॉपअप मध्ये"
+  },
+  "_inSideMenuLeft": {
+    "message": "साइड मेनू डावीकडे"
+  },
+  "_inSideMenuRight": {
+    "message": "साइड मेनू मध्ये उजवीकडे"
+  },
+  "_word": {
+    "message": "शब्द"
+  },
+  "_character": {
+    "message": "चारित्र्य"
+  },
+  "extName": {
+    "message": "Count me up - शब्द आणि वर्ण काउंटर"
+  },
+  "extDescription": {
+    "message": "शब्द आणि वर्ण काउंटर"
+  }
+}

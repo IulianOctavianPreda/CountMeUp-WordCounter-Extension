@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Ievadiet vēlamo tekstu"
+  },
+  "_words": {
+    "message": "Vārdi"
+  },
+  "_characters": {
+    "message": "Rakstzīmes"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Rakstzīmes bez atstarpēm"
+  },
+  "_inPopup": {
+    "message": "Uznirstošajā logā"
+  },
+  "_inSideMenuLeft": {
+    "message": "Sānu izvēlnē pa kreisi"
+  },
+  "_inSideMenuRight": {
+    "message": "Sānu izvēlnē pa labi"
+  },
+  "_word": {
+    "message": "Vārds"
+  },
+  "_character": {
+    "message": "Raksturs"
+  },
+  "extDescription": {
+    "message": "Vārdu un rakstzīmju skaitītājs"
+  },
+  "extName": {
+    "message": "Count me up - Vārdu un rakstzīmju skaitītājs"
+  }
+}

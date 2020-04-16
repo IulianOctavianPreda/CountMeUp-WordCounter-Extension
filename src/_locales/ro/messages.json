@@ -9,19 +9,16 @@
         "message": "Caractere"
     },
     "_charactersWithoutSpaces": {
-        "message": "Personaje fără spații"
+        "message": "Caractere fără spații"
     },
     "_inPopup": {
-        "message": "În Popup"
+        "message": "În popup"
     },
-    "_insideMenuLeft": {
-        "message": "Meniul din stânga"
+    "_inSideMenuLeft": {
+        "message": "În meniul lateral stânga"
     },
-    "_insideMenuRight": {
-        "message": "În meniul din dreapta"
-    },
-    "_inExtension": {
-        "message": "În extindere"
+    "_inSideMenuRight": {
+        "message": "În meniul lateral dreapta"
     },
     "_word": {
         "message": "Cuvânt"
@@ -29,10 +26,10 @@
     "_character": {
         "message": "Caracter"
     },
-    "_characterWithoutSpaces": {
-        "message": "Personaj fără spații"
-    },
     "extDescription": {
         "message": "Contor de cuvinte și caractere"
+    },
+    "extName": {
+        "message": "Count me up - Contor de cuvinte și caractere"
     }
 }

@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Εισαγάγετε το επιθυμητό κείμενο"
+  },
+  "_words": {
+    "message": "Λόγια"
+  },
+  "_characters": {
+    "message": "Χαρακτήρες"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Χαρακτήρες χωρίς κενά"
+  },
+  "_inPopup": {
+    "message": "Στο αναδυόμενο παράθυρο"
+  },
+  "_inSideMenuLeft": {
+    "message": "Στο πλευρικό μενού αριστερά"
+  },
+  "_inSideMenuRight": {
+    "message": "Στο πλευρικό μενού δεξιά"
+  },
+  "_word": {
+    "message": "Λέξη"
+  },
+  "_character": {
+    "message": "Χαρακτήρας"
+  },
+  "extDescription": {
+    "message": "Μετρητής λέξεων και χαρακτήρων"
+  },
+  "extName": {
+    "message": "Count me up - Μετρητής λέξεων και χαρακτήρων"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Unesite željeni tekst"
+  },
+  "_words": {
+    "message": "Riječi"
+  },
+  "_characters": {
+    "message": "Likovi"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Likovi bez razmaka"
+  },
+  "_inPopup": {
+    "message": "U Popupu"
+  },
+  "_inSideMenuLeft": {
+    "message": "U bočnom izborniku lijevo"
+  },
+  "_inSideMenuRight": {
+    "message": "U bočnom izborniku desno"
+  },
+  "_word": {
+    "message": "Riječ"
+  },
+  "_character": {
+    "message": "Lik"
+  },
+  "extDescription": {
+    "message": "Brojač riječi i znakova"
+  },
+  "extName": {
+    "message": "Count me up - Brojač riječi i znakova"
+  }
+}

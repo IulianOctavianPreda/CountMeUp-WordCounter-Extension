@@ -8,11 +8,12 @@ const path = require("path");
 const fs = require("fs");
 
 // prettier-ignore
-let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da","de","el","es","et","fa","fi","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh-CN","zh-TW"];
+let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da",,"el","es","et","fa","fi","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh-CN","zh-TW"];
 
-let manualLanguageCodes = ["ro", "en", "pt_BR", "pt_PT"];
+let manualLanguageCodes = ["ro", "en", "de", "pt_BR", "pt_PT"];
 let pathToTranslationFile = "./src/translations/template.json";
-let extName = "Word counter";
+let extName = "Word and character counter";
+let fixedExtName = "Count me up - ";
 let extDescription = "Word and character counter";
 
 Array.prototype.last = function () {
@@ -143,7 +144,9 @@ function createTranslateFile(languageCode) {
     let templateTranslation = JSON.parse(templateTranslationFile);
 
     let promiseArray = [];
-    promiseArray.push(translateText(templateTranslation, "extName", extName, languageCode));
+    promiseArray.push(
+        translateText(templateTranslation, "extName", extName, languageCode, fixedExtName)
+    );
     promiseArray.push(
         translateText(templateTranslation, "extDescription", extDescription, languageCode)
     );
@@ -169,9 +172,11 @@ function updateTranslations(obj1, languageCode) {
     return promisesArray;
 }
 
-async function translateText(obj, element, text, languageCode) {
+async function translateText(obj, element, text, languageCode, fixedText = "") {
     let textToTranslate = camelCaseToText(text.replace("_", ""));
     let [translation] = await translate.translate(textToTranslate, languageCode);
+    translation = translation.trim();
+    if (fixedText !== "") translation = fixedText + translation;
     obj[element] = convertToMessageString(capitalizeFirstLetter(translation.trim()));
 }
 

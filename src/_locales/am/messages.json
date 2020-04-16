@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "የሚፈለግ ጽሑፍ ያስገቡ"
+  },
+  "_words": {
+    "message": "ቃላት"
+  },
+  "_characters": {
+    "message": "ቁምፊዎች"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "ያለቦታ ቁምፊዎች"
+  },
+  "_inPopup": {
+    "message": "ብቅ ባዮች ውስጥ"
+  },
+  "_inSideMenuLeft": {
+    "message": "በግራ ምናሌ ግራ"
+  },
+  "_inSideMenuRight": {
+    "message": "በጎን ምናሌ በቀኝ"
+  },
+  "_word": {
+    "message": "ቃል"
+  },
+  "_character": {
+    "message": "ገጸ ባህሪ"
+  },
+  "extDescription": {
+    "message": "የቃላት እና የቁምፊ ቆጣሪ"
+  },
+  "extName": {
+    "message": "Count me up - የቃላት እና የቁምፊ ቆጣሪ"
+  }
+}

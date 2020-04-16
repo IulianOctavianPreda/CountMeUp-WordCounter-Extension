@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Ange önskad text"
+  },
+  "_words": {
+    "message": "Ord"
+  },
+  "_characters": {
+    "message": "Tecken"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Tecken utan mellanrum"
+  },
+  "_inPopup": {
+    "message": "I popup"
+  },
+  "_inSideMenuLeft": {
+    "message": "I sidmenyn vänster"
+  },
+  "_inSideMenuRight": {
+    "message": "I sidmenyn höger"
+  },
+  "_word": {
+    "message": "Ord"
+  },
+  "_character": {
+    "message": "Karaktär"
+  },
+  "extDescription": {
+    "message": "Ord- och karaktärräknare"
+  },
+  "extName": {
+    "message": "Count me up - Ord- och karaktärräknare"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Ingrese el texto deseado"
+  },
+  "_words": {
+    "message": "Palabras"
+  },
+  "_characters": {
+    "message": "Caracteres"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Personajes sin espacios"
+  },
+  "_inPopup": {
+    "message": "En ventana emergente"
+  },
+  "_inSideMenuLeft": {
+    "message": "En el menú lateral izquierdo"
+  },
+  "_inSideMenuRight": {
+    "message": "En el menú lateral derecho"
+  },
+  "_word": {
+    "message": "Palabra"
+  },
+  "_character": {
+    "message": "Personaje"
+  },
+  "extDescription": {
+    "message": "Contador de palabras y caracteres"
+  },
+  "extName": {
+    "message": "Count me up - Contador de palabras y caracteres"
+  }
+}

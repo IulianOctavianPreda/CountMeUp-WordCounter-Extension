@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Унесите жељени текст"
+  },
+  "_words": {
+    "message": "Речи"
+  },
+  "_characters": {
+    "message": "Ликови"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Ликови без размака"
+  },
+  "_inPopup": {
+    "message": "У Попупу"
+  },
+  "_inSideMenuLeft": {
+    "message": "У бочном менију лево"
+  },
+  "_inSideMenuRight": {
+    "message": "У бочном менију десно"
+  },
+  "_word": {
+    "message": "Ворд"
+  },
+  "_character": {
+    "message": "Цхарацтер"
+  },
+  "extDescription": {
+    "message": "Бројач речи и карактера"
+  },
+  "extName": {
+    "message": "Count me up - Бројач речи и карактера"
+  }
+}

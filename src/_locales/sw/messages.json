@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Ingiza Nakala ya Tamaa"
+  },
+  "_words": {
+    "message": "Maneno"
+  },
+  "_characters": {
+    "message": "Wahusika"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Wahusika bila nafasi"
+  },
+  "_inPopup": {
+    "message": "Katika Dukizo"
+  },
+  "_inSideMenuLeft": {
+    "message": "Kwenye Menyu ya Upande Kushoto"
+  },
+  "_inSideMenuRight": {
+    "message": "Kwenye Menyu ya Upande kulia"
+  },
+  "_word": {
+    "message": "Neno"
+  },
+  "_character": {
+    "message": "Tabia"
+  },
+  "extDescription": {
+    "message": "Ishara ya neno na tabia"
+  },
+  "extName": {
+    "message": "Count me up - Ishara ya neno na tabia"
+  }
+}

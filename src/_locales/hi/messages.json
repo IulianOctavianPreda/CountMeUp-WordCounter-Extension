@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "वांछित पाठ दर्ज करें"
+  },
+  "_words": {
+    "message": "शब्दों"
+  },
+  "_characters": {
+    "message": "पात्र"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "रिक्त स्थान के बिना वर्ण"
+  },
+  "_inPopup": {
+    "message": "पॉपअप में"
+  },
+  "_inSideMenuLeft": {
+    "message": "साइड मेन्यू लेफ्ट में"
+  },
+  "_inSideMenuRight": {
+    "message": "साइड मेन्यू में"
+  },
+  "_word": {
+    "message": "शब्द"
+  },
+  "_character": {
+    "message": "चरित्र"
+  },
+  "extName": {
+    "message": "Count me up - शब्द और चरित्र काउंटर"
+  },
+  "extDescription": {
+    "message": "शब्द और चरित्र काउंटर"
+  }
+}

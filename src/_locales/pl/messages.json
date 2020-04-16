@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Wpisz żądany tekst"
+  },
+  "_words": {
+    "message": "Słowa"
+  },
+  "_characters": {
+    "message": "Postacie"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Znaki bez spacji"
+  },
+  "_inPopup": {
+    "message": "W wyskakującym okienku"
+  },
+  "_inSideMenuLeft": {
+    "message": "W menu bocznym po lewej"
+  },
+  "_inSideMenuRight": {
+    "message": "W menu bocznym po prawej"
+  },
+  "_word": {
+    "message": "Słowo"
+  },
+  "_character": {
+    "message": "Postać"
+  },
+  "extName": {
+    "message": "Count me up - Licznik słów i znaków"
+  },
+  "extDescription": {
+    "message": "Licznik słów i znaków"
+  }
+}

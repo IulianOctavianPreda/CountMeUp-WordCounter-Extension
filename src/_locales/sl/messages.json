@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Vnesite želeno besedilo"
+  },
+  "_words": {
+    "message": "Besede"
+  },
+  "_characters": {
+    "message": "Liki"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Liki brez razmikov"
+  },
+  "_inPopup": {
+    "message": "V Popupu"
+  },
+  "_inSideMenuLeft": {
+    "message": "V stranskem meniju levo"
+  },
+  "_inSideMenuRight": {
+    "message": "V stranskem meniju desno"
+  },
+  "_word": {
+    "message": "Beseda"
+  },
+  "_character": {
+    "message": "Lik"
+  },
+  "extDescription": {
+    "message": "Števec besed in znakov"
+  },
+  "extName": {
+    "message": "Count me up - Števec besed in znakov"
+  }
+}

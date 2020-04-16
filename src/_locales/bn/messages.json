@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "পছন্দসই পাঠ্য প্রবেশ করান"
+  },
+  "_words": {
+    "message": "শব্দ"
+  },
+  "_characters": {
+    "message": "চরিত্র"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "স্থান ছাড়াই অক্ষর"
+  },
+  "_inPopup": {
+    "message": "পপআপে"
+  },
+  "_inSideMenuLeft": {
+    "message": "সাইড মেনু বামে"
+  },
+  "_inSideMenuRight": {
+    "message": "ডানদিকে সাইড মেনু"
+  },
+  "_word": {
+    "message": "শব্দ"
+  },
+  "_character": {
+    "message": "চরিত্র"
+  },
+  "extDescription": {
+    "message": "শব্দ এবং চরিত্রের কাউন্টার"
+  },
+  "extName": {
+    "message": "Count me up - শব্দ এবং চরিত্রের কাউন্টার"
+  }
+}

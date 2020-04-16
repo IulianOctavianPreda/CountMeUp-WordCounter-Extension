@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "కోరుకున్న వచనాన్ని నమోదు చేయండి"
+  },
+  "_words": {
+    "message": "పదాలు"
+  },
+  "_characters": {
+    "message": "అక్షరాలు"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "ఖాళీలు లేని అక్షరాలు"
+  },
+  "_inPopup": {
+    "message": "పాపప్‌లో"
+  },
+  "_inSideMenuLeft": {
+    "message": "సైడ్ మెనూలో ఎడమ"
+  },
+  "_inSideMenuRight": {
+    "message": "సైడ్ మెనూలో కుడి"
+  },
+  "_word": {
+    "message": "పద"
+  },
+  "_character": {
+    "message": "అక్షర"
+  },
+  "extName": {
+    "message": "Count me up - పదం మరియు అక్షర కౌంటర్"
+  },
+  "extDescription": {
+    "message": "పదం మరియు అక్షర కౌంటర్"
+  }
+}

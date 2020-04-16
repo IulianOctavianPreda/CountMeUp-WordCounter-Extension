@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Введите желаемый текст"
+  },
+  "_words": {
+    "message": "Слова"
+  },
+  "_characters": {
+    "message": "Персонажи"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Персонажи без пробелов"
+  },
+  "_inPopup": {
+    "message": "В всплывающем окне"
+  },
+  "_inSideMenuLeft": {
+    "message": "В боковом меню слева"
+  },
+  "_inSideMenuRight": {
+    "message": "В боковом меню справа"
+  },
+  "_word": {
+    "message": "Слово"
+  },
+  "_character": {
+    "message": "Символ"
+  },
+  "extName": {
+    "message": "Count me up - Счетчик слов и символов"
+  },
+  "extDescription": {
+    "message": "Счетчик слов и символов"
+  }
+}

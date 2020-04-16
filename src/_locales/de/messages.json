@@ -1,0 +1,35 @@
+{
+    "_enterDesiredText": {
+        "message": "Fügen Sie den gewünschten Text ein"
+    },
+    "_words": {
+        "message": "Wörter"
+    },
+    "_characters": {
+        "message": "Figuren"
+    },
+    "_charactersWithoutSpaces": {
+        "message": "Zeichen ohne Leerzeichen"
+    },
+    "_inPopup": {
+        "message": "Im Popup"
+    },
+    "_inSideMenuLeft": {
+        "message": "Im Seitenmenü links"
+    },
+    "_inSideMenuRight": {
+        "message": "Im Seitenmenü rechts"
+    },
+    "_word": {
+        "message": "Wort"
+    },
+    "_character": {
+        "message": "Charakter"
+    },
+    "extName": {
+        "message": "Count me up - Wort- und Zeichenzähler"
+    },
+    "extDescription": {
+        "message": "Wort- und Zeichenzähler"
+    }
+}

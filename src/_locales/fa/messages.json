@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "متن مورد نظر را وارد کنید"
+  },
+  "_words": {
+    "message": "کلمات"
+  },
+  "_characters": {
+    "message": "شخصیت ها"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "شخصیت های بدون فاصله"
+  },
+  "_inPopup": {
+    "message": "در پنجره"
+  },
+  "_inSideMenuLeft": {
+    "message": "در سمت چپ منو"
+  },
+  "_inSideMenuRight": {
+    "message": "در سمت راست منو"
+  },
+  "_word": {
+    "message": "کلمه"
+  },
+  "_character": {
+    "message": "شخصیت"
+  },
+  "extName": {
+    "message": "Count me up - پیشخوان کلمه و شخصیت"
+  },
+  "extDescription": {
+    "message": "پیشخوان کلمه و شخصیت"
+  }
+}

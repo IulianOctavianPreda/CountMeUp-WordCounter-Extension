@@ -1,0 +1,35 @@
+{
+    "_enterDesiredText": {
+        "message": "Enter desired text"
+    },
+    "_words": {
+        "message": "Words"
+    },
+    "_characters": {
+        "message": "Characters"
+    },
+    "_charactersWithoutSpaces": {
+        "message": "Characters without spaces"
+    },
+    "_inPopup": {
+        "message": "In popup"
+    },
+    "_inSideMenuLeft": {
+        "message": "In side menu - left"
+    },
+    "_inSideMenuRight": {
+        "message": "In side menu - right"
+    },
+    "_word": {
+        "message": "Word"
+    },
+    "_character": {
+        "message": "Character"
+    },
+    "extDescription": {
+        "message": "Word and character counter"
+    },
+    "extName": {
+        "message": "Count me up - Word and character counter"
+    }
+}

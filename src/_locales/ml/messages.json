@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "ആഗ്രഹിച്ച വാചകം നൽകുക"
+  },
+  "_words": {
+    "message": "വാക്കുകൾ"
+  },
+  "_characters": {
+    "message": "പ്രതീകങ്ങൾ"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "ഇടങ്ങളില്ലാത്ത പ്രതീകങ്ങൾ"
+  },
+  "_inPopup": {
+    "message": "പോപ്പ്അപ്പിൽ"
+  },
+  "_inSideMenuLeft": {
+    "message": "സൈഡ് മെനു ഇടതുവശത്ത്"
+  },
+  "_inSideMenuRight": {
+    "message": "സൈഡ് മെനു വലതുവശത്ത്"
+  },
+  "_word": {
+    "message": "വാക്ക്"
+  },
+  "_character": {
+    "message": "പ്രതീകം"
+  },
+  "extDescription": {
+    "message": "പദവും പ്രതീക ക .ണ്ടറും"
+  },
+  "extName": {
+    "message": "Count me up - പദവും പ്രതീക ക .ണ്ടറും"
+  }
+}

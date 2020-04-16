@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Írja be a kívánt szöveget"
+  },
+  "_words": {
+    "message": "Szavak"
+  },
+  "_characters": {
+    "message": "Karakterek"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Karakterek szóköz nélkül"
+  },
+  "_inPopup": {
+    "message": "A felbukkanóban"
+  },
+  "_inSideMenuLeft": {
+    "message": "A bal oldali menüben"
+  },
+  "_inSideMenuRight": {
+    "message": "A jobb oldali menüben"
+  },
+  "_word": {
+    "message": "Szó"
+  },
+  "_character": {
+    "message": "Karakter"
+  },
+  "extName": {
+    "message": "Count me up - Szó és karakter számláló"
+  },
+  "extDescription": {
+    "message": "Szó és karakter számláló"
+  }
+}

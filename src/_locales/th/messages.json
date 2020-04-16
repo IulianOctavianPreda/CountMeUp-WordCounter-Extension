@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "ป้อนข้อความที่ต้องการ"
+  },
+  "_words": {
+    "message": "คำ"
+  },
+  "_characters": {
+    "message": "ตัวละคร"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "ตัวละครที่ไม่มีช่องว่าง"
+  },
+  "_inPopup": {
+    "message": "ในป๊อปอัพ"
+  },
+  "_inSideMenuLeft": {
+    "message": "ในเมนูด้านซ้าย"
+  },
+  "_inSideMenuRight": {
+    "message": "ในเมนูด้านขวา"
+  },
+  "_word": {
+    "message": "คำ"
+  },
+  "_character": {
+    "message": "ตัวละคร"
+  },
+  "extDescription": {
+    "message": "ตัวนับคำและตัวอักษร"
+  },
+  "extName": {
+    "message": "Count me up - ตัวนับคำและตัวอักษร"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Zadejte požadovaný text"
+  },
+  "_words": {
+    "message": "Slova"
+  },
+  "_characters": {
+    "message": "Znaky"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Postavy bez mezer"
+  },
+  "_inPopup": {
+    "message": "Ve vyskakovacím okně"
+  },
+  "_inSideMenuLeft": {
+    "message": "V postranním menu vlevo"
+  },
+  "_inSideMenuRight": {
+    "message": "V postranním menu vpravo"
+  },
+  "_word": {
+    "message": "Slovo"
+  },
+  "_character": {
+    "message": "Charakter"
+  },
+  "extName": {
+    "message": "Count me up - Počitadlo slov a znaků"
+  },
+  "extDescription": {
+    "message": "Počitadlo slov a znaků"
+  }
+}

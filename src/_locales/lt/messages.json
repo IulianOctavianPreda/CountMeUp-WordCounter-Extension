@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Įveskite norimą tekstą"
+  },
+  "_words": {
+    "message": "Žodžiai"
+  },
+  "_characters": {
+    "message": "Personažai"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Veikėjai be tarpų"
+  },
+  "_inPopup": {
+    "message": "„Popup“"
+  },
+  "_inSideMenuLeft": {
+    "message": "Kairėje pusėje esančiame meniu"
+  },
+  "_inSideMenuRight": {
+    "message": "Šoniniame meniu dešinėje"
+  },
+  "_word": {
+    "message": "Žodis"
+  },
+  "_character": {
+    "message": "Charakteris"
+  },
+  "extName": {
+    "message": "Count me up - Žodžių ir simbolių skaitiklis"
+  },
+  "extDescription": {
+    "message": "Žodžių ir simbolių skaitiklis"
+  }
+}

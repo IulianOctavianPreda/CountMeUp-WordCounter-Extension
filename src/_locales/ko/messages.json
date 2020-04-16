@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "원하는 텍스트를 입력하십시오"
+  },
+  "_words": {
+    "message": "말"
+  },
+  "_characters": {
+    "message": "캐릭터"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "공백이없는 문자"
+  },
+  "_inPopup": {
+    "message": "팝업에서"
+  },
+  "_inSideMenuLeft": {
+    "message": "사이드 메뉴 왼쪽"
+  },
+  "_inSideMenuRight": {
+    "message": "사이드 메뉴 오른쪽"
+  },
+  "_word": {
+    "message": "워드"
+  },
+  "_character": {
+    "message": "캐릭터"
+  },
+  "extName": {
+    "message": "Count me up - 단어 및 문자 카운터"
+  },
+  "extDescription": {
+    "message": "단어 및 문자 카운터"
+  }
+}

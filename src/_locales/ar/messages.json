@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "أدخل النص المطلوب"
+  },
+  "_words": {
+    "message": "كلمات"
+  },
+  "_characters": {
+    "message": "الشخصيات"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "أحرف بدون مسافات"
+  },
+  "_inPopup": {
+    "message": "في النافذة المنبثقة"
+  },
+  "_inSideMenuLeft": {
+    "message": "في القائمة الجانبية اليسرى"
+  },
+  "_inSideMenuRight": {
+    "message": "في القائمة الجانبية اليمنى"
+  },
+  "_word": {
+    "message": "كلمة"
+  },
+  "_character": {
+    "message": "حرف"
+  },
+  "extDescription": {
+    "message": "عداد الكلمات والحرف"
+  },
+  "extName": {
+    "message": "Count me up - عداد الكلمات والحرف"
+  }
+}

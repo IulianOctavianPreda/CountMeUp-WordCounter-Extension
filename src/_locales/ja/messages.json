@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "希望のテキストを入力してください"
+  },
+  "_words": {
+    "message": "ことば"
+  },
+  "_characters": {
+    "message": "キャラクター"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "スペースのない文字"
+  },
+  "_inPopup": {
+    "message": "ポップアップで"
+  },
+  "_inSideMenuLeft": {
+    "message": "サイドメニュー左"
+  },
+  "_inSideMenuRight": {
+    "message": "サイドメニュー右"
+  },
+  "_word": {
+    "message": "語"
+  },
+  "_character": {
+    "message": "キャラクター"
+  },
+  "extName": {
+    "message": "Count me up - 単語と文字のカウンター"
+  },
+  "extDescription": {
+    "message": "単語と文字のカウンター"
+  }
+}

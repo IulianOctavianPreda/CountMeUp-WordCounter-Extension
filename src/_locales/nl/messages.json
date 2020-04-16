@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "Voer de gewenste tekst in"
+  },
+  "_words": {
+    "message": "Woorden"
+  },
+  "_characters": {
+    "message": "Karakters"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Tekens zonder spaties"
+  },
+  "_inPopup": {
+    "message": "In Popup"
+  },
+  "_inSideMenuLeft": {
+    "message": "In zijmenu links"
+  },
+  "_inSideMenuRight": {
+    "message": "In zijmenu rechts"
+  },
+  "_word": {
+    "message": "Woord"
+  },
+  "_character": {
+    "message": "Karakter"
+  },
+  "extName": {
+    "message": "Count me up - Woord- en karakterteller"
+  },
+  "extDescription": {
+    "message": "Woord- en karakterteller"
+  }
+}

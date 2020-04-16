@@ -1,0 +1,35 @@
+{
+  "_enterDesiredText": {
+    "message": "விரும்பிய உரையை உள்ளிடவும்"
+  },
+  "_words": {
+    "message": "சொற்கள்"
+  },
+  "_characters": {
+    "message": "எழுத்துக்கள்"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "இடைவெளிகள் இல்லாத எழுத்துக்கள்"
+  },
+  "_inPopup": {
+    "message": "பாப்அப்பில்"
+  },
+  "_inSideMenuLeft": {
+    "message": "பக்க மெனுவில் இடது"
+  },
+  "_inSideMenuRight": {
+    "message": "பக்க மெனுவில் வலது"
+  },
+  "_word": {
+    "message": "சொல்"
+  },
+  "_character": {
+    "message": "எழுத்து"
+  },
+  "extName": {
+    "message": "Count me up - சொல் மற்றும் எழுத்து கவுண்டர்"
+  },
+  "extDescription": {
+    "message": "சொல் மற்றும் எழுத்து கவுண்டர்"
+  }
+}
