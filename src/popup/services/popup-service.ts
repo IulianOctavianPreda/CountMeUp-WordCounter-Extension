@@ -16,7 +16,6 @@ import { TranslationService } from "./translation-service";
 
 export class PopupService {
     private counter = new Counter();
-    private currentTabId: any;
 
     constructor() {
         ThemeService.createDarkThemeCss();
