@@ -8,13 +8,13 @@ export class SideMenu {
         [MenuPosition.Right]: { div: "right:0;", iframe: `margin-left:${this.borderSize}px;` },
         [MenuPosition.Left]: { div: "left:0;", iframe: `margin-right:${this.borderSize}px;` },
     };
+    shadowRoot: any;
 
     constructor() {
         this.render();
-        this.addListeners();
     }
 
-    get template() {
+    template(html) {
         return `
     <div
         id="wordsCounterSidePanel"
@@ -28,13 +28,12 @@ export class SideMenu {
                    z-index:9000000000000000000;
                    background-color:black"
         >
-        <iframe
+        <div
             id="wordsCounterSidePanelIframe"
-            src="${chrome.extension.getURL("popup/popup.html")}"
             style="height:100%; width:CALC(100% - ${this.borderSize}px); ${
             this.cssSide[this.side].iframe
         }"
-        "></iframe>
+        ">${html}</div>
     </div>
     `;
     }
@@ -42,7 +41,7 @@ export class SideMenu {
     reInitialize(side: MenuPosition = MenuPosition.Right) {
         if (side !== this.side) {
             this.side = side;
-            document.getElementById("wordsCounterSidePanel")?.remove();
+            document.getElementById("wordsCounterExtensionWrapper")?.remove();
             this.render();
         }
     }
@@ -51,23 +50,52 @@ export class SideMenu {
         htmlElement: HTMLElement = <HTMLElement>document.getElementsByTagName("body")[0],
         position: InsertPosition = "beforeend"
     ) {
-        htmlElement.insertAdjacentHTML(position, this.template);
+        const popupPath = chrome.runtime.getURL("popup/popup.html");
+        const popupCssPath = chrome.runtime.getURL("popup/popup.css");
+        const popupJsPath = chrome.runtime.getURL("popup/popup.js");
+        fetch(popupPath)
+            .then((response) => response.text())
+            .then((data) => {
+                const wrapper = document.createElement("div");
+                wrapper.id = "wordsCounterExtensionWrapper";
+
+                data = data.replace("../popup/popup.css", popupCssPath);
+                data = data.replace(`<script src="../popup/popup.js"></script>`, "");
+
+                wrapper.innerHTML = this.template(data.trim());
+
+                const script = document.createElement("script");
+                script.src = popupJsPath;
+
+                wrapper.appendChild(script);
+
+                this.shadowRoot = wrapper.attachShadow({ mode: "open" });
+
+                htmlElement.insertAdjacentElement(position, wrapper);
+            })
+            .then(() => this.addListeners());
     }
 
     get panel() {
-        return <HTMLElement>document.getElementById("wordsCounterSidePanel");
+        return <HTMLElement>this.shadowRoot.getElementById("wordsCounterSidePanel");
     }
 
     get panelIframe() {
-        return <HTMLIFrameElement>document.getElementById("wordsCounterSidePanelIframe");
+        return <HTMLIFrameElement>this.shadowRoot.getElementById("wordsCounterSidePanelIframe");
     }
 
     showMenu() {
-        this.panel.style.width = 320 + this.borderSize + "px";
+        if (!!this.shadowRoot) {
+            this.panel.style.width = 320 + this.borderSize + "px";
+            this.panel.style.display = "block";
+        }
     }
 
     hideMenu() {
-        this.panel.style.width = "0px";
+        if (!!this.shadowRoot) {
+            this.panel.style.width = "0px";
+            this.panel.style.display = "none";
+        }
     }
 
     addListeners() {

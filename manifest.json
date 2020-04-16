@@ -19,9 +19,21 @@
         {
             "run_at": "document_end",
             "matches": ["<all_urls>"],
-            "js": ["./content_script/content_script.js"]
+            "js": ["content_script/content_script.js", "popup/popup.js"],
+            "css": ["popup/popup.css"]
         }
     ],
     "permissions": ["activeTab", "contextMenus", "storage"],
-    "web_accessible_resources": ["popup/popup.html"]
+    "web_accessible_resources": [
+        "popup/popup.html",
+        "popup/popup.css",
+        "popup/popup.js",
+        "assets/images/*.png"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "addons@example.com",
+            "strict_min_version": "42.0"
+        }
+    }
 }
