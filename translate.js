@@ -3,8 +3,8 @@ const path = require("path");
 const fs = require("fs");
 
 // prettier-ignore
-// let languageCodes = ["af","sq","am","ar","hy","az","eu","be","bn","bs","bg","ca","ceb","zh-CN","zh-TW","co","hr","cs","da","nl","en","eo","et","fi","fr","fy","gl","ka","de","el","gu","ht","ha","haw","he","hi","hmn","hu","is","ig","id","ga","it","ja","jv","kn","kk","km","ko","ku","ky","lo","la","lv","lt","lb","mk","mg","ms","ml","mt","mi","mr","mn","my","ne","no","ny","ps","fa","pl","pt","pa","ro","ru","sm","gd","sr","st","sn","sd","si","sk","sl","so","es","su","sw","sv","tl","tg","ta","te","th","tr","uk","ur","uz","vi","cy","xh","yi","yo","zu"];
-let languageCodes = ["ro"]
+// let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da","de","el","en","en_GB","en_US","es","es_419","et","fa","fi","fil","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt_BR","pt_PT","ro","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh_CN","zh_TW"];
+let manualLanguageCodes = ["ro"]
 let pathToTranslationFile = "./src/translations/template.json";
 let extName = "Word counter";
 let extDescription = "Word and character counter";
@@ -12,7 +12,6 @@ let extDescription = "Word and character counter";
 Array.prototype.last = function () {
     return this[this.length - 1];
 };
-
 main();
 
 function main() {
@@ -25,9 +24,13 @@ function main() {
     parseAllFiles(files, translationObj);
     writeObjectToJson(pathToTranslationFile, translationObj);
 
-    languageCodes.forEach((languageCode) => {
-        createTranslateFile(languageCode);
+    manualLanguageCodes.forEach((languageCode) => {
+        mergeTranslateTemplateWithTranslationFile(languageCode);
     });
+
+    // automaticLanguageCodes.forEach((languageCode) => {
+    //     createTranslateFile(languageCode);
+    // });
 }
 
 function getAllFiles(source, filter = [], include = []) {
@@ -55,6 +58,15 @@ function getAllFiles(source, filter = [], include = []) {
         });
     }
     return filesFound;
+}
+
+function parseAllFiles(files, translationObj) {
+    files.forEach((element) => {
+        let tempObj = parseFile(element);
+        if (Object.entries(tempObj).length !== 0) {
+            copyProperties(translationObj, tempObj);
+        }
+    });
 }
 
 function parseFile(filePath) {
@@ -99,28 +111,39 @@ function propertiesToObject(namespace, obj) {
     }
 }
 
-function parseAllFiles(files, translationObj) {
-    files.forEach((element) => {
-        let tempObj = parseFile(element);
-        if (Object.entries(tempObj).length !== 0) {
-            copyProperties(translationObj, tempObj);
-        }
-    });
+function mergeTranslateTemplateWithTranslationFile(languageCode) {
+    makeDirIfNotExist(`./src/_locales/`);
+    makeDirIfNotExist(`./src/_locales/${languageCode}`);
+    const localeFile = `./src/_locales/${languageCode}/messages.json`;
+
+    let templateTranslationFile = fs.readFileSync(pathToTranslationFile);
+    let templateTranslation = JSON.parse(templateTranslationFile);
+
+    if (!fs.existsSync(localeFile)) {
+        writeObjectToJson(localeFile, templateTranslation, "w");
+    } else {
+        let translation = JSON.parse(fs.readFileSync(localeFile));
+
+        copyPropertiesUpdateTranslation(templateTranslation, translation);
+        writeObjectToJson(localeFile, templateTranslation, "w");
+    }
 }
 
 function createTranslateFile(languageCode) {
     makeDirIfNotExist(`./src/_locales/`);
     makeDirIfNotExist(`./src/_locales/${languageCode}`);
     // fs.copyFileSync(pathToTranslationFile, `./src/_locale/${languageCode}/translations.json`);
-    let translationFile = fs.readFileSync(pathToTranslationFile);
-    let translation = JSON.parse(translationFile);
+    let templateTranslationFile = fs.readFileSync(pathToTranslationFile);
+    let templateTranslation = JSON.parse(templateTranslationFile);
 
     let promiseArray = [];
-    promiseArray.push(translateText(translation, "extName", extName, languageCode));
-    promiseArray.push(translateText(translation, "extDescription", extDescription, languageCode));
-    promiseArray.push(...updateTranslations(translation, languageCode));
+    promiseArray.push(translateText(templateTranslation, "extName", extName, languageCode));
+    promiseArray.push(
+        translateText(templateTranslation, "extDescription", extDescription, languageCode)
+    );
+    promiseArray.push(...updateTranslations(templateTranslation, languageCode));
     Promise.all(promiseArray).then(() => {
-        writeObjectToJson(`./src/_locales/${languageCode}/messages.json`, translation, "w");
+        writeObjectToJson(`./src/_locales/${languageCode}/messages.json`, templateTranslation, "w");
     });
 }
 
@@ -175,6 +198,21 @@ function copyProperties(obj1, obj2) {
             copyProperties(obj1[element], obj2[element]);
         } else {
             obj1[element] = obj2[element];
+        }
+    });
+}
+
+function copyPropertiesUpdateTranslation(obj1, obj2) {
+    Object.getOwnPropertyNames(obj2).forEach((element) => {
+        if (obj1[element] === "" || element === "extName" || element === "extDescription") {
+            obj1[element] = obj2[element];
+        }
+    });
+    Object.getOwnPropertyNames(obj1).forEach((element) => {
+        if (obj1[element] === "") {
+            obj1[element] = {
+                message: "",
+            };
         }
     });
 }

@@ -1,7 +1,4 @@
 {
-    "_blank": {
-        "message": "Gol"
-    },
     "_enterDesiredText": {
         "message": "Introduceți textul dorit"
     },
@@ -17,11 +14,11 @@
     "_inPopup": {
         "message": "În Popup"
     },
-    "_inSideMenuLeft": {
-        "message": "În meniul lateral S"
+    "_insideMenuLeft": {
+        "message": "Meniul din stânga"
     },
-    "_inSideMenuRight": {
-        "message": "În meniul lateral D"
+    "_insideMenuRight": {
+        "message": "În meniul din dreapta"
     },
     "_inExtension": {
         "message": "În extindere"
@@ -34,9 +31,6 @@
     },
     "_characterWithoutSpaces": {
         "message": "Personaj fără spații"
-    },
-    "extName": {
-        "message": "Contorizator de cuvinte"
     },
     "extDescription": {
         "message": "Contor de cuvinte și caractere"
