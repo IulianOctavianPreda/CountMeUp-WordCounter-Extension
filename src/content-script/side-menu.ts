@@ -1,7 +1,8 @@
 import { MenuPosition } from "../shared/enums/menu-position";
+import { MouseButton } from "./enums/mouse-button";
 
 export class SideMenu {
-    mousePosition;
+    isHidden = true;
     borderSize = 5;
     side = MenuPosition.Right;
     cssSide = {
@@ -59,19 +60,21 @@ export class SideMenu {
     }
 
     showMenu() {
+        this.isHidden = false;
         this.panel.style.width = 320 + this.borderSize + "px";
     }
 
     hideMenu() {
+        this.isHidden = true;
         this.panel.style.width = "0px";
     }
     addListeners() {
-        document.addEventListener(
-            "dblclick",
-            () => {
+        document.addEventListener("mousedown", (e) => {
+            if (e.button === MouseButton.Middle && !this.isHidden) {
                 this.hideMenu();
-            },
-            false
-        );
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
     }
 }

@@ -23,11 +23,6 @@ chrome.contextMenus.create({
 function openPopUp(info, tab) {
     ViewMethodService.openView(tab);
     StorageService.saveToStorage(Storage.SelectedText, info.selectionText);
-
-    MessagePassingService.sendMessage(
-        { source: Message.BackgroundId, destination: Message.PopupId, name: "selectedText" },
-        info.selectionText
-    );
 }
 
 MessagePassingService.addMessageListener(
@@ -37,6 +32,11 @@ MessagePassingService.addMessageListener(
         chrome.contextMenus.update("WordsCounter", {
             title: `${counter.formattedTextLong()}`,
         });
+
+        MessagePassingService.sendMessage(
+            { source: Message.BackgroundId, destination: Message.PopupId, name: "selectedText" },
+            selectedText
+        );
     }
 );
 
