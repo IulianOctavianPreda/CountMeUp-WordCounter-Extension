@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Watak Tanpa Ruang"
   },
-  "_inPopup": {
-    "message": "Dalam Pop timbul"
+  "_popup": {
+    "message": "Pop timbul"
   },
-  "_inSideMenuLeft": {
-    "message": "Di Menu Sisi Kiri"
+  "_sideMenuLeft": {
+    "message": "Menu Sebelah Kiri"
   },
-  "_inSideMenuRight": {
-    "message": "Di Menu Sebelah Kanan"
+  "_sideMenuRight": {
+    "message": "Menu Sebelah Kanan"
+  },
+  "_openIn": {
+    "message": "Buka Di"
   },
   "_word": {
     "message": "Perkataan"

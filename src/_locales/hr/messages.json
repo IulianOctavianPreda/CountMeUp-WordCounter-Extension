@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Likovi bez razmaka"
   },
-  "_inPopup": {
-    "message": "U Popupu"
+  "_popup": {
+    "message": "Iskočiti"
   },
-  "_inSideMenuLeft": {
-    "message": "U bočnom izborniku lijevo"
+  "_sideMenuLeft": {
+    "message": "Bočni izbornik lijevo"
   },
-  "_inSideMenuRight": {
-    "message": "U bočnom izborniku desno"
+  "_sideMenuRight": {
+    "message": "Bočni izbornik udesno"
+  },
+  "_openIn": {
+    "message": "Otvori u"
   },
   "_word": {
     "message": "Riječ"

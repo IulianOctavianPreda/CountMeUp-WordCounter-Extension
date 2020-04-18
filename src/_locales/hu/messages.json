@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Karakterek szóköz nélkül"
   },
-  "_inPopup": {
-    "message": "A felbukkanóban"
+  "_popup": {
+    "message": "Felugrik"
   },
-  "_inSideMenuLeft": {
-    "message": "A bal oldali menüben"
+  "_sideMenuLeft": {
+    "message": "Oldalmenü balra"
   },
-  "_inSideMenuRight": {
-    "message": "A jobb oldali menüben"
+  "_sideMenuRight": {
+    "message": "Oldalsó menü jobbra"
+  },
+  "_openIn": {
+    "message": "Nyissa meg"
   },
   "_word": {
     "message": "Szó"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Karakter"
   },
-  "extName": {
-    "message": "Count me up - Szó és karakter számláló"
-  },
   "extDescription": {
     "message": "Szó és karakter számláló"
+  },
+  "extName": {
+    "message": "Count me up - Szó és karakter számláló"
   }
 }

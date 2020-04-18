@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "જગ્યાઓ વિનાનાં પાત્રો"
   },
-  "_inPopup": {
-    "message": "પ Popપઅપમાં"
+  "_popup": {
+    "message": "પ્રગટ થવું"
   },
-  "_inSideMenuLeft": {
-    "message": "સાઇડ મેનુમાં ડાબે"
+  "_sideMenuLeft": {
+    "message": "સાઇડ મેનુ ડાબે"
   },
-  "_inSideMenuRight": {
-    "message": "સાઇડ મેનુમાં"
+  "_sideMenuRight": {
+    "message": "સાઇડ મેનુ જમણું"
+  },
+  "_openIn": {
+    "message": "ખોલો"
   },
   "_word": {
     "message": "શબ્દ"

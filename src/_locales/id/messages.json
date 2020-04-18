@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Karakter Tanpa Spasi"
   },
-  "_inPopup": {
-    "message": "Di Popup"
+  "_popup": {
+    "message": "Muncul"
   },
-  "_inSideMenuLeft": {
-    "message": "Di Menu Sisi Kiri"
+  "_sideMenuLeft": {
+    "message": "Menu Samping Kiri"
   },
-  "_inSideMenuRight": {
-    "message": "Di Menu Sisi Kanan"
+  "_sideMenuRight": {
+    "message": "Menu Samping Kanan"
+  },
+  "_openIn": {
+    "message": "Open In"
   },
   "_word": {
     "message": "Kata"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Karakter"
   },
-  "extName": {
-    "message": "Count me up - Penghitung kata dan karakter"
-  },
   "extDescription": {
     "message": "Penghitung kata dan karakter"
+  },
+  "extName": {
+    "message": "Count me up - Penghitung kata dan karakter"
   }
 }

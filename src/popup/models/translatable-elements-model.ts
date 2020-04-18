@@ -29,17 +29,22 @@ export const TranslatableElementsModel: TranslatableElement[] = [
     },
     {
         id: "popup",
-        translateId: "_inPopup",
+        translateId: "_popup",
         property: Property.InnerText,
     },
     {
         id: "sideMenuLeft",
-        translateId: "_inSideMenuLeft",
+        translateId: "_sideMenuLeft",
         property: Property.InnerText,
     },
     {
         id: "sideMenuRight",
-        translateId: "_inSideMenuRight",
+        translateId: "_sideMenuRight",
+        property: Property.InnerText,
+    },
+    {
+        id: "openIn",
+        translateId: "_openIn",
         property: Property.InnerText,
     },
 ];

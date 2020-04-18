@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Veikėjai be tarpų"
   },
-  "_inPopup": {
-    "message": "„Popup“"
+  "_popup": {
+    "message": "Iššokantis langas"
   },
-  "_inSideMenuLeft": {
-    "message": "Kairėje pusėje esančiame meniu"
+  "_sideMenuLeft": {
+    "message": "Šoninis meniu kairėje"
   },
-  "_inSideMenuRight": {
-    "message": "Šoniniame meniu dešinėje"
+  "_sideMenuRight": {
+    "message": "Šoninis meniu dešinėje"
+  },
+  "_openIn": {
+    "message": "Atidaryti"
   },
   "_word": {
     "message": "Žodis"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Charakteris"
   },
-  "extName": {
-    "message": "Count me up - Žodžių ir simbolių skaitiklis"
-  },
   "extDescription": {
     "message": "Žodžių ir simbolių skaitiklis"
+  },
+  "extName": {
+    "message": "Count me up - Žodžių ir simbolių skaitiklis"
   }
 }

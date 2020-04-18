@@ -1,35 +1,38 @@
 {
-    "_enterDesiredText": {
-        "message": "Introduceți textul dorit"
-    },
-    "_words": {
-        "message": "Cuvinte"
-    },
-    "_characters": {
-        "message": "Caractere"
-    },
-    "_charactersWithoutSpaces": {
-        "message": "Caractere fără spații"
-    },
-    "_inPopup": {
-        "message": "În popup"
-    },
-    "_inSideMenuLeft": {
-        "message": "În meniul lateral stânga"
-    },
-    "_inSideMenuRight": {
-        "message": "În meniul lateral dreapta"
-    },
-    "_word": {
-        "message": "Cuvânt"
-    },
-    "_character": {
-        "message": "Caracter"
-    },
-    "extDescription": {
-        "message": "Contor de cuvinte și caractere"
-    },
-    "extName": {
-        "message": "Count me up - Contor de cuvinte și caractere"
-    }
+  "_enterDesiredText": {
+    "message": "Introduceți textul dorit"
+  },
+  "_words": {
+    "message": "Cuvinte"
+  },
+  "_characters": {
+    "message": "Caractere"
+  },
+  "_charactersWithoutSpaces": {
+    "message": "Personaje fără spații"
+  },
+  "_popup": {
+    "message": "Pop-up"
+  },
+  "_sideMenuLeft": {
+    "message": "Meniu lateral stânga"
+  },
+  "_sideMenuRight": {
+    "message": "Meniu lateral dreapta"
+  },
+  "_openIn": {
+    "message": "Deschide în"
+  },
+  "_word": {
+    "message": "Cuvânt"
+  },
+  "_character": {
+    "message": "Caracter"
+  },
+  "extDescription": {
+    "message": "Contor de cuvinte și caractere"
+  },
+  "extName": {
+    "message": "Count me up - Contor de cuvinte și caractere"
+  }
 }

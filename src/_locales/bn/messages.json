@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "স্থান ছাড়াই অক্ষর"
   },
-  "_inPopup": {
-    "message": "পপআপে"
+  "_popup": {
+    "message": "পপআপ"
   },
-  "_inSideMenuLeft": {
-    "message": "সাইড মেনু বামে"
+  "_sideMenuLeft": {
+    "message": "সাইড মেনু বাম"
   },
-  "_inSideMenuRight": {
-    "message": "ডানদিকে সাইড মেনু"
+  "_sideMenuRight": {
+    "message": "ডানদিকে"
+  },
+  "_openIn": {
+    "message": "খোলা"
   },
   "_word": {
     "message": "শব্দ"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "চরিত্র"
   },
-  "extDescription": {
-    "message": "শব্দ এবং চরিত্রের কাউন্টার"
-  },
   "extName": {
     "message": "Count me up - শব্দ এবং চরিত্রের কাউন্টার"
+  },
+  "extDescription": {
+    "message": "শব্দ এবং চরিত্রের কাউন্টার"
   }
 }

@@ -3,9 +3,10 @@
   "_words": "",
   "_characters": "",
   "_charactersWithoutSpaces": "",
-  "_inPopup": "",
-  "_inSideMenuLeft": "",
-  "_inSideMenuRight": "",
+  "_popup": "",
+  "_sideMenuLeft": "",
+  "_sideMenuRight": "",
+  "_openIn": "",
   "_word": "",
   "_character": ""
 }

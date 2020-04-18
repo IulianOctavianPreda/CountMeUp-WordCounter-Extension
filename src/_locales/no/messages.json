@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Karakterer uten mellomrom"
   },
-  "_inPopup": {
-    "message": "I Popup"
+  "_popup": {
+    "message": "Popup"
   },
-  "_inSideMenuLeft": {
-    "message": "I sidemenyen til venstre"
+  "_sideMenuLeft": {
+    "message": "Sidemeny til venstre"
   },
-  "_inSideMenuRight": {
-    "message": "I sidemenyen til høyre"
+  "_sideMenuRight": {
+    "message": "Sidemeny til høyre"
+  },
+  "_openIn": {
+    "message": "Åpne i"
   },
   "_word": {
     "message": "Ord"

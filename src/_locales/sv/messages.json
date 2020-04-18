@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Tecken utan mellanrum"
   },
-  "_inPopup": {
-    "message": "I popup"
+  "_popup": {
+    "message": "Dyka upp"
   },
-  "_inSideMenuLeft": {
-    "message": "I sidmenyn vänster"
+  "_sideMenuLeft": {
+    "message": "Sidemeny vänster"
   },
-  "_inSideMenuRight": {
-    "message": "I sidmenyn höger"
+  "_sideMenuRight": {
+    "message": "Sidmeny höger"
+  },
+  "_openIn": {
+    "message": "Öppna i"
   },
   "_word": {
     "message": "Ord"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Karaktär"
   },
-  "extDescription": {
-    "message": "Ord- och karaktärräknare"
-  },
   "extName": {
     "message": "Count me up - Ord- och karaktärräknare"
+  },
+  "extDescription": {
+    "message": "Ord- och karaktärräknare"
   }
 }

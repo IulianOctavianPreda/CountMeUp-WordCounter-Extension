@@ -6,19 +6,22 @@
     "message": "Слова"
   },
   "_characters": {
-    "message": "Персонажи"
+    "message": "Символы"
   },
   "_charactersWithoutSpaces": {
     "message": "Персонажи без пробелов"
   },
-  "_inPopup": {
-    "message": "В всплывающем окне"
+  "_popup": {
+    "message": "Неожиданно возникнуть"
   },
-  "_inSideMenuLeft": {
-    "message": "В боковом меню слева"
+  "_sideMenuLeft": {
+    "message": "Боковое меню слева"
   },
-  "_inSideMenuRight": {
-    "message": "В боковом меню справа"
+  "_sideMenuRight": {
+    "message": "Боковое меню справа"
+  },
+  "_openIn": {
+    "message": "Открыть в"
   },
   "_word": {
     "message": "Слово"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Символ"
   },
-  "extName": {
-    "message": "Count me up - Счетчик слов и символов"
-  },
   "extDescription": {
     "message": "Счетчик слов и символов"
+  },
+  "extName": {
+    "message": "Count me up - Счетчик слов и символов"
   }
 }

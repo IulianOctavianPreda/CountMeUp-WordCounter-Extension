@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "ఖాళీలు లేని అక్షరాలు"
   },
-  "_inPopup": {
-    "message": "పాపప్‌లో"
+  "_popup": {
+    "message": "పాప్అప్"
   },
-  "_inSideMenuLeft": {
-    "message": "సైడ్ మెనూలో ఎడమ"
+  "_sideMenuLeft": {
+    "message": "సైడ్ మెనూ ఎడమ"
   },
-  "_inSideMenuRight": {
-    "message": "సైడ్ మెనూలో కుడి"
+  "_sideMenuRight": {
+    "message": "సైడ్ మెనూ కుడి"
+  },
+  "_openIn": {
+    "message": "లోపలికి తెరవండి"
   },
   "_word": {
     "message": "పద"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "అక్షర"
   },
-  "extName": {
-    "message": "Count me up - పదం మరియు అక్షర కౌంటర్"
-  },
   "extDescription": {
     "message": "పదం మరియు అక్షర కౌంటర్"
+  },
+  "extName": {
+    "message": "Count me up - పదం మరియు అక్షర కౌంటర్"
   }
 }

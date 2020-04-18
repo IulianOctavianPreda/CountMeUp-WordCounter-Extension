@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "דמויות ללא רווחים"
   },
-  "_inPopup": {
-    "message": "בפופ-אפ"
+  "_popup": {
+    "message": "קופץ"
   },
-  "_inSideMenuLeft": {
-    "message": "בתפריט הצד משמאל"
+  "_sideMenuLeft": {
+    "message": "תפריט צד שמאלי"
   },
-  "_inSideMenuRight": {
-    "message": "בתפריט הצד מימין"
+  "_sideMenuRight": {
+    "message": "תפריט צד מימין"
+  },
+  "_openIn": {
+    "message": "להיפתח ב"
   },
   "_word": {
     "message": "מילה"

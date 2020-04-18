@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "شخصیت های بدون فاصله"
   },
-  "_inPopup": {
-    "message": "در پنجره"
+  "_popup": {
+    "message": "پنجره"
   },
-  "_inSideMenuLeft": {
-    "message": "در سمت چپ منو"
+  "_sideMenuLeft": {
+    "message": "منوی سمت چپ"
   },
-  "_inSideMenuRight": {
-    "message": "در سمت راست منو"
+  "_sideMenuRight": {
+    "message": "منوی سمت راست"
+  },
+  "_openIn": {
+    "message": "باز کردن در"
   },
   "_word": {
     "message": "کلمه"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "شخصیت"
   },
-  "extName": {
-    "message": "Count me up - پیشخوان کلمه و شخصیت"
-  },
   "extDescription": {
     "message": "پیشخوان کلمه و شخصیت"
+  },
+  "extName": {
+    "message": "Count me up - پیشخوان کلمه و شخصیت"
   }
 }

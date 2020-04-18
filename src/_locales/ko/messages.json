@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "공백이없는 문자"
   },
-  "_inPopup": {
-    "message": "팝업에서"
+  "_popup": {
+    "message": "팝업"
   },
-  "_inSideMenuLeft": {
+  "_sideMenuLeft": {
     "message": "사이드 메뉴 왼쪽"
   },
-  "_inSideMenuRight": {
+  "_sideMenuRight": {
     "message": "사이드 메뉴 오른쪽"
+  },
+  "_openIn": {
+    "message": "열기"
   },
   "_word": {
     "message": "워드"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "캐릭터"
   },
-  "extName": {
-    "message": "Count me up - 단어 및 문자 카운터"
-  },
   "extDescription": {
     "message": "단어 및 문자 카운터"
+  },
+  "extName": {
+    "message": "Count me up - 단어 및 문자 카운터"
   }
 }

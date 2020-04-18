@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "沒有空格的字符"
   },
-  "_inPopup": {
-    "message": "在彈出窗口中"
+  "_popup": {
+    "message": "彈出"
   },
-  "_inSideMenuLeft": {
-    "message": "在左側菜單中"
+  "_sideMenuLeft": {
+    "message": "左側左側菜單"
   },
-  "_inSideMenuRight": {
-    "message": "在右側菜單中"
+  "_sideMenuRight": {
+    "message": "右側菜單"
+  },
+  "_openIn": {
+    "message": "打開"
   },
   "_word": {
     "message": "字"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "字符"
   },
-  "extName": {
-    "message": "Count me up - 文字和文字計數器"
-  },
   "extDescription": {
     "message": "文字和文字計數器"
+  },
+  "extName": {
+    "message": "Count me up - 文字和文字計數器"
   }
 }

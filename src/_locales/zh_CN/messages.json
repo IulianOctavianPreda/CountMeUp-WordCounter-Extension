@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "没有空格的字符"
   },
-  "_inPopup": {
-    "message": "在弹出窗口中"
+  "_popup": {
+    "message": "弹出"
   },
-  "_inSideMenuLeft": {
-    "message": "在左侧菜单中"
+  "_sideMenuLeft": {
+    "message": "左侧左侧菜单"
   },
-  "_inSideMenuRight": {
-    "message": "在右侧菜单中"
+  "_sideMenuRight": {
+    "message": "右侧菜单"
+  },
+  "_openIn": {
+    "message": "打开"
   },
   "_word": {
     "message": "字"

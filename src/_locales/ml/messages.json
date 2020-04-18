@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "ഇടങ്ങളില്ലാത്ത പ്രതീകങ്ങൾ"
   },
-  "_inPopup": {
-    "message": "പോപ്പ്അപ്പിൽ"
+  "_popup": {
+    "message": "പൊന്തിവരിക"
   },
-  "_inSideMenuLeft": {
-    "message": "സൈഡ് മെനു ഇടതുവശത്ത്"
+  "_sideMenuLeft": {
+    "message": "സൈഡ് മെനു ഇടത്"
   },
-  "_inSideMenuRight": {
-    "message": "സൈഡ് മെനു വലതുവശത്ത്"
+  "_sideMenuRight": {
+    "message": "സൈഡ് മെനു വലത്"
+  },
+  "_openIn": {
+    "message": "തുറക്കുക"
   },
   "_word": {
     "message": "വാക്ക്"

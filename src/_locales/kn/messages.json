@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "ಸ್ಥಳಗಳಿಲ್ಲದ ಪಾತ್ರಗಳು"
   },
-  "_inPopup": {
-    "message": "ಪಾಪ್ಅಪ್ನಲ್ಲಿ"
+  "_popup": {
+    "message": "ಪಾಪ್ಅಪ್"
   },
-  "_inSideMenuLeft": {
-    "message": "ಸೈಡ್ ಮೆನು ಎಡಭಾಗದಲ್ಲಿ"
+  "_sideMenuLeft": {
+    "message": "ಅಡ್ಡ ಮೆನು ಎಡ"
   },
-  "_inSideMenuRight": {
-    "message": "ಸೈಡ್ ಮೆನು ಬಲದಲ್ಲಿ"
+  "_sideMenuRight": {
+    "message": "ಸೈಡ್ ಮೆನು ಬಲ"
+  },
+  "_openIn": {
+    "message": "ತೆರೆಯಿರಿ"
   },
   "_word": {
     "message": "ಪದ"

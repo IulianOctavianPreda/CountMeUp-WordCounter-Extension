@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Персонажи без интервали"
   },
-  "_inPopup": {
-    "message": "В Popup"
+  "_popup": {
+    "message": "Popup"
   },
-  "_inSideMenuLeft": {
-    "message": "В странично меню наляво"
+  "_sideMenuLeft": {
+    "message": "Странично меню отляво"
   },
-  "_inSideMenuRight": {
-    "message": "В страничното меню вдясно"
+  "_sideMenuRight": {
+    "message": "Странично меню вдясно"
+  },
+  "_openIn": {
+    "message": "Отваряне в"
   },
   "_word": {
     "message": "Дума"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Характер"
   },
-  "extName": {
-    "message": "Count me up - Брояч на думи и символи"
-  },
   "extDescription": {
     "message": "Брояч на думи и символи"
+  },
+  "extName": {
+    "message": "Count me up - Брояч на думи и символи"
   }
 }

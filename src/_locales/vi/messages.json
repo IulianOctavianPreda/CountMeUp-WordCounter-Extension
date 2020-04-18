@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Nhân vật không có không gian"
   },
-  "_inPopup": {
-    "message": "Trong Popup"
+  "_popup": {
+    "message": "Popup"
   },
-  "_inSideMenuLeft": {
-    "message": "Trong Menu bên trái"
+  "_sideMenuLeft": {
+    "message": "Menu bên trái"
   },
-  "_inSideMenuRight": {
-    "message": "Trong menu bên phải"
+  "_sideMenuRight": {
+    "message": "Menu bên phải"
+  },
+  "_openIn": {
+    "message": "Mở ra"
   },
   "_word": {
     "message": "Lời"

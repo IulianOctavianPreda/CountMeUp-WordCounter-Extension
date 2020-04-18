@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Ликови без размака"
   },
-  "_inPopup": {
-    "message": "У Попупу"
+  "_popup": {
+    "message": "Попуп"
   },
-  "_inSideMenuLeft": {
-    "message": "У бочном менију лево"
+  "_sideMenuLeft": {
+    "message": "Леви мени лево"
   },
-  "_inSideMenuRight": {
-    "message": "У бочном менију десно"
+  "_sideMenuRight": {
+    "message": "Десни мени десно"
+  },
+  "_openIn": {
+    "message": "Отварање у"
   },
   "_word": {
     "message": "Ворд"

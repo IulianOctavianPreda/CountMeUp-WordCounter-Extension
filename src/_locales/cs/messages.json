@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Postavy bez mezer"
   },
-  "_inPopup": {
-    "message": "Ve vyskakovacím okně"
+  "_popup": {
+    "message": "Vyskakovat"
   },
-  "_inSideMenuLeft": {
-    "message": "V postranním menu vlevo"
+  "_sideMenuLeft": {
+    "message": "Boční menu vlevo"
   },
-  "_inSideMenuRight": {
-    "message": "V postranním menu vpravo"
+  "_sideMenuRight": {
+    "message": "Boční menu vpravo"
+  },
+  "_openIn": {
+    "message": "Otevři to"
   },
   "_word": {
     "message": "Slovo"

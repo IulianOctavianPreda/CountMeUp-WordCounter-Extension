@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Персонажі без пробілів"
   },
-  "_inPopup": {
-    "message": "В Попуп"
+  "_popup": {
+    "message": "Вискочити"
   },
-  "_inSideMenuLeft": {
-    "message": "У бічному меню зліва"
+  "_sideMenuLeft": {
+    "message": "Бічне меню зліва"
   },
-  "_inSideMenuRight": {
-    "message": "У бічному меню праворуч"
+  "_sideMenuRight": {
+    "message": "Бічне меню справа"
+  },
+  "_openIn": {
+    "message": "Відкрити в"
   },
   "_word": {
     "message": "Слово"

@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Boşluksuz Karakterler"
   },
-  "_inPopup": {
-    "message": "Popup'ta"
+  "_popup": {
+    "message": "Aniden belirmek"
   },
-  "_inSideMenuLeft": {
-    "message": "Yan Menü Solda"
+  "_sideMenuLeft": {
+    "message": "Sol Menü Sol"
   },
-  "_inSideMenuRight": {
-    "message": "Yan Menü Sağda"
+  "_sideMenuRight": {
+    "message": "Yan Menü Sağ"
+  },
+  "_openIn": {
+    "message": "Açılmak"
   },
   "_word": {
     "message": "Sözcük"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Karakter"
   },
-  "extName": {
-    "message": "Count me up - Kelime ve karakter sayacı"
-  },
   "extDescription": {
     "message": "Kelime ve karakter sayacı"
+  },
+  "extName": {
+    "message": "Count me up - Kelime ve karakter sayacı"
   }
 }

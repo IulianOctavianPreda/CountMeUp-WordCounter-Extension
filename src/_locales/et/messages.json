@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Tegelased ilma tühikuteta"
   },
-  "_inPopup": {
-    "message": "Hüpikaknas"
+  "_popup": {
+    "message": "Hüpik"
   },
-  "_inSideMenuLeft": {
-    "message": "Külgmenüüs vasakul"
+  "_sideMenuLeft": {
+    "message": "Külgmenüü vasakul"
   },
-  "_inSideMenuRight": {
-    "message": "Külgmenüüs paremal"
+  "_sideMenuRight": {
+    "message": "Külgmenüü paremal"
+  },
+  "_openIn": {
+    "message": "Ava sisse"
   },
   "_word": {
     "message": "Sõna"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Iseloom"
   },
-  "extName": {
-    "message": "Count me up - Sõna- ja märgiloendur"
-  },
   "extDescription": {
     "message": "Sõna- ja märgiloendur"
+  },
+  "extName": {
+    "message": "Count me up - Sõna- ja märgiloendur"
   }
 }

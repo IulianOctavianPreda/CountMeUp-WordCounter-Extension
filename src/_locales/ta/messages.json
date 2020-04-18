@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "இடைவெளிகள் இல்லாத எழுத்துக்கள்"
   },
-  "_inPopup": {
-    "message": "பாப்அப்பில்"
+  "_popup": {
+    "message": "பாப்அப்"
   },
-  "_inSideMenuLeft": {
-    "message": "பக்க மெனுவில் இடது"
+  "_sideMenuLeft": {
+    "message": "பக்க பட்டி இடது"
   },
-  "_inSideMenuRight": {
-    "message": "பக்க மெனுவில் வலது"
+  "_sideMenuRight": {
+    "message": "பக்க மெனு வலது"
+  },
+  "_openIn": {
+    "message": "இல் திறக்கவும்"
   },
   "_word": {
     "message": "சொல்"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "எழுத்து"
   },
-  "extName": {
-    "message": "Count me up - சொல் மற்றும் எழுத்து கவுண்டர்"
-  },
   "extDescription": {
     "message": "சொல் மற்றும் எழுத்து கவுண்டர்"
+  },
+  "extName": {
+    "message": "Count me up - சொல் மற்றும் எழுத்து கவுண்டர்"
   }
 }

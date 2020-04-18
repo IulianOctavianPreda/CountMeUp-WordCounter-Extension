@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "أحرف بدون مسافات"
   },
-  "_inPopup": {
-    "message": "في النافذة المنبثقة"
+  "_popup": {
+    "message": "يظهر فجأة"
   },
-  "_inSideMenuLeft": {
-    "message": "في القائمة الجانبية اليسرى"
+  "_sideMenuLeft": {
+    "message": "القائمة الجانبية اليسرى"
   },
-  "_inSideMenuRight": {
-    "message": "في القائمة الجانبية اليمنى"
+  "_sideMenuRight": {
+    "message": "قائمة جانبية يمنى"
+  },
+  "_openIn": {
+    "message": "فتح في"
   },
   "_word": {
     "message": "كلمة"

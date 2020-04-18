@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "ያለቦታ ቁምፊዎች"
   },
-  "_inPopup": {
-    "message": "ብቅ ባዮች ውስጥ"
+  "_popup": {
+    "message": "ብቅታ"
   },
-  "_inSideMenuLeft": {
-    "message": "በግራ ምናሌ ግራ"
+  "_sideMenuLeft": {
+    "message": "የጎን ምናሌ ግራ"
   },
-  "_inSideMenuRight": {
-    "message": "በጎን ምናሌ በቀኝ"
+  "_sideMenuRight": {
+    "message": "የጎን ምናሌ በቀኝ"
+  },
+  "_openIn": {
+    "message": "ክፈት በ"
   },
   "_word": {
     "message": "ቃል"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "ገጸ ባህሪ"
   },
-  "extDescription": {
-    "message": "የቃላት እና የቁምፊ ቆጣሪ"
-  },
   "extName": {
     "message": "Count me up - የቃላት እና የቁምፊ ቆጣሪ"
+  },
+  "extDescription": {
+    "message": "የቃላት እና የቁምፊ ቆጣሪ"
   }
 }

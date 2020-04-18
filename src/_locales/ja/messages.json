@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "スペースのない文字"
   },
-  "_inPopup": {
-    "message": "ポップアップで"
+  "_popup": {
+    "message": "現れる"
   },
-  "_inSideMenuLeft": {
+  "_sideMenuLeft": {
     "message": "サイドメニュー左"
   },
-  "_inSideMenuRight": {
+  "_sideMenuRight": {
     "message": "サイドメニュー右"
+  },
+  "_openIn": {
+    "message": "で開く"
   },
   "_word": {
     "message": "語"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "キャラクター"
   },
-  "extName": {
-    "message": "Count me up - 単語と文字のカウンター"
-  },
   "extDescription": {
     "message": "単語と文字のカウンター"
+  },
+  "extName": {
+    "message": "Count me up - 単語と文字のカウンター"
   }
 }

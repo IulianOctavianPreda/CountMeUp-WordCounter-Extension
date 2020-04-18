@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Personatges sense espais"
   },
-  "_inPopup": {
-    "message": "A la finestra emergent"
+  "_popup": {
+    "message": "Popup"
   },
-  "_inSideMenuLeft": {
-    "message": "Al menú lateral esquerre"
+  "_sideMenuLeft": {
+    "message": "Menú lateral esquerre"
   },
-  "_inSideMenuRight": {
-    "message": "Al menú lateral dret"
+  "_sideMenuRight": {
+    "message": "Menú lateral a la dreta"
+  },
+  "_openIn": {
+    "message": "Obriu-ho"
   },
   "_word": {
     "message": "Paraula"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Personatge"
   },
-  "extDescription": {
-    "message": "Comptador de paraules i personatges"
-  },
   "extName": {
     "message": "Count me up - Comptador de paraules i personatges"
+  },
+  "extDescription": {
+    "message": "Comptador de paraules i personatges"
   }
 }

@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Wahusika bila nafasi"
   },
-  "_inPopup": {
-    "message": "Katika Dukizo"
+  "_popup": {
+    "message": "Dukizo"
   },
-  "_inSideMenuLeft": {
-    "message": "Kwenye Menyu ya Upande Kushoto"
+  "_sideMenuLeft": {
+    "message": "Menyu ya upande wa kushoto"
   },
-  "_inSideMenuRight": {
-    "message": "Kwenye Menyu ya Upande kulia"
+  "_sideMenuRight": {
+    "message": "Menyu ya Upande kulia"
+  },
+  "_openIn": {
+    "message": "Fungua ndani"
   },
   "_word": {
     "message": "Neno"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Tabia"
   },
-  "extDescription": {
-    "message": "Ishara ya neno na tabia"
-  },
   "extName": {
     "message": "Count me up - Ishara ya neno na tabia"
+  },
+  "extDescription": {
+    "message": "Ishara ya neno na tabia"
   }
 }

@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Tekens zonder spaties"
   },
-  "_inPopup": {
-    "message": "In Popup"
+  "_popup": {
+    "message": "Pop-up"
   },
-  "_inSideMenuLeft": {
-    "message": "In zijmenu links"
+  "_sideMenuLeft": {
+    "message": "Zijmenu links"
   },
-  "_inSideMenuRight": {
-    "message": "In zijmenu rechts"
+  "_sideMenuRight": {
+    "message": "Zijmenu rechts"
+  },
+  "_openIn": {
+    "message": "Open in"
   },
   "_word": {
     "message": "Woord"

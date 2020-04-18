@@ -11,14 +11,17 @@
     "_charactersWithoutSpaces": {
         "message": "Characters without spaces"
     },
-    "_inPopup": {
-        "message": "In popup"
+    "_popup": {
+        "message": "Popup"
     },
-    "_inSideMenuLeft": {
-        "message": "In side menu - left"
+    "_sideMenuLeft": {
+        "message": "Side menu left"
     },
-    "_inSideMenuRight": {
-        "message": "In side menu - right"
+    "_sideMenuRight": {
+        "message": "Side menu right"
+    },
+    "_openIn": {
+        "message": "Open in"
     },
     "_word": {
         "message": "Word"

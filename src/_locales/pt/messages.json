@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Personagens Sem Espaços"
   },
-  "_inPopup": {
-    "message": "Em Popup"
+  "_popup": {
+    "message": "Aparecer"
   },
-  "_inSideMenuLeft": {
-    "message": "No menu lateral esquerdo"
+  "_sideMenuLeft": {
+    "message": "Menu lateral esquerdo"
   },
-  "_inSideMenuRight": {
-    "message": "No menu lateral direito"
+  "_sideMenuRight": {
+    "message": "Menu Lateral Direito"
+  },
+  "_openIn": {
+    "message": "Aberto em"
   },
   "_word": {
     "message": "Palavra"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Personagem"
   },
-  "extName": {
-    "message": "Count me up - Contador de palavras e caracteres"
-  },
   "extDescription": {
     "message": "Contador de palavras e caracteres"
+  },
+  "extName": {
+    "message": "Count me up - Contador de palavras e caracteres"
   }
 }

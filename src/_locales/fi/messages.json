@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Hahmot ilman välilyöntejä"
   },
-  "_inPopup": {
-    "message": "Ponnahdusikkunassa"
+  "_popup": {
+    "message": "Ponnahdusikkuna"
   },
-  "_inSideMenuLeft": {
-    "message": "Sivun valikossa vasemmalla"
+  "_sideMenuLeft": {
+    "message": "Sivun valikko vasen"
   },
-  "_inSideMenuRight": {
-    "message": "Sivuvalikossa oikealla"
+  "_sideMenuRight": {
+    "message": "Sivuruutu oikealla"
+  },
+  "_openIn": {
+    "message": "Avaa sisään"
   },
   "_word": {
     "message": "Sana"

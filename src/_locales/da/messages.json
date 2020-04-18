@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Tegn uden mellemrum"
   },
-  "_inPopup": {
-    "message": "I pop-up"
+  "_popup": {
+    "message": "Pop op"
   },
-  "_inSideMenuLeft": {
-    "message": "I sidemenu til venstre"
+  "_sideMenuLeft": {
+    "message": "Sidemenu til venstre"
   },
-  "_inSideMenuRight": {
-    "message": "I sidemenu til højre"
+  "_sideMenuRight": {
+    "message": "Sidemenu Højre"
+  },
+  "_openIn": {
+    "message": "Åbn ind"
   },
   "_word": {
     "message": "Ord"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Karakter"
   },
-  "extName": {
-    "message": "Count me up - Ord- og karaktertæller"
-  },
   "extDescription": {
     "message": "Ord- og karaktertæller"
+  },
+  "extName": {
+    "message": "Count me up - Ord- og karaktertæller"
   }
 }

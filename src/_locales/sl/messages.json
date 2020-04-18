@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Liki brez razmikov"
   },
-  "_inPopup": {
-    "message": "V Popupu"
+  "_popup": {
+    "message": "Popup"
   },
-  "_inSideMenuLeft": {
-    "message": "V stranskem meniju levo"
+  "_sideMenuLeft": {
+    "message": "Stranski meni Levo"
   },
-  "_inSideMenuRight": {
-    "message": "V stranskem meniju desno"
+  "_sideMenuRight": {
+    "message": "Stranski meni desno"
+  },
+  "_openIn": {
+    "message": "Odpri"
   },
   "_word": {
     "message": "Beseda"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Lik"
   },
-  "extDescription": {
-    "message": "Števec besed in znakov"
-  },
   "extName": {
     "message": "Count me up - Števec besed in znakov"
+  },
+  "extDescription": {
+    "message": "Števec besed in znakov"
   }
 }

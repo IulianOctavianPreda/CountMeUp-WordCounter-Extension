@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Znaky bez medzier"
   },
-  "_inPopup": {
-    "message": "Vo vyskakovacom okne"
+  "_popup": {
+    "message": "Objaviť sa"
   },
-  "_inSideMenuLeft": {
-    "message": "V bočnom menu vľavo"
+  "_sideMenuLeft": {
+    "message": "Bočné menu vľavo"
   },
-  "_inSideMenuRight": {
-    "message": "V bočnom menu vpravo"
+  "_sideMenuRight": {
+    "message": "Bočné menu vpravo"
+  },
+  "_openIn": {
+    "message": "Otvoriť v"
   },
   "_word": {
     "message": "Slovo"

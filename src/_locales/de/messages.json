@@ -11,14 +11,17 @@
     "_charactersWithoutSpaces": {
         "message": "Zeichen ohne Leerzeichen"
     },
-    "_inPopup": {
-        "message": "Im Popup"
+    "_popup": {
+        "message": "Popup"
     },
-    "_inSideMenuLeft": {
-        "message": "Im Seitenmenü links"
+    "_sideMenuLeft": {
+        "message": "Seitenmenü links"
     },
-    "_inSideMenuRight": {
-        "message": "Im Seitenmenü rechts"
+    "_sideMenuRight": {
+        "message": "Seitenmenü rechts"
+    },
+    "_openIn": {
+        "message": "Öffnen Sie im"
     },
     "_word": {
         "message": "Wort"

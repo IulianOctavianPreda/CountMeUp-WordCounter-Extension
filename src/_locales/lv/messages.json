@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Rakstzīmes bez atstarpēm"
   },
-  "_inPopup": {
-    "message": "Uznirstošajā logā"
+  "_popup": {
+    "message": "Uznirstošais"
   },
-  "_inSideMenuLeft": {
-    "message": "Sānu izvēlnē pa kreisi"
+  "_sideMenuLeft": {
+    "message": "Sānu izvēlne pa kreisi"
   },
-  "_inSideMenuRight": {
-    "message": "Sānu izvēlnē pa labi"
+  "_sideMenuRight": {
+    "message": "Sānu izvēlne pa labi"
+  },
+  "_openIn": {
+    "message": "Atvērt"
   },
   "_word": {
     "message": "Vārds"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "Raksturs"
   },
-  "extDescription": {
-    "message": "Vārdu un rakstzīmju skaitītājs"
-  },
   "extName": {
     "message": "Count me up - Vārdu un rakstzīmju skaitītājs"
+  },
+  "extDescription": {
+    "message": "Vārdu un rakstzīmju skaitītājs"
   }
 }

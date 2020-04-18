@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "मोकळी जागा नसलेली पात्रं"
   },
-  "_inPopup": {
-    "message": "पॉपअप मध्ये"
+  "_popup": {
+    "message": "पॉपअप"
   },
-  "_inSideMenuLeft": {
-    "message": "साइड मेनू डावीकडे"
+  "_sideMenuLeft": {
+    "message": "साइड मेनू डावा"
   },
-  "_inSideMenuRight": {
-    "message": "साइड मेनू मध्ये उजवीकडे"
+  "_sideMenuRight": {
+    "message": "साइड मेनू उजवीकडे"
+  },
+  "_openIn": {
+    "message": "ओपन इन"
   },
   "_word": {
     "message": "शब्द"
@@ -26,10 +29,10 @@
   "_character": {
     "message": "चारित्र्य"
   },
-  "extName": {
-    "message": "Count me up - शब्द आणि वर्ण काउंटर"
-  },
   "extDescription": {
     "message": "शब्द आणि वर्ण काउंटर"
+  },
+  "extName": {
+    "message": "Count me up - शब्द आणि वर्ण काउंटर"
   }
 }

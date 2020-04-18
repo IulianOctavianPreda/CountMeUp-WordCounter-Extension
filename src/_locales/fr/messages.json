@@ -11,14 +11,17 @@
   "_charactersWithoutSpaces": {
     "message": "Personnages sans espaces"
   },
-  "_inPopup": {
-    "message": "Dans Popup"
+  "_popup": {
+    "message": "Apparaitre"
   },
-  "_inSideMenuLeft": {
-    "message": "Dans le menu latéral gauche"
+  "_sideMenuLeft": {
+    "message": "Menu latéral gauche"
   },
-  "_inSideMenuRight": {
-    "message": "Dans le menu latéral droit"
+  "_sideMenuRight": {
+    "message": "Menu latéral droit"
+  },
+  "_openIn": {
+    "message": "Ouvrir dans"
   },
   "_word": {
     "message": "Mot"

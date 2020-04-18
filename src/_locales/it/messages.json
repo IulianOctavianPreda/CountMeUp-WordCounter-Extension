@@ -11,25 +11,28 @@
   "_charactersWithoutSpaces": {
     "message": "Personaggi senza spazi"
   },
-  "_inPopup": {
-    "message": "In popup"
+  "_popup": {
+    "message": "Apparire"
   },
-  "_inSideMenuLeft": {
-    "message": "Nel menu laterale a sinistra"
+  "_sideMenuLeft": {
+    "message": "Menu laterale a sinistra"
   },
-  "_inSideMenuRight": {
-    "message": "Nel menu laterale a destra"
+  "_sideMenuRight": {
+    "message": "Menu laterale destro"
+  },
+  "_openIn": {
+    "message": "Apri in"
   },
   "_word": {
     "message": "Parola"
   },
   "_character": {
-    "message": "Carattere"
-  },
-  "extDescription": {
-    "message": "Contatore di parole e caratteri"
+    "message": "Personaggio"
   },
   "extName": {
     "message": "Count me up - Contatore di parole e caratteri"
+  },
+  "extDescription": {
+    "message": "Contatore di parole e caratteri"
   }
 }
