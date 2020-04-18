@@ -4,7 +4,7 @@ import { ViewMethod } from "./../../shared/enums/view-method";
 
 export const ImageElementsModel: ImageElement[] = [
     {
-        id: "menu",
+        id: "menuIcon",
         path: "assets/images/menu.svg",
         property: Property.Src,
     },
@@ -31,6 +31,11 @@ export const ImageElementsModel: ImageElement[] = [
     {
         id: ViewMethod.SideMenuRight + "Check",
         path: "assets/images/check.svg",
+        property: Property.Src,
+    },
+    {
+        id: "closeIcon",
+        path: "assets/images/close.svg",
         property: Property.Src,
     },
 ];

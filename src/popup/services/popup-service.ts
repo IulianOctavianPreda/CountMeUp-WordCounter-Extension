@@ -1,3 +1,5 @@
+import { MenuPosition } from "src/shared/enums/menu-position";
+
 import { Counter } from "../../shared/counter";
 import { Message } from "../../shared/enums/message";
 import { Storage } from "../../shared/enums/storage";
@@ -16,8 +18,10 @@ import { TranslationService } from "./translation-service";
 
 export class PopupService {
     private counter = new Counter();
+    private containingTabId: number | undefined;
 
     constructor() {
+        DomUtils.hideElementById(Identifiers.CloseButton);
         ThemeService.createDarkThemeCss();
         TranslationService.updateTranslations(TranslatableElementsModel);
         ImageService.updateSources(ImageElementsModel);
@@ -45,6 +49,65 @@ export class PopupService {
         MessagePassingService.addMessageListener(
             { source: Message.BackgroundId, destination: Message.PopupId, name: "selectedText" },
             this.updateUsingSelectedText.bind(this)
+        );
+
+        MessagePassingService.addMessageListener(
+            { source: Message.ContentId, destination: Message.PopupId, name: "sideMenu" },
+            (data: MenuPosition, sender) => {
+                this.containingTabId = sender?.tab?.id;
+                DomUtils.showElementById(Identifiers.CloseButton, "flex");
+
+                if (data === MenuPosition.Left) {
+                    DomUtils.replaceClassById(
+                        Identifiers.CloseButton,
+                        "flex-row-reverse",
+                        "flex-row"
+                    );
+
+                    DomUtils.replaceClassById(Identifiers.Title, "order-0", "order-1");
+                    DomUtils.replaceClassById(Identifiers.Menu, "order-1", "order-0");
+                    DomUtils.replaceClassById(
+                        Identifiers.MenuButton,
+                        "justify-content-end",
+                        "justify-content-start"
+                    );
+                    (<HTMLElement>(
+                        document.getElementsByClassName("dropdown-content")[0]
+                    )).style.right = "auto";
+                } else {
+                    DomUtils.replaceClassById(
+                        Identifiers.CloseButton,
+                        "flex-row",
+                        "flex-row-reverse"
+                    );
+
+                    DomUtils.replaceClassById(Identifiers.Title, "order-1", "order-0");
+                    DomUtils.replaceClassById(Identifiers.Menu, "order-0", "order-1");
+                    DomUtils.replaceClassById(
+                        Identifiers.MenuButton,
+                        "justify-content-start",
+                        "justify-content-end"
+                    );
+
+                    (<HTMLElement>(
+                        document.getElementsByClassName("dropdown-content")[0]
+                    )).style.right = "0px";
+                }
+            }
+        );
+
+        (<HTMLElement>document.getElementById(Identifiers.CloseButton))?.addEventListener(
+            "click",
+            () => {
+                MessagePassingService.sendMessageToContentScript(
+                    <number>this.containingTabId,
+                    {
+                        source: Message.PopupId,
+                        name: "closeSideMenu",
+                    },
+                    null
+                );
+            }
         );
 
         (<HTMLInputElement>document.getElementById(Identifiers.TextArea))?.addEventListener(

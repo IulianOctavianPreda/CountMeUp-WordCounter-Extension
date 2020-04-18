@@ -1,4 +1,6 @@
 import { MenuPosition } from "../shared/enums/menu-position";
+import { Message } from "../shared/enums/message";
+import { MessagePassingService } from "../shared/services/message-passing-service";
 import { MouseButton } from "./enums/mouse-button";
 
 export class SideMenu {
@@ -6,23 +8,35 @@ export class SideMenu {
     borderSize = 5;
     side = MenuPosition.Right;
     cssSide = {
-        [MenuPosition.Right]: { div: "right:0;", iframe: `margin-left:${this.borderSize}px;` },
-        [MenuPosition.Left]: { div: "left:0;", iframe: `margin-right:${this.borderSize}px;` },
+        [MenuPosition.Right]: {
+            div: { right: "0px", left: "auto" },
+            iframe: {
+                marginLeft: `${this.borderSize}px`,
+                marginRight: `0px`,
+            },
+        },
+        [MenuPosition.Left]: {
+            div: { right: "auto", left: "0px" },
+            iframe: {
+                marginLeft: `0px`,
+                marginRight: `${this.borderSize}px`,
+            },
+        },
     };
 
     constructor() {
         this.render();
+        this.postRenderUpdate();
         this.addListeners();
     }
 
     get template() {
         return `
     <div
-        id="wordsCounterSidePanel"
+        id="countMeUpWordCounterSidePanel"
         style="height:100%;
                    position: fixed;
                    width: 0px;
-                   ${this.cssSide[this.side].div}
                    top:0;
                    border: 0;
                    padding: 0;
@@ -30,11 +44,9 @@ export class SideMenu {
                    background-color:black"
         >
         <iframe
-            id="wordsCounterSidePanelIframe"
+            id="countMeUpWordCounterSidePanelIframe"
             src="${chrome.extension.getURL("popup/popup.html")}"
-            style="height:100%; width:CALC(100% - ${this.borderSize}px); border:0; ${
-            this.cssSide[this.side].iframe
-        }"
+            style="height:100%; width:CALC(100% - ${this.borderSize}px); border:0;"
         "></iframe>
     </div>
     `;
@@ -43,8 +55,7 @@ export class SideMenu {
     reInitialize(side: MenuPosition = MenuPosition.Right) {
         if (side !== this.side) {
             this.side = side;
-            document.getElementById("wordsCounterSidePanel")?.remove();
-            this.render();
+            this.postRenderUpdate();
         }
     }
 
@@ -55,8 +66,19 @@ export class SideMenu {
         htmlElement.insertAdjacentHTML(position, this.template);
     }
 
+    postRenderUpdate() {
+        this.panel.style.left = this.cssSide[this.side].div.left;
+        this.panel.style.right = this.cssSide[this.side].div.right;
+        this.iframePanel.style.marginLeft = this.cssSide[this.side].iframe.marginLeft;
+        this.iframePanel.style.marginRight = this.cssSide[this.side].iframe.marginRight;
+    }
+
     get panel() {
-        return <HTMLElement>document.getElementById("wordsCounterSidePanel");
+        return <HTMLElement>document.getElementById("countMeUpWordCounterSidePanel");
+    }
+
+    get iframePanel() {
+        return <HTMLElement>document.getElementById("countMeUpWordCounterSidePanelIframe");
     }
 
     showMenu() {
@@ -76,5 +98,10 @@ export class SideMenu {
                 e.stopPropagation();
             }
         });
+
+        MessagePassingService.addMessageListener(
+            { source: Message.PopupId, destination: Message.ContentId, name: "closeSideMenu" },
+            this.hideMenu.bind(this)
+        );
     }
 }

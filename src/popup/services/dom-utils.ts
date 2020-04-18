@@ -22,4 +22,16 @@ export class DomUtils {
             element.style.display = display;
         }
     }
+
+    public static replaceClassById(id: string, deletedClass: string, addedClass: string) {
+        const element = document.getElementById(id);
+        if (!!element) {
+            if (element.classList.contains(deletedClass)) {
+                element.classList.remove(deletedClass);
+            }
+            if (!element.classList.contains(addedClass)) {
+                element.classList.add(addedClass);
+            }
+        }
+    }
 }

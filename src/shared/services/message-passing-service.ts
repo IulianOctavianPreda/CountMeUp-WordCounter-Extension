@@ -24,16 +24,20 @@ export class MessagePassingService {
 
     public static addMessageListener(
         msg: { source: string; destination: string; name?: string },
-        callback: (data: any, sendResponse?: (response?: any) => void) => void
+        callback: (
+            data: any,
+            sender?: chrome.runtime.MessageSender,
+            sendResponse?: (response?: any) => void
+        ) => void
     ): void {
         chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             if (request.msg.source === msg.source && request.msg.destination === msg.destination) {
                 if (!!msg.name) {
                     if (msg?.name === request.msg?.name) {
-                        callback(request.data, sendResponse);
+                        callback(request.data, sender, sendResponse);
                     }
                 } else {
-                    callback(request.data, sendResponse);
+                    callback(request.data, sender, sendResponse);
                 }
             }
         });

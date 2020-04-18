@@ -9,6 +9,19 @@ html {
     background: transparent; /* optional: just make scrollbar invisible */
 }
 
+.pr-3half {
+    padding-right: 1.25rem !important;
+}
+
+.pl-3half {
+    padding-left: 1.25rem !important;
+}
+
+.px-3half {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+}
+
 .dropdown-content {
     // display: none;
     transition: opacity 0.7s ease;
