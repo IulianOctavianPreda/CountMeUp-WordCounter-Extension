@@ -39,7 +39,7 @@ export class PopupService {
         });
 
         StorageService.getFromStorage(Storage.SelectedViewMethod, (data) => {
-            this.checklistUpdate(data);
+            this.checklistUpdateDisplay(data);
         });
     }
 
@@ -54,6 +54,10 @@ export class PopupService {
         MessagePassingService.addMessageListener(
             { source: Message.ContentId, destination: Message.PopupId, name: "sideMenu" },
             (data: MenuPosition, sender) => {
+                StorageService.getFromStorage(Storage.SelectedViewMethod, (viewMethod) => {
+                    this.checklistUpdateDisplay(viewMethod);
+                });
+
                 this.containingTabId = sender?.tab?.id;
                 DomUtils.showElementById(Identifiers.CloseButton, "flex");
 
@@ -157,6 +161,17 @@ export class PopupService {
     }
 
     private checklistUpdate(id: string) {
+        this.checklistUpdateDisplay(id);
+
+        if (this.containingTabId) {
+            MessagePassingService.sendMessage(
+                { source: Message.PopupId, destination: Message.BackgroundId, name: "changeView" },
+                { viewMethod: id, tabId: this.containingTabId }
+            );
+        }
+    }
+
+    private checklistUpdateDisplay(id: string) {
         const optionMenuCheckIconIdList = Object.keys(ViewMethod)
             .map((k) => ViewMethod[k])
             .map((v) => v + "Check");

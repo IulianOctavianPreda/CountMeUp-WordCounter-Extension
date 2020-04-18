@@ -29,45 +29,67 @@ export class ViewMethodService {
             if (!ViewMethodService.isAcceptedTab(tab.url)) {
                 data = ViewMethod.Popup;
             }
-            switch (data) {
-                case ViewMethod.Popup: {
-                    StorageService.getFromStorage(Storage.PopupWindowId, (windowId) => {
-                        if (!!windowId) {
-                            chrome.windows.update(
-                                windowId,
-                                {
-                                    focused: true,
-                                },
-                                (callbackData) => {
-                                    if (!callbackData) {
-                                        ViewMethodService.createWindow();
-                                    }
-                                }
-                            );
-                        } else {
-                            ViewMethodService.createWindow();
-                        }
-                    });
-                    break;
-                }
-                case ViewMethod.SideMenuLeft: {
-                    MessagePassingService.sendMessageToContentScript(
-                        tab.id,
-                        { source: Message.BackgroundId },
-                        MenuPosition.Left
-                    );
-                    break;
-                }
-                case ViewMethod.SideMenuRight: {
-                    MessagePassingService.sendMessageToContentScript(
-                        tab.id,
-                        { source: Message.BackgroundId },
-                        MenuPosition.Right
-                    );
-                    break;
-                }
-            }
+            ViewMethodService.openSelectedView(data, tab.id);
         });
+    }
+
+    public static openSelectedView(data: ViewMethod, tabId: any) {
+        switch (data) {
+            case ViewMethod.Popup: {
+                StorageService.getFromStorage(Storage.PopupWindowId, (windowId) => {
+                    if (!!windowId) {
+                        chrome.windows.update(
+                            windowId,
+                            {
+                                focused: true,
+                            },
+                            (callbackData) => {
+                                if (!callbackData) {
+                                    ViewMethodService.createWindow();
+                                }
+                            }
+                        );
+                    } else {
+                        ViewMethodService.createWindow();
+                    }
+                });
+                break;
+            }
+            case ViewMethod.SideMenuLeft: {
+                MessagePassingService.sendMessageToContentScript(
+                    tabId,
+                    { source: Message.BackgroundId },
+                    MenuPosition.Left
+                );
+                break;
+            }
+            case ViewMethod.SideMenuRight: {
+                MessagePassingService.sendMessageToContentScript(
+                    tabId,
+                    { source: Message.BackgroundId },
+                    MenuPosition.Right
+                );
+                break;
+            }
+        }
+    }
+
+    public static reInitializeView(data: ViewMethod, tabId: any) {
+        if (data === ViewMethod.Popup) {
+            MessagePassingService.sendMessageToContentScript(
+                tabId,
+                { source: Message.BackgroundId, name: "hideSideMenu" },
+                null
+            );
+        } else {
+            StorageService.getFromStorage(Storage.PopupWindowId, (windowId) => {
+                if (!!windowId) {
+                    chrome.windows.remove(windowId);
+                    StorageService.removeFromStorage(Storage.PopupWindowId);
+                }
+            });
+        }
+        ViewMethodService.openSelectedView(data, tabId);
     }
 
     public static isAcceptedTab(url) {

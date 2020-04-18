@@ -9,7 +9,6 @@ MessagePassingService.addMessageListener(
     (data: MenuPosition) => {
         sideMenu.reInitialize(data);
         sideMenu.showMenu();
-
         MessagePassingService.sendMessage(
             {
                 source: Message.ContentId,
@@ -18,6 +17,13 @@ MessagePassingService.addMessageListener(
             },
             data
         );
+    }
+);
+
+MessagePassingService.addMessageListener(
+    { source: Message.BackgroundId, destination: Message.ContentId, name: "hideSideMenu" },
+    () => {
+        sideMenu.hideMenu();
     }
 );
 
