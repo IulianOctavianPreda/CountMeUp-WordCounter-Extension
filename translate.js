@@ -7,11 +7,14 @@ const translate = new Translate({ projectId });
 const path = require("path");
 const fs = require("fs");
 
+var args = process.argv.slice(2);
+
 // prettier-ignore
-let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da",,"el","es","et","fa","fi","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh-CN","zh-TW"];
+let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da","el","es","et","fa","fi","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh-CN","zh-TW"];
 
 let manualLanguageCodes = ["ro", "en", "de", "pt_BR", "pt_PT"];
 let pathToTranslationFile = "./src/translations/template.json";
+let defaultPath = "./src";
 let extName = "Word and character counter";
 let fixedExtName = "Count me up - ";
 let extDescription = "Word and character counter";
@@ -22,7 +25,11 @@ Array.prototype.last = function () {
 main();
 
 function main() {
-    let files = getAllFiles("./src", [], ["html", "ts", "js"]);
+    if (!!args[0]) {
+        defaultPath = args[0];
+        pathToTranslationFile = `${defaultPath}/translations/template.json`;
+    }
+    let files = getAllFiles(defaultPath, [], ["html", "ts", "js"]);
     cleanTranslationTemplate();
     createTranslationTemplateFolder();
 
@@ -119,9 +126,9 @@ function propertiesToObject(namespace, obj) {
 }
 
 function mergeTranslateTemplateWithTranslationFile(languageCode) {
-    makeDirIfNotExist(`./src/_locales/`);
-    makeDirIfNotExist(`./src/_locales/${languageCode}`);
-    const localeFile = `./src/_locales/${languageCode}/messages.json`;
+    makeDirIfNotExist(`${defaultPath}/_locales/`);
+    makeDirIfNotExist(`${defaultPath}/_locales/${languageCode}`);
+    const localeFile = `${defaultPath}/_locales/${languageCode}/messages.json`;
 
     let templateTranslationFile = fs.readFileSync(pathToTranslationFile);
     let templateTranslation = JSON.parse(templateTranslationFile);
@@ -137,9 +144,9 @@ function mergeTranslateTemplateWithTranslationFile(languageCode) {
 }
 
 function createTranslateFile(languageCode) {
-    makeDirIfNotExist(`./src/_locales/`);
-    makeDirIfNotExist(`./src/_locales/${languageCode.replace("-", "_")}`);
-    // fs.copyFileSync(pathToTranslationFile, `./src/_locale/${languageCode}/translations.json`);
+    makeDirIfNotExist(`${defaultPath}/_locales/`);
+    makeDirIfNotExist(`${defaultPath}/_locales/${languageCode.replace("-", "_")}`);
+    // fs.copyFileSync(pathToTranslationFile, `${defaultPath}/_locale/${languageCode}/translations.json`);
     let templateTranslationFile = fs.readFileSync(pathToTranslationFile);
     let templateTranslation = JSON.parse(templateTranslationFile);
 
@@ -153,7 +160,7 @@ function createTranslateFile(languageCode) {
     promiseArray.push(...updateTranslations(templateTranslation, languageCode));
     Promise.all(promiseArray).then(() => {
         writeObjectToJson(
-            `./src/_locales/${languageCode.replace("-", "_")}/messages.json`,
+            `${defaultPath}/_locales/${languageCode.replace("-", "_")}/messages.json`,
             templateTranslation,
             "w"
         );
@@ -201,10 +208,10 @@ function writeObjectToJson(path, obj, flag = "a") {
 }
 
 function cleanTranslationTemplate() {
-    deleteFolderRecursive("./src/translations");
+    deleteFolderRecursive(`${defaultPath}/translations`);
 }
 function createTranslationTemplateFolder() {
-    fs.mkdirSync("./src/translations");
+    fs.mkdirSync(`${defaultPath}/translations`);
 }
 
 function copyProperties(obj1, obj2) {

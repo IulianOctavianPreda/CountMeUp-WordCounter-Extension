@@ -43,7 +43,7 @@ module.exports = {
         }),
         new CopyPlugin([
             { from: "manifest.json", to: "manifest.json" },
-            { from: "assets", to: "assets" },
+            { from: "src/assets", to: "assets" },
             { from: "src/_locales", to: "_locales" },
         ]),
         new MiniCssExtractPlugin({

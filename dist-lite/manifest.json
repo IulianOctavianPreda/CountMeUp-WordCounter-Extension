@@ -10,11 +10,6 @@
     "background": {
         "scripts": ["./background/background.js"]
     },
-    "browser_action": {
-        "default_title": "__MSG_extName__",
-        "default_icon": "./assets/images/128x128-icon.png",
-        "default_popup": "./popup/popup.html"
-    },
     "content_scripts": [
         {
             "run_at": "document_end",
@@ -22,8 +17,7 @@
             "js": ["./content_script/content_script.js"]
         }
     ],
-    "permissions": ["activeTab", "contextMenus", "storage"],
-    "web_accessible_resources": ["popup/popup.html"],
+    "permissions": ["activeTab", "contextMenus"],
     "browser_specific_settings": {
         "gecko": {
             "id": "a@example.com",

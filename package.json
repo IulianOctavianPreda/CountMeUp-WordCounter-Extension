@@ -11,7 +11,10 @@
     "scripts": {
         "build": "webpack",
         "watch": "webpack --watch",
-        "generateTranslations": "node ./translate.js"
+        "extract": "node ./translate.js",
+        "build-lite": "webpack --config webpack.config.lite.js",
+        "watch-lite": "webpack --config webpack.config.lite.js --watch",
+        "extract-lite": "node ./translate.js ./src-lite"
     },
     "devDependencies": {
         "@types/chrome": "0.0.88",
