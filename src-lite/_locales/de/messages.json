@@ -6,15 +6,15 @@
         "message": "Wörter"
     },
     "_character": {
-        "message": "Buchstabe"
+        "message": "Charakter"
     },
     "_characters": {
-        "message": "Buchstaben"
+        "message": "Charakteren"
     },
     "extName": {
-        "message": "Count me up lite - Wort- und Buchstabenzähler"
+        "message": "Count me up lite - Wort- und Charakterenzähler"
     },
     "extDescription": {
-        "message": "Wort- und Buchstabenzähler"
+        "message": "Wort- und Charakterenzähler"
     }
 }
