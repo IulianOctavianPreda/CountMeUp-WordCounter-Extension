@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "ಪದ"
+    },
+    "_words": {
+        "message": "ಪದಗಳು"
+    },
+    "_character": {
+        "message": "ಅಕ್ಷರ"
+    },
+    "_characters": {
+        "message": "ಪಾತ್ರಗಳು"
+    },
+    "extName": {
+        "message": "Count me up lite - ಪದ ಮತ್ತು ಅಕ್ಷರ ಕೌಂಟರ್"
+    },
+    "extDescription": {
+        "message": "ಪದ ಮತ್ತು ಅಕ್ಷರ ಕೌಂಟರ್"
+    }
+}

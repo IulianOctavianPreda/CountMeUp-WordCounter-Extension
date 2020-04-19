@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Слово"
+    },
+    "_words": {
+        "message": "Слова"
+    },
+    "_character": {
+        "message": "Символ"
+    },
+    "_characters": {
+        "message": "Символы"
+    },
+    "extName": {
+        "message": "Count me up lite - Счетчик слов и символов"
+    },
+    "extDescription": {
+        "message": "Счетчик слов и символов"
+    }
+}

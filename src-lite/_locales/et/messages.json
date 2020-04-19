@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Sõna"
+    },
+    "_words": {
+        "message": "Sõnad"
+    },
+    "_character": {
+        "message": "Iseloom"
+    },
+    "_characters": {
+        "message": "Tegelased"
+    },
+    "extName": {
+        "message": "Count me up lite - Sõna- ja märgiloendur"
+    },
+    "extDescription": {
+        "message": "Sõna- ja märgiloendur"
+    }
+}

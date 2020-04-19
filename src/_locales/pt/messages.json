@@ -1,38 +1,38 @@
 {
-  "_enterDesiredText": {
-    "message": "Digite o texto desejado"
-  },
-  "_words": {
-    "message": "Palavras"
-  },
-  "_characters": {
-    "message": "Personagens"
-  },
-  "_charactersWithoutSpaces": {
-    "message": "Personagens Sem Espaços"
-  },
-  "_popup": {
-    "message": "Aparecer"
-  },
-  "_sideMenuLeft": {
-    "message": "Menu lateral esquerdo"
-  },
-  "_sideMenuRight": {
-    "message": "Menu Lateral Direito"
-  },
-  "_openIn": {
-    "message": "Aberto em"
-  },
-  "_word": {
-    "message": "Palavra"
-  },
-  "_character": {
-    "message": "Personagem"
-  },
-  "extDescription": {
-    "message": "Contador de palavras e caracteres"
-  },
-  "extName": {
-    "message": "Count me up - Contador de palavras e caracteres"
-  }
+    "_enterDesiredText": {
+        "message": "Digite o texto desejado"
+    },
+    "_words": {
+        "message": "Palavras"
+    },
+    "_characters": {
+        "message": "Caracteres"
+    },
+    "_charactersWithoutSpaces": {
+        "message": "Caracteres Sem Espaços"
+    },
+    "_popup": {
+        "message": "Aparecer"
+    },
+    "_sideMenuLeft": {
+        "message": "Menu lateral esquerdo"
+    },
+    "_sideMenuRight": {
+        "message": "Menu Lateral Direito"
+    },
+    "_openIn": {
+        "message": "Aberto em"
+    },
+    "_word": {
+        "message": "Palavra"
+    },
+    "_character": {
+        "message": "Carácter"
+    },
+    "extDescription": {
+        "message": "Contador de palavras e caracteres"
+    },
+    "extName": {
+        "message": "Count me up - Contador de palavras e caracteres"
+    }
 }

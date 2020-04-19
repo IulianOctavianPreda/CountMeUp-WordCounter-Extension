@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "字"
+    },
+    "_words": {
+        "message": "话"
+    },
+    "_character": {
+        "message": "字符"
+    },
+    "_characters": {
+        "message": "性格"
+    },
+    "extName": {
+        "message": "Count me up lite - 文字和文字计数器"
+    },
+    "extDescription": {
+        "message": "文字和文字计数器"
+    }
+}

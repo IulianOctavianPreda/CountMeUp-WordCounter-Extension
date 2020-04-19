@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "워드"
+    },
+    "_words": {
+        "message": "말"
+    },
+    "_character": {
+        "message": "캐릭터"
+    },
+    "_characters": {
+        "message": "캐릭터"
+    },
+    "extName": {
+        "message": "Count me up lite - 단어 및 문자 카운터"
+    },
+    "extDescription": {
+        "message": "단어 및 문자 카운터"
+    }
+}

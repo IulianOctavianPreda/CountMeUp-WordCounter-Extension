@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "كلمة"
+    },
+    "_words": {
+        "message": "كلمات"
+    },
+    "_character": {
+        "message": "حرف"
+    },
+    "_characters": {
+        "message": "الشخصيات"
+    },
+    "extName": {
+        "message": "Count me up lite - عداد الكلمات والحرف"
+    },
+    "extDescription": {
+        "message": "عداد الكلمات والحرف"
+    }
+}

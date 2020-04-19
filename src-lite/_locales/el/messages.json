@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Λέξη"
+    },
+    "_words": {
+        "message": "Λόγια"
+    },
+    "_character": {
+        "message": "Χαρακτήρας"
+    },
+    "_characters": {
+        "message": "Χαρακτήρες"
+    },
+    "extName": {
+        "message": "Count me up lite - Μετρητής λέξεων και χαρακτήρων"
+    },
+    "extDescription": {
+        "message": "Μετρητής λέξεων και χαρακτήρων"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Слово"
+    },
+    "_words": {
+        "message": "Слова"
+    },
+    "_character": {
+        "message": "Характер"
+    },
+    "_characters": {
+        "message": "Персонажі"
+    },
+    "extName": {
+        "message": "Count me up lite - Лічильник слів і символів"
+    },
+    "extDescription": {
+        "message": "Лічильник слів і символів"
+    }
+}

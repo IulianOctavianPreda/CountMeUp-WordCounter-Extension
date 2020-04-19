@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Paraula"
+    },
+    "_words": {
+        "message": "Paraules"
+    },
+    "_character": {
+        "message": "Personatge"
+    },
+    "_characters": {
+        "message": "Personatges"
+    },
+    "extDescription": {
+        "message": "Comptador de paraules i personatges"
+    },
+    "extName": {
+        "message": "Count me up lite - Comptador de paraules i personatges"
+    }
+}

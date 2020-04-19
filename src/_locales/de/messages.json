@@ -6,10 +6,10 @@
         "message": "Wörter"
     },
     "_characters": {
-        "message": "Figuren"
+        "message": "Buchstaben"
     },
     "_charactersWithoutSpaces": {
-        "message": "Zeichen ohne Leerzeichen"
+        "message": "Buchstaben ohne Leerzeichen"
     },
     "_popup": {
         "message": "Popup"
@@ -27,12 +27,12 @@
         "message": "Wort"
     },
     "_character": {
-        "message": "Charakter"
+        "message": "Buchstabe"
     },
     "extName": {
-        "message": "Count me up - Wort- und Zeichenzähler"
+        "message": "Count me up - Wort- und Buchstabenzähler"
     },
     "extDescription": {
-        "message": "Wort- und Zeichenzähler"
+        "message": "Wort- und Buchstabenzähler"
     }
 }

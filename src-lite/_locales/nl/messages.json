@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Woord"
+    },
+    "_words": {
+        "message": "Woorden"
+    },
+    "_character": {
+        "message": "Karakter"
+    },
+    "_characters": {
+        "message": "Karakters"
+    },
+    "extName": {
+        "message": "Count me up lite - Woord- en karakterteller"
+    },
+    "extDescription": {
+        "message": "Woord- en karakterteller"
+    }
+}

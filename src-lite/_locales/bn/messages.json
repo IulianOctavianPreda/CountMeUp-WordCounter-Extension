@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "শব্দ"
+    },
+    "_words": {
+        "message": "শব্দ"
+    },
+    "_character": {
+        "message": "চরিত্র"
+    },
+    "_characters": {
+        "message": "চরিত্র"
+    },
+    "extDescription": {
+        "message": "শব্দ এবং চরিত্রের কাউন্টার"
+    },
+    "extName": {
+        "message": "Count me up lite - শব্দ এবং চরিত্রের কাউন্টার"
+    }
+}

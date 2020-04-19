@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Slovo"
+    },
+    "_words": {
+        "message": "Slova"
+    },
+    "_character": {
+        "message": "Charakter"
+    },
+    "_characters": {
+        "message": "Znaky"
+    },
+    "extDescription": {
+        "message": "Počitadlo slov a znaků"
+    },
+    "extName": {
+        "message": "Count me up lite - Počitadlo slov a znaků"
+    }
+}

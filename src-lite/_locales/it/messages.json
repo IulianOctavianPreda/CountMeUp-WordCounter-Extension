@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Parola"
+    },
+    "_words": {
+        "message": "Parole"
+    },
+    "_character": {
+        "message": "Carattere"
+    },
+    "_characters": {
+        "message": "Caratteri"
+    },
+    "extName": {
+        "message": "Count me up lite - Contatore di parole e caratteri"
+    },
+    "extDescription": {
+        "message": "Contatore di parole e caratteri"
+    }
+}

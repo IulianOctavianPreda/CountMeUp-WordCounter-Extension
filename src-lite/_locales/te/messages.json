@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "పద"
+    },
+    "_words": {
+        "message": "పదాలు"
+    },
+    "_character": {
+        "message": "అక్షర"
+    },
+    "_characters": {
+        "message": "అక్షరాలు"
+    },
+    "extName": {
+        "message": "Count me up lite - పదం మరియు అక్షర కౌంటర్"
+    },
+    "extDescription": {
+        "message": "పదం మరియు అక్షర కౌంటర్"
+    }
+}

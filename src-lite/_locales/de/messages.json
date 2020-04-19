@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Wort"
+    },
+    "_words": {
+        "message": "Wörter"
+    },
+    "_character": {
+        "message": "Buchstabe"
+    },
+    "_characters": {
+        "message": "Buchstaben"
+    },
+    "extName": {
+        "message": "Count me up lite - Wort- und Buchstabenzähler"
+    },
+    "extDescription": {
+        "message": "Wort- und Buchstabenzähler"
+    }
+}

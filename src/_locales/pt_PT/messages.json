@@ -6,10 +6,10 @@
         "message": "Palavras"
     },
     "_characters": {
-        "message": "Personagens"
+        "message": "Caracteres"
     },
     "_charactersWithoutSpaces": {
-        "message": "Personagens Sem Espaços"
+        "message": "Caracteres Sem Espaços"
     },
     "_popup": {
         "message": "Aparecer"
@@ -27,7 +27,7 @@
         "message": "Palavra"
     },
     "_character": {
-        "message": "Personagem"
+        "message": "Carácter"
     },
     "extDescription": {
         "message": "Contador de palavras e caracteres"

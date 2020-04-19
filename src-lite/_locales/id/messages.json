@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Kata"
+    },
+    "_words": {
+        "message": "Kata-kata"
+    },
+    "_character": {
+        "message": "Karakter"
+    },
+    "_characters": {
+        "message": "Karakter"
+    },
+    "extDescription": {
+        "message": "Penghitung kata dan karakter"
+    },
+    "extName": {
+        "message": "Count me up lite - Penghitung kata dan karakter"
+    }
+}

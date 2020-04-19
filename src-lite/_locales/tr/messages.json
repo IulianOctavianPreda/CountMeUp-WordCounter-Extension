@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Sözcük"
+    },
+    "_words": {
+        "message": "Kelimeler"
+    },
+    "_character": {
+        "message": "Karakter"
+    },
+    "_characters": {
+        "message": "Karakterler"
+    },
+    "extDescription": {
+        "message": "Kelime ve karakter sayacı"
+    },
+    "extName": {
+        "message": "Count me up lite - Kelime ve karakter sayacı"
+    }
+}

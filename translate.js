@@ -10,9 +10,9 @@ const fs = require("fs");
 var args = process.argv.slice(2);
 
 // prettier-ignore
-let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da","el","es","et","fa","fi","fr","gu","he","hi","hr","hu","id","it","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","pt","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh-CN","zh-TW"];
+let automaticLanguageCodes = ["ar","am","bg","bn","ca","cs","da","el","es","et","fa","fi","fr","gu","he","hi","hr","hu","id","ja","kn","ko","lt","lv","ml","mr","ms","nl","no","pl","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","vi","zh-CN","zh-TW"];
 
-let manualLanguageCodes = ["ro", "en", "de", "pt_BR", "pt_PT"];
+let manualLanguageCodes = ["ro", "en", "de", "pt", "pt_BR", "pt_PT", "fr", "it"];
 let pathToTranslationFile = "./src/translations/template.json";
 let defaultPath = "./src";
 let extName = "Word and character counter";

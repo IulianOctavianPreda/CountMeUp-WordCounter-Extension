@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "शब्द"
+    },
+    "_words": {
+        "message": "शब्दों"
+    },
+    "_character": {
+        "message": "चरित्र"
+    },
+    "_characters": {
+        "message": "पात्र"
+    },
+    "extDescription": {
+        "message": "शब्द और चरित्र काउंटर"
+    },
+    "extName": {
+        "message": "Count me up lite - शब्द और चरित्र काउंटर"
+    }
+}

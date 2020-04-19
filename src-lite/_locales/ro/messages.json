@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Cuvânt"
+    },
+    "_words": {
+        "message": "Cuvinte"
+    },
+    "_character": {
+        "message": "Caracter"
+    },
+    "_characters": {
+        "message": "Caractere"
+    },
+    "extDescription": {
+        "message": "Contor de cuvinte și caractere"
+    },
+    "extName": {
+        "message": "Count me up lite - Contor de cuvinte și caractere"
+    }
+}

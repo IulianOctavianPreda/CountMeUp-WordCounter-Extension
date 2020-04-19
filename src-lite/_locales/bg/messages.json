@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Дума"
+    },
+    "_words": {
+        "message": "Думи"
+    },
+    "_character": {
+        "message": "Характер"
+    },
+    "_characters": {
+        "message": "Герои"
+    },
+    "extName": {
+        "message": "Count me up lite - Брояч на думи и символи"
+    },
+    "extDescription": {
+        "message": "Брояч на думи и символи"
+    }
+}

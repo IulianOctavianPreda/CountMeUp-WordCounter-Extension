@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Słowo"
+    },
+    "_words": {
+        "message": "Słowa"
+    },
+    "_character": {
+        "message": "Postać"
+    },
+    "_characters": {
+        "message": "Postacie"
+    },
+    "extDescription": {
+        "message": "Licznik słów i znaków"
+    },
+    "extName": {
+        "message": "Count me up lite - Licznik słów i znaków"
+    }
+}

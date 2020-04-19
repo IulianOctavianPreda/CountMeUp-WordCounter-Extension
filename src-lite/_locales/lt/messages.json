@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Žodis"
+    },
+    "_words": {
+        "message": "Žodžiai"
+    },
+    "_character": {
+        "message": "Charakteris"
+    },
+    "_characters": {
+        "message": "Personažai"
+    },
+    "extName": {
+        "message": "Count me up lite - Žodžių ir simbolių skaitiklis"
+    },
+    "extDescription": {
+        "message": "Žodžių ir simbolių skaitiklis"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "சொல்"
+    },
+    "_words": {
+        "message": "சொற்கள்"
+    },
+    "_character": {
+        "message": "எழுத்து"
+    },
+    "_characters": {
+        "message": "எழுத்துக்கள்"
+    },
+    "extDescription": {
+        "message": "சொல் மற்றும் எழுத்து கவுண்டர்"
+    },
+    "extName": {
+        "message": "Count me up lite - சொல் மற்றும் எழுத்து கவுண்டர்"
+    }
+}

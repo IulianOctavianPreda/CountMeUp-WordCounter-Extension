@@ -1,38 +1,38 @@
 {
-  "_enterDesiredText": {
-    "message": "Entrez le texte souhaité"
-  },
-  "_words": {
-    "message": "Mots"
-  },
-  "_characters": {
-    "message": "Personnages"
-  },
-  "_charactersWithoutSpaces": {
-    "message": "Personnages sans espaces"
-  },
-  "_popup": {
-    "message": "Apparaitre"
-  },
-  "_sideMenuLeft": {
-    "message": "Menu latéral gauche"
-  },
-  "_sideMenuRight": {
-    "message": "Menu latéral droit"
-  },
-  "_openIn": {
-    "message": "Ouvrir dans"
-  },
-  "_word": {
-    "message": "Mot"
-  },
-  "_character": {
-    "message": "Personnage"
-  },
-  "extName": {
-    "message": "Count me up - Compteur de mots et de caractères"
-  },
-  "extDescription": {
-    "message": "Compteur de mots et de caractères"
-  }
+    "_enterDesiredText": {
+        "message": "Entrez le texte souhaité"
+    },
+    "_words": {
+        "message": "Mots"
+    },
+    "_characters": {
+        "message": "Caractères"
+    },
+    "_charactersWithoutSpaces": {
+        "message": "Caractères sans espaces"
+    },
+    "_popup": {
+        "message": "Apparaitre"
+    },
+    "_sideMenuLeft": {
+        "message": "Menu latéral gauche"
+    },
+    "_sideMenuRight": {
+        "message": "Menu latéral droit"
+    },
+    "_openIn": {
+        "message": "Ouvrir dans"
+    },
+    "_word": {
+        "message": "Mot"
+    },
+    "_character": {
+        "message": "Caractère"
+    },
+    "extName": {
+        "message": "Count me up - Compteur de mots et de caractères"
+    },
+    "extDescription": {
+        "message": "Compteur de mots et de caractères"
+    }
 }

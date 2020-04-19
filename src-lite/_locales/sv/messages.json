@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Ord"
+    },
+    "_words": {
+        "message": "Ord"
+    },
+    "_character": {
+        "message": "Karaktär"
+    },
+    "_characters": {
+        "message": "Tecken"
+    },
+    "extDescription": {
+        "message": "Ord- och karaktärräknare"
+    },
+    "extName": {
+        "message": "Count me up lite - Ord- och karaktärräknare"
+    }
+}

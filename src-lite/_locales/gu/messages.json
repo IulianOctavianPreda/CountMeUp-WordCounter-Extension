@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "શબ્દ"
+    },
+    "_words": {
+        "message": "શબ્દો"
+    },
+    "_character": {
+        "message": "પાત્ર"
+    },
+    "_characters": {
+        "message": "પાત્રો"
+    },
+    "extDescription": {
+        "message": "શબ્દ અને પાત્રનો કાઉન્ટર"
+    },
+    "extName": {
+        "message": "Count me up lite - શબ્દ અને પાત્રનો કાઉન્ટર"
+    }
+}

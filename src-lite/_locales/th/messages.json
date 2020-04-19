@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "คำ"
+    },
+    "_words": {
+        "message": "คำ"
+    },
+    "_character": {
+        "message": "ตัวละคร"
+    },
+    "_characters": {
+        "message": "ตัวละคร"
+    },
+    "extDescription": {
+        "message": "ตัวนับคำและตัวอักษร"
+    },
+    "extName": {
+        "message": "Count me up lite - ตัวนับคำและตัวอักษร"
+    }
+}

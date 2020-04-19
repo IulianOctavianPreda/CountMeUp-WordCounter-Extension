@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Szó"
+    },
+    "_words": {
+        "message": "Szavak"
+    },
+    "_character": {
+        "message": "Karakter"
+    },
+    "_characters": {
+        "message": "Karakterek"
+    },
+    "extName": {
+        "message": "Count me up lite - Szó és karakter számláló"
+    },
+    "extDescription": {
+        "message": "Szó és karakter számláló"
+    }
+}

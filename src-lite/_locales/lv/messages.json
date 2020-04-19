@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Vārds"
+    },
+    "_words": {
+        "message": "Vārdi"
+    },
+    "_character": {
+        "message": "Raksturs"
+    },
+    "_characters": {
+        "message": "Rakstzīmes"
+    },
+    "extName": {
+        "message": "Count me up lite - Vārdu un rakstzīmju skaitītājs"
+    },
+    "extDescription": {
+        "message": "Vārdu un rakstzīmju skaitītājs"
+    }
+}

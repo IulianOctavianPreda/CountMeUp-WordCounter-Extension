@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Riječ"
+    },
+    "_words": {
+        "message": "Riječi"
+    },
+    "_character": {
+        "message": "Lik"
+    },
+    "_characters": {
+        "message": "Likovi"
+    },
+    "extDescription": {
+        "message": "Brojač riječi i znakova"
+    },
+    "extName": {
+        "message": "Count me up lite - Brojač riječi i znakova"
+    }
+}

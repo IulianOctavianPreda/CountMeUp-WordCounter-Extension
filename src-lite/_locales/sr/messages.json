@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "Ворд"
+    },
+    "_words": {
+        "message": "Речи"
+    },
+    "_character": {
+        "message": "Цхарацтер"
+    },
+    "_characters": {
+        "message": "Ликови"
+    },
+    "extName": {
+        "message": "Count me up lite - Бројач речи и карактера"
+    },
+    "extDescription": {
+        "message": "Бројач речи и карактера"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "کلمه"
+    },
+    "_words": {
+        "message": "کلمات"
+    },
+    "_character": {
+        "message": "شخصیت"
+    },
+    "_characters": {
+        "message": "شخصیت ها"
+    },
+    "extName": {
+        "message": "Count me up lite - پیشخوان کلمه و شخصیت"
+    },
+    "extDescription": {
+        "message": "پیشخوان کلمه و شخصیت"
+    }
+}

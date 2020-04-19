@@ -16,19 +16,19 @@ MessagePassingService.addMessageListener(
     }
 );
 
-function numberOfWords(text) {
-    return text.split(" ").length;
+function numberOfWords(text = "") {
+    return text.trim().split(" ").length;
 }
 
-function numberOfCharacters(text) {
-    return text.length;
+function numberOfCharacters(text = "") {
+    return text.trim().length;
 }
 
-function formattedTextLong(text) {
+function formattedTextLong(text = "") {
     return `${numberOfWordsLocaleString(text)} - ${numberOfCharactersLocaleString(text)}`;
 }
 
-function numberOfWordsLocaleString(text) {
+function numberOfWordsLocaleString(text = "") {
     const nrOfWords = numberOfWords(text);
     if (nrOfWords === 1) {
         return `${nrOfWords} ${chrome.i18n.getMessage("_word")}`;

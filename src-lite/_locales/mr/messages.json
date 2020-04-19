@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "शब्द"
+    },
+    "_words": {
+        "message": "शब्द"
+    },
+    "_character": {
+        "message": "चारित्र्य"
+    },
+    "_characters": {
+        "message": "वर्ण"
+    },
+    "extName": {
+        "message": "Count me up lite - शब्द आणि वर्ण काउंटर"
+    },
+    "extDescription": {
+        "message": "शब्द आणि वर्ण काउंटर"
+    }
+}

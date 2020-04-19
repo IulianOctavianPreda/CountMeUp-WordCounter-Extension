@@ -1,0 +1,20 @@
+{
+    "_word": {
+        "message": "語"
+    },
+    "_words": {
+        "message": "ことば"
+    },
+    "_character": {
+        "message": "キャラクター"
+    },
+    "_characters": {
+        "message": "キャラクター"
+    },
+    "extName": {
+        "message": "Count me up lite - 単語と文字のカウンター"
+    },
+    "extDescription": {
+        "message": "単語と文字のカウンター"
+    }
+}
