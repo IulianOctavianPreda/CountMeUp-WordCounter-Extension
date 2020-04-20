@@ -17,11 +17,5 @@
             "js": ["./content_script/content_script.js"]
         }
     ],
-    "permissions": ["activeTab", "contextMenus"],
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "a@example.com",
-            "strict_min_version": "42.0"
-        }
-    }
+    "permissions": ["contextMenus"]
 }

@@ -2,7 +2,7 @@ import { Message } from "../../src/shared/enums/message";
 import { MessagePassingService } from "../../src/shared/services/message-passing-service";
 
 chrome.contextMenus.create({
-    title: `Word counter`,
+    title: `Word counter - lite`,
     contexts: ["selection"],
     id: "WordsCounter",
 });
