@@ -9,12 +9,12 @@
         "message": "Charakter"
     },
     "_characters": {
-        "message": "Charakteren"
+        "message": "Charaktere"
     },
     "extName": {
-        "message": "Count me up lite - Wort- und Charakterenzähler"
+        "message": "Count me up lite - Wort- und Zeichenzähler"
     },
     "extDescription": {
-        "message": "Wort- und Charakterenzähler"
+        "message": "Wort- und Zeichenzähler"
     }
 }

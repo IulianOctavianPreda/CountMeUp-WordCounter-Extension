@@ -6,10 +6,10 @@
         "message": "Wörter"
     },
     "_characters": {
-        "message": "Charakteren"
+        "message": "Charaktere"
     },
     "_charactersWithoutSpaces": {
-        "message": "Charakteren ohne Leerzeichen"
+        "message": "Charaktere ohne Leerzeichen"
     },
     "_popup": {
         "message": "Popup"
@@ -30,9 +30,9 @@
         "message": "Charakter"
     },
     "extName": {
-        "message": "Count me up - Wort- und Charakterenzähler"
+        "message": "Count me up - Wort- und Zeichenzähler"
     },
     "extDescription": {
-        "message": "Wort- und Charakterenzähler"
+        "message": "Wort- und Zeichenzähler"
     }
 }
