@@ -160,7 +160,7 @@ export class PopupService {
         this.checklistUpdate(element.id);
     }
 
-    private checklistUpdate(id: string) {
+    private checklistUpdate(id: ViewMethod) {
         this.checklistUpdateDisplay(id);
 
         if (this.containingTabId) {

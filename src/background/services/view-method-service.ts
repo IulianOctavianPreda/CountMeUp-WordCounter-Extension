@@ -26,9 +26,6 @@ export class ViewMethodService {
 
     public static openView(tab) {
         ViewMethodService.getViewMethod((data) => {
-            if (!ViewMethodService.isAcceptedTab(tab.url)) {
-                data = ViewMethod.Popup;
-            }
             ViewMethodService.openSelectedView(data, tab.id);
         });
     }
@@ -90,10 +87,6 @@ export class ViewMethodService {
             });
         }
         ViewMethodService.openSelectedView(data, tabId);
-    }
-
-    public static isAcceptedTab(url) {
-        return url.includes("http") || url.includes("ftp");
     }
 
     public static createWindow() {
